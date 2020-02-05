@@ -37,12 +37,14 @@ At 3 cores 5 taxa:
 Minimum 4 samples per core 
 Maximum 9 samples per core
 ```{r}
+print('No. of samples at Three Cores')
 signif(M/3, 3)
 ```
 At 2 cores 5 taxa:
 Minimum 7 samples per core
 Maximum 14 samples per core
 ```{r}
+print('No. of samples at Two Cores')
 signif(M/2, 3)
 ```
 
