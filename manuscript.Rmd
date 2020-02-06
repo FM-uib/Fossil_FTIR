@@ -1,17 +1,24 @@
 ---
-title: 'Title'
+title: 'Viability of FTIR on fossil pollen'
 author: 'Florian Muthreich'
 date: '2020/02/04'
 output: pdf_document
 ---
 
+extracted fossil pollen from sediment.
+ca 5 common taxa: Alnus, Picea, Pinus, 
+
+Research Questions:
+1. chemical variation between taxa in the same cores.
+2. chemical variation between taxa between cores 
+3. chemical variation of pollen with depths/age
 
 Notes:
-- Time to measure 50 pollen grains on single taxa slides: 60 min. 
+- Time to measure 50 pollen grains on single taxa slides: min 60 min. 
 - includes Mounting, selecting pollen, measuring time FTIR
 
 Fossil pollen will require more searching in the selection phase.
-Have to measure 75 grains if we target 50 good spectra.
+Have to measure ~75 grains if we target 50 good spectra.
 Estimate time for mounting, selecting, measuring 75 grains of one taxa: 90 - 120 min
 
 10 days in the lab; 8+ hrs a day: 80 hrs
@@ -29,6 +36,7 @@ total_samples = function(hrs_per_sample, no_taxa, total_hrs = 140){
 M = outer(c(1,1.5,2),c(3,4,5),total_samples, total_hrs = 140)
 row.names(M) = c(1,1.5,2)
 colnames(M) = c(3,4,5)
+print('Number of samples at One Core')
 M
 ```
 
