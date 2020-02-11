@@ -2,18 +2,49 @@
 title: 'Viability of FTIR on fossil pollen'
 author: 'Florian Muthreich'
 date: '2020/02/04'
-output: pdf_document
+output:
+  pdf_document: default
+bibliography: references.bib
 ---
 
 extracted fossil pollen from sediment.
-ca 5 common taxa: Alnus, Picea, Pinus, 
+ca 5 common taxa: Alnus, Picea, Pinus,
+
 
 Research Questions:
 1. chemical variation between taxa in the same cores.
 2. chemical variation between taxa between cores 
 3. chemical variation of pollen with depths/age
+## Cores
+Dalman Lado:
 
-Notes:
+Totenmoos [@heissUltenValleySouth2005]:
+- bog-sediment core
+- min 1000 grains counted
+- Picea, Pinus very common, switch at 10000 BP from Pinus to Picea
+- Alnus, Betula throughout
+- Abies, Fagus after 9000 BP
+- trace Quercus
+
+Younger Dryas [@brauerHighResolutionSediment1999]:
+- 12 samples laminated sediment
+- from  11400 to 13120
+- min 500 grains
+- pollen conc highest in 11000-11600 and 12700-12900
+- Pinus betula most common (ca 150 grains counted)
+- salix (ca 25 counted)
+- quercus throughout in low conc (<1%)
+- graminoids/cyperaceae/artemisia common
+
+Tinner alpine:
+
+Tinner meso-mediterranean:
+Quercus sections Quercus, Cerris and Ilex
+
+Tinner thermo-mediterranean:
+Quercus sections Quercus, Cerris and Ilex
+
+## Time to measure notes:
 - Time to measure 50 pollen grains on single taxa slides: min 60 min. 
 - includes Mounting, selecting pollen, measuring time FTIR
 
