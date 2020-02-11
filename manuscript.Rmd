@@ -16,10 +16,12 @@ Research Questions:
 2. chemical variation between taxa between cores 
 3. chemical variation of pollen with depths/age
 ## Cores
-Dalman Lado:
+Dalmuttlado:
+- pine
+- holocene
 
 Totenmoos [@heissUltenValleySouth2005]:
-- bog-sediment core
+- bog-sediment core; past 15000 yrs
 - min 1000 grains counted
 - Picea, Pinus very common, switch at 10000 BP from Pinus to Picea
 - Alnus, Betula throughout
@@ -35,6 +37,11 @@ Younger Dryas [@brauerHighResolutionSediment1999]:
 - salix (ca 25 counted)
 - quercus throughout in low conc (<1%)
 - graminoids/cyperaceae/artemisia common
+
+Tiefer See:
+- 1870-2010
+- laminated sediments
+- Pinus pollen
 
 Tinner alpine:
 
@@ -75,6 +82,7 @@ Anywhere from 18 to 30 samples is reasonable.
 At 3 cores 5 taxa:
 Minimum 4 samples per core 
 Maximum 9 samples per core
+
 ```{r}
 print('No. of samples at Three Cores')
 signif(M/3, 3)
@@ -82,6 +90,7 @@ signif(M/3, 3)
 At 2 cores 5 taxa:
 Minimum 7 samples per core
 Maximum 14 samples per core
+
 ```{r}
 print('No. of samples at Two Cores')
 signif(M/2, 3)
