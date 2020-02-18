@@ -4,3 +4,38 @@ author: 'Florian Muthreich'
 date: '2020/02/04'
 output: pdf_document
 ---
+
+#Lab-Notes
+Samples 2020-02-13
+Vial  Sample         Pinus  Betula  Salix  Spores
+5*    A4-DL 138-140  +++    +              +++
+4     D4-DL 161-163  ++     +              +++
+4*    A5-UR  64- 66  ++     +       1      +++
+
+1. add 1 cube to vial (~1cm^-3^)
+2. wash with water -> dissolve sediment vortex
+3. centrifuge 3min 3000rpm
+4. decant; save decant
+5. add 3 ml 1.43 SPT solution
+6. vortex
+7. centrifuge 3min 3000rpm
+8. decant supernatant into new vial
+9. repeat 5-7; decant into same vial
+10. wash with water; save decant for checking
+11. wash with water; save decant x2
+12. wash residue with water; save in vial
+
+2nd Run
+Vial  Sample
+2*    A4-DL 188-190
+3*    A5-UR  72- 74
+5     D4-DL 182-184
+6     A4-DL 130-132
+7*    A4-DL 163-165
+
+3rd Run
+Vial  Sample
+4     A4-DL 175-177
+5     D4-DL 149-151
+6     A4-DL 145-147
+7*    D4-DL 138-140
