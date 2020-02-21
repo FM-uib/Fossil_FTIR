@@ -6,15 +6,10 @@ output:
   pdf_document: default
 bibliography: references.bib
 ---
-
+# Notes
 extracted fossil pollen from sediment.
 ca 5 common taxa: Alnus, Picea, Pinus,
 
-
-Research Questions:
-1. chemical variation between taxa in the same cores.
-2. chemical variation between taxa between cores 
-3. chemical variation of pollen with depths/age
 ## Cores
 Dalmuttlado:
 - pine
@@ -96,3 +91,15 @@ print('No. of samples at Two Cores')
 signif(M/2, 3)
 ```
 
+# Introduction
+Research Questions:
+1. chemical variation between taxa in the same cores.
+2. chemical variation between taxa between cores 
+3. chemical variation of pollen with depths/age
+
+# Methods and Materials
+
+Pollen extracted from sediment samples 
+[@kampsAgentSeparationDissolved1985] SPT patent
+[@nakagawaDensemediaSeparationMore1998] 
+[@regnellPreparativeCentrifugationNew1996] density of pollen 1.4
