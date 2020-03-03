@@ -41,9 +41,11 @@ Tiefer See:
 Tinner alpine:
 
 Tinner meso-mediterranean:
+[@bisculmHoloceneVegetationFire2012; @vanniereClimateHumandrivenFire2008]
 Quercus sections Quercus, Cerris and Ilex
 
-Tinner thermo-mediterranean:
+Tinner sub-mediterranean:
+[@zoller19601960]
 Quercus sections Quercus, Cerris and Ilex
 
 ## Time to measure notes:
