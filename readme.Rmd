@@ -52,3 +52,10 @@ Vial  Samples
 6     TSK15-K6 34.0-35.0
 7     TSK15-K6 29.5-31.0
 8     TSK15-K6 21.5-22.2
+
+Meeting with Boris
+higher microscope
+tradeoff more time less image
+BSi region showing up on the spectra
+36x 1 px = 1 µm
+testing of objective
