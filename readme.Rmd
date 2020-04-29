@@ -59,3 +59,31 @@ tradeoff more time less image
 BSi region showing up on the spectra
 36x 1 px = 1 µm
 testing of objective
+
+#Plan for Ås Lab work
+
+dependant on results from Boris tests
+
+Status after last update that binding medium is working:
+- much better picture than on ZnSe slides
+- only measured empty sample
+- normal objectiv works, no switching objectives needed
+- if comparison to modern material, needs to be measured on new setup as well, cant use old data
+Problems:
+- Pollen density on slides
+- unknownd layer over pollen; BSi? (maybe more washing, switching to store in alcohol instead of water?)
+
+Possible set ups:
+1. Measure one core. Multiple samples (5+), multiple species (3+) -> 15 samples
+2. measure multiple cores (5+), reduced number of samples (<3) and red species (1; only Pinus) -> 15 samples
+
+RQ for both setups:
+Description of method for FTIR analysis of single grain fossil pollen
+
+specific to 1: 
+RQ1 Taxonomic differences between fossil pollen
+RQ2 change in pollen chem with age (finer scale 100s of years)
+
+specific to 2:
+RQ1 chem differences of same species between cores (assuming P. sylvestris everwhere)
+RQ2 change in pollen with age (broader scale 1000s of years)
