@@ -6,7 +6,7 @@ output: pdf_document
 ---
 
 #Lab-Notes
-Samples 2020-02-13
+##Samples 2020-02-13
 Vial  Sample         Pinus  Betula  Salix  Spores
 5*    A4-DL 138-140  +++    +              +++
 4     D4-DL 161-163  ++     +              +++
@@ -40,7 +40,7 @@ Vial  Sample
 6     A4-DL 145-147
 7*    D4-DL 138-140
 
-Samples 2020-02-19
+##Samples 2020-02-19
 Vial  Samples
 1     TSK15-K6 42.0-42.8
 2*    TSK15-K6 17.5-18.2
@@ -52,6 +52,66 @@ Vial  Samples
 6     TSK15-K6 34.0-35.0
 7     TSK15-K6 29.5-31.0
 8     TSK15-K6 21.5-22.2
+
+##Samples 2020-05-04
+Urio Zuazzrocchi
+Vial  Samples
+1     UQC-20
+2     UQC-70
+2*    UQC-150
+3*    UQC-268
+4     UQC-365
+5*    UQC-468
+6     UQC-588
+7     UQC-667
+8     UQC-767
+8*    UQC-882
+
+Notes: after first waterwash vial 5-8 spilled in the centrifuge
+
+##Samples 2020-05-05
+Sa Curcurica
+Vial  Samples
+1     SCUR-12
+2     SCUR-120
+2*    SCUR-232
+3*    SCUR-328
+4     SCUR-430
+5*    SCUR-526
+6     SCUR-664
+7     SCUR-728
+8     SCUR-824
+8*    SCUR-944
+
+##Samples 2020-05-06
+Lago del Sangiatto
+Vial  Samples
+1     SNG-32
+2     SNG-72
+2*    SNG-128
+3*    SNG-176
+4     SNG-224
+5*    SNG-264
+6     SNG-308
+7     SNG-328
+8     SNG-360
+8*    SNG-390
+
+##Samples 2020-05-07
+Dalmutladdo
+Vial  Samples
+1     DL-20
+2     DL-40
+2*    DL-60
+3*    DL-90
+4     DL-100
+5*    DL-110
+6     DL-120
+7     DL-130
+8     DL-140
+8*    DL-150
+
+
 
 Meeting with Boris
 higher microscope
@@ -87,3 +147,90 @@ RQ2 change in pollen chem with age (finer scale 100s of years)
 specific to 2:
 RQ1 chem differences of same species between cores (assuming P. sylvestris everwhere)
 RQ2 change in pollen with age (broader scale 1000s of years)
+
+#Ås Labwork
+
+2020-05-11
+Bergen PS7_02
+all sideways pollen
+polar pollen left 2x2
+
+INN_PS3_01
+sideways pollen: all
+polar pollen: 1x1 and 1x2
+
+INN_PS19_01
+sideways_pollen: 1x1, 1x3
+polar pollen: 1x1,1x2
+
+DAL_20_01
+all Pinus
+Alnus (6)
+BetCor (8)
+
+DAL_20_02
+all Pinus
+Alnus (1)
+BetCor (7)
+
+BGO_PS08
+sideways: 25 grains
+polar: 25 grains
+
+DAL_90_01
+all Pinus (8)
+blanks (6)
+
+DAL_90_02
+all Pinus (9)
+blanks (6)
+
+DAL_90_03
+all Pinus (19)
+blanks (6)
+
+DAL_130_01
+all Pinus (12)
+blanks (6)
+
+DAL_130_02
+all Pinus (27)
+blanks (6)
+
+DAL_60_01
+Pinus 1x1 to 6x4 (47)
+blanks (6)
+
+DAL_110_01
+Pinus (11)
+blanks (6)
+
+DAL_110_02
+Pinus (21)
+blanks (6)
+
+DAL_150_03-09
+Pinus (7)
+
+Cor_ave 14B1 skip 1x2 quadrant
+
+DAL_08_01
+Pinus (7)
+blanks (4)
+
+DAL_08_02
+Pinus (2)
+blanks (4)
+
+DAL_08_03
+Pinus (2)
+
+DAL_40_01
+Pinus 1x1 to 2x6 (37)
+blanks (5)
+
+DAL_08_04-15
+Pinus (12)
+
+DAL_140_01_17
+Pinus (17)
