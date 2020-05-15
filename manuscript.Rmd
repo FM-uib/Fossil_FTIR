@@ -101,6 +101,14 @@ Research Questions:
 
 # Methods and Materials
 
+PCA on grains for exploration
+
+regression of spectra on depth
+
+repeat on different grain averages (1, 3, 5, 10)
+
+average all spectra and stack plot
+
 Pollen extracted from sediment samples 
 [@kampsAgentSeparationDissolved1985] SPT patent
 [@nakagawaDensemediaSeparationMore1998] 
