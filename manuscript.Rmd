@@ -100,7 +100,50 @@ Research Questions:
 3. chemical variation of pollen with depths/age
 
 # Methods and Materials
+## Labwork Report
 
+did µFTIR on fresh and fossil pollen using Hyperion-FPA
+
+This is very sample dependent.
+organic rich cores are problematic (requires a better extraction protocol), pollen density is another.
+Dalmutladdo was a very good core for this: low in organic and relatively rich in pollen.
+BSi increased with depth, highest in oldest samples (extracted blanks).
+Still, some depth were more time intensive (130/150), low amount of pollen .
+I managed about 2-3 core samples per day, the fresh samples can be done in a fraction of the time, all done within 1 half day.
+
+9 depth from Dalmutladdo core. targeted and extracted Pinus pollen (see table)
+
+possibilities for Alnus and Betula, even though scattering visible in spectra 
+
+```{r}
+dalmutladdo = data.frame(ID = c("DAL_08","DAL_20","DAL_40","DAL_60","DAL_90", "DAL_110","DAL_130","DAL_140","DAL_150"),
+                         pinus_pollen = c(23,49,37,47,36,32,39,17,7),
+                         alnus_pollen = c(0,7,0,0,0,0,0,0,0),
+                         betula_pollen = c(0,15,0,0,0,0,0,0,0))
+dalmutladdo
+```
+
+```{r}
+fresh_pollen = data.frame(ID = c("BGO_PS7", "BGO_PS8", "INN_PS13", "INN_PS19A","NMBU_Pin_syl_14E1", "NMBU_Pin_syl_14H1", "NMBU_Aln_glu_14E1", "NMBU_Aln_glu_14J1", "NMBU_Aln_inc_14B1", "NMBU_Aln_inc_14G1", "NMBU_Bet_pub_14A1", "NMBU_Bet_pub_14B1", "NMBU_Cor_ave_14B1", "NMBU_Cor_ave_14C1"),
+                          extracted = c(109,55,51,24,0,0,0,0,0,0,0,0,0,0))
+fresh_pollen
+```
+
+
+Research questions we could answer with this set:
+
+- Differences between fresh and fossil/near fossil grains of Pinus
+- chemical changes in Pinus pollen with age/depth
+(- chemical differences between Pinus/Alnus/Betula)
+
+extensions to this set:
+- add more samples from Dalmuttladdo highest and lowest depth (maybe labwork)
+- add cores (e.g. MFM, Tiefer See or Italian cores), Festi core was quite organic rich
+- 
+
+# Introduction
+
+# Methods and Materials 
 PCA on grains for exploration
 
 regression of spectra on depth
