@@ -48,50 +48,7 @@ Tinner sub-mediterranean:
 [@zoller19601960]
 Quercus sections Quercus, Cerris and Ilex
 
-## Time to measure notes:
-- Time to measure 50 pollen grains on single taxa slides: min 60 min. 
-- includes Mounting, selecting pollen, measuring time FTIR
 
-Fossil pollen will require more searching in the selection phase.
-Have to measure ~75 grains if we target 50 good spectra.
-Estimate time for mounting, selecting, measuring 75 grains of one taxa: 90 - 120 min
-
-10 days in the lab; 8+ hrs a day: 80 hrs
-Target: 5 taxa per sample; 5 x 90: 7.5 hrs `r 5*90/60`
-
-9-12 13-24
-10 days in the lab; 14 hrs a day: 140
-Target: 5 taxa per sample; 140/7.5 = 18; 14/10 = 14
-
-```{r}
-total_samples = function(hrs_per_sample, no_taxa, total_hrs = 140){
-  tmp = total_hrs / (no_taxa * hrs_per_sample)
-  return(signif(tmp,3))
-}
-M = outer(c(1,1.5,2),c(3,4,5),total_samples, total_hrs = 140)
-row.names(M) = c(1,1.5,2)
-colnames(M) = c(3,4,5)
-print('Number of samples at One Core')
-M
-```
-
-Anywhere from 18 to 30 samples is reasonable.
-At 3 cores 5 taxa:
-Minimum 4 samples per core 
-Maximum 9 samples per core
-
-```{r}
-print('No. of samples at Three Cores')
-signif(M/3, 3)
-```
-At 2 cores 5 taxa:
-Minimum 7 samples per core
-Maximum 14 samples per core
-
-```{r}
-print('No. of samples at Two Cores')
-signif(M/2, 3)
-```
 
 # Introduction
 Research Questions:
@@ -139,7 +96,7 @@ Research questions we could answer with this set:
 extensions to this set:
 - add more samples from Dalmuttladdo highest and lowest depth (maybe labwork)
 - add cores (e.g. MFM, Tiefer See or Italian cores), Festi core was quite organic rich
-- 
+- add more grains from already measured samples (to hit min 25 or 50)
 
 # Introduction
 
