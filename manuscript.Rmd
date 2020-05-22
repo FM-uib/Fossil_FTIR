@@ -15,13 +15,6 @@ Dalmuttlado:
 - pine
 - holocene
 
-Totenmoos [@heissUltenValleySouth2005]:
-- bog-sediment core; past 15000 yrs
-- min 1000 grains counted
-- Picea, Pinus very common, switch at 10000 BP from Pinus to Picea
-- Alnus, Betula throughout
-- Abies, Fagus after 9000 BP
-- trace Quercus
 
 Younger Dryas [@brauerHighResolutionSediment1999]:
 - 12 samples laminated sediment
@@ -38,16 +31,10 @@ Tiefer See:
 - laminated sediments
 - Pinus pollen
 
-Tinner alpine:
-
-Tinner meso-mediterranean:
-[@bisculmHoloceneVegetationFire2012; @vanniereClimateHumandrivenFire2008]
-Quercus sections Quercus, Cerris and Ilex
-
-Tinner sub-mediterranean:
-[@zoller19601960]
-Quercus sections Quercus, Cerris and Ilex
-
+Tinner/Cesar cores:
+Urio Quattrocchi (supra mediterranean) [@bisculmHoloceneVegetationFire2012]
+Sa Curcurica (thermo mediterranean) [@beffaVegetationFireHistory2016]
+Lago del Sangiatto (southern alps)
 
 
 # Introduction
@@ -100,16 +87,38 @@ extensions to this set:
 
 # Introduction
 
-# Methods and Materials 
+# Methods and Materials
+
+Pollen extraction:
+
+1. add 1 cube to vial (~1cm^-3^)
+2. wash with water -> dissolve sediment vortex
+3. centrifuge 3min 3000rpm
+4. decant; save decant
+5. add 3 ml 1.43 SPT solution
+6. vortex
+7. centrifuge 3min 3000rpm
+8. decant supernatant into new vial
+9. repeat 5-7; decant into same vial
+10. wash with water; save decant for checking
+11. wash with water; save decant x2
+12. wash residue with water; save in vial
+
+Preprocessing:
+- SG 2nd degree, 2 poly, windowsize 5 or 6
+- EMSC linear (probably needs to involve background spectra to filter them out)
+
 PCA on grains for exploration
 
-regression of spectra on depth
+PLS regression of spectra on depth
 
 repeat on different grain averages (1, 3, 5, 10)
 
-average all spectra and stack plot
+average all spectra and stack plots of different depth
 
 Pollen extracted from sediment samples 
 [@kampsAgentSeparationDissolved1985] SPT patent
 [@nakagawaDensemediaSeparationMore1998] 
 [@regnellPreparativeCentrifugationNew1996] density of pollen 1.4
+
+# References
