@@ -3,9 +3,11 @@ title: 'Viability of FTIR on fossil pollen'
 author: 'Florian Muthreich'
 date: '2020/02/04'
 output:
-  pdf_document: default
+  bookdown::pdf_document2:
+    extra_dependencies: ["flafter"]
 bibliography: references.bib
 ---
+
 # Notes
 extracted fossil pollen from sediment.
 ca 5 common taxa: Alnus, Picea, Pinus,
@@ -14,7 +16,6 @@ ca 5 common taxa: Alnus, Picea, Pinus,
 Dalmuttlado:
 - pine
 - holocene
-
 
 Younger Dryas [@brauerHighResolutionSediment1999]:
 - 12 samples laminated sediment
@@ -55,22 +56,22 @@ BSi increased with depth, highest in oldest samples (extracted blanks).
 Still, some depth were more time intensive (130/150), low amount of pollen .
 I managed about 2-3 core samples per day, the fresh samples can be done in a fraction of the time, all done within 1 half day.
 
-9 depth from Dalmutladdo core. targeted and extracted Pinus pollen (see table)
+9 depth from Dalmutladdo core. targeted and extracted Pinus pollen (Table \@ref(tab:pollencounts), Table \@ref(tab:fresh))
 
 possibilities for Alnus and Betula, even though scattering visible in spectra 
 
-```{r}
+```{r pollencounts, echo=FALSE}
 dalmutladdo = data.frame(ID = c("DAL_08","DAL_20","DAL_40","DAL_60","DAL_90", "DAL_110","DAL_130","DAL_140","DAL_150"),
                          pinus_pollen = c(23,49,37,47,36,32,39,17,7),
                          alnus_pollen = c(0,7,0,0,0,0,0,0,0),
                          betula_pollen = c(0,15,0,0,0,0,0,0,0))
-dalmutladdo
+knitr::kable(dalmutladdo, caption = "Pollen counts")
 ```
 
-```{r}
+```{r fresh, echo=FALSE}
 fresh_pollen = data.frame(ID = c("BGO_PS7", "BGO_PS8", "INN_PS13", "INN_PS19A","NMBU_Pin_syl_14E1", "NMBU_Pin_syl_14H1", "NMBU_Aln_glu_14E1", "NMBU_Aln_glu_14J1", "NMBU_Aln_inc_14B1", "NMBU_Aln_inc_14G1", "NMBU_Bet_pub_14A1", "NMBU_Bet_pub_14B1", "NMBU_Cor_ave_14B1", "NMBU_Cor_ave_14C1"),
                           extracted = c(109,55,51,24,0,0,0,0,0,0,0,0,0,0))
-fresh_pollen
+knitr::kable(fresh_pollen, caption = "Fresh pollen counts")
 ```
 
 
@@ -120,5 +121,6 @@ Pollen extracted from sediment samples
 [@kampsAgentSeparationDissolved1985] SPT patent
 [@nakagawaDensemediaSeparationMore1998] 
 [@regnellPreparativeCentrifugationNew1996] density of pollen 1.4
+
 
 # References
