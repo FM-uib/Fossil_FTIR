@@ -4,8 +4,10 @@ author: 'Florian Muthreich'
 date: '2020/02/04'
 output:
   bookdown::pdf_document2:
+    toc: false
     extra_dependencies: ["flafter"]
 bibliography: references.bib
+csl: biology-letters.csl
 ---
 
 # Notes
@@ -65,15 +67,20 @@ dalmutladdo = data.frame(ID = c("DAL_08","DAL_20","DAL_40","DAL_60","DAL_90", "D
                          pinus_pollen = c(23,49,37,47,36,32,39,17,7),
                          alnus_pollen = c(0,7,0,0,0,0,0,0,0),
                          betula_pollen = c(0,15,0,0,0,0,0,0,0))
-knitr::kable(dalmutladdo, caption = "Pollen counts")
+knitr::kable(dalmutladdo, format="latex", booktabs=TRUE,
+             caption = "Pollen counts")
 ```
 
 ```{r fresh, echo=FALSE}
 fresh_pollen = data.frame(ID = c("BGO_PS7", "BGO_PS8", "INN_PS13", "INN_PS19A","NMBU_Pin_syl_14E1", "NMBU_Pin_syl_14H1", "NMBU_Aln_glu_14E1", "NMBU_Aln_glu_14J1", "NMBU_Aln_inc_14B1", "NMBU_Aln_inc_14G1", "NMBU_Bet_pub_14A1", "NMBU_Bet_pub_14B1", "NMBU_Cor_ave_14B1", "NMBU_Cor_ave_14C1"),
                           extracted = c(109,55,51,24,0,0,0,0,0,0,0,0,0,0))
-knitr::kable(fresh_pollen, caption = "Fresh pollen counts")
+knitr::kable(fresh_pollen, format="latex", booktabs=TRUE,
+             caption = "Fresh pollen counts")
 ```
 
+9 fossil samples from 1 core
+
+2 trees of Pinus at each location
 
 Research questions we could answer with this set:
 
