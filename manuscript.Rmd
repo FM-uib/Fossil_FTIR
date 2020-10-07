@@ -40,13 +40,12 @@ Sa Curcurica (thermo mediterranean) [@beffaVegetationFireHistory2016]
 Lago del Sangiatto (southern alps)
 
 
-# Introduction
+
 Research Questions:
 1. chemical variation between taxa in the same cores.
 2. chemical variation between taxa between cores 
 3. chemical variation of pollen with depths/age
 
-# Methods and Materials
 ## Labwork Report
 
 did µFTIR on fresh and fossil pollen using Hyperion-FPA
@@ -93,7 +92,36 @@ extensions to this set:
 - add cores (e.g. MFM, Tiefer See or Italian cores), Festi core was quite organic rich
 - add more grains from already measured samples (to hit min 25 or 50)
 
+# TODO
+
+- extract fresh Pinus from images
+- measure samples from 2 more cores (9 each)
+- mark Alnus and BetCor on images
+- extract Alnus BetCor from Dal samples
+- extract fresh Alnus BetCor
+
 # Introduction
+
+Main Goal: Explore the chemical differences between fresh and untreated fossil pollen.
+
+The study of plant remains is an integral part of Palaeoecology and Palaeobotany.
+Spores and pollengrains, besides macrofossils, are utilized to study past environmental and climatic change, migration of plant communities as well as the development and evolution of plants. 
+EXAMPLES
+
+Pollen has shown to be resistant to diagenetic processes and found in most palaeoecological records. 
+
+FTIR used on fossil papers in the past use acetolysed pollen or other chemically extracted pollen. 
+There has not been a comparison between fresh and untreated fossil pollen.
+In order to compare which compounds are missing and still present in fossil pollen.
+
+
+RQs
+i. Difference between fresh and fossil grains.
+ii. effect of orientation and depth/age on chemistry
+iii. difference to other species
+    -> needs extracting of spectra from files (marking of grains on images)
+    -> add another core
+    
 
 # Methods and Materials
 
