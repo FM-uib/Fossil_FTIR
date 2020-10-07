@@ -104,11 +104,15 @@ extensions to this set:
 
 Main Goal: Explore the chemical differences between fresh and untreated fossil pollen.
 
-The study of plant remains is an integral part of Palaeoecology and Palaeobotany.
-Spores and pollengrains, besides macrofossils, are utilized to study past environmental and climatic change, migration of plant communities as well as the development and evolution of plants. 
+The study of plant micro and macrofossil (spores, seed and pollen),recovered from lake sediments and peat bogs, is an integral part of Palaeoecology and Palaeobotany.
+Pollengrains are an important tool to reconstruct past vegetational, environmental and climatic changes. 
 EXAMPLES
 
-Pollen has shown to be resistant to diagenetic processes and found in most palaeoecological records. 
+Palaeo relies on taxonomic identification of pollen based on morphology.
+Not always possible.
+Recently IR spectro has emerged as a promising candidate to improve taxonomic resolution and automation of pollen counting.
+
+Pollen is preserved in lake sediments and has shown to be resistant to diagenetic processes and found in most palaeoecological records. 
 
 FTIR used on fossil papers in the past use acetolysed pollen or other chemically extracted pollen. 
 There has not been a comparison between fresh and untreated fossil pollen.
