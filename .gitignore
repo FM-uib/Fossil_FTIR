@@ -4,6 +4,5 @@
 *.RData
 .Ruserdata
 data
-R
 figures
 *.pdf

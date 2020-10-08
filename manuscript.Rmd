@@ -105,18 +105,26 @@ extensions to this set:
 Main Goal: Explore the chemical differences between fresh and untreated fossil pollen.
 
 The study of plant micro and macrofossil (spores, seed and pollen),recovered from lake sediments and peat bogs, is an integral part of Palaeoecology and Palaeobotany.
-Pollengrains are an important tool to reconstruct past vegetational, environmental and climatic changes. 
+Pollengrains are resistant to the diagenetic processes that occur in the formation of sediments, bogs and other deposits, which makes pollen records 
+an important tool to reconstruct past vegetational, environmental and climatic changes. 
 EXAMPLES
 
+The main component, which makes pollen grains so resistant is sporopollenin, a highly resistant biopolymer, making up the majority of the outer pollen grain wall (exine). 
+
+In recent years, the study of pollen grain chemistry has lead to new information on the chemical structure of sporopollenin as well as taxonomic and environmental information stored in the chemistry of pollen. 
+
+pollengrains are higly resistant to the processes that occur in the formation of sediments, bogs and other deposits (diagenesis).
+Sporopollenin is a biopolymer, which is the main building block for pollen grains. 
 Palaeo relies on taxonomic identification of pollen based on morphology.
 Not always possible.
-Recently IR spectro has emerged as a promising candidate to improve taxonomic resolution and automation of pollen counting.
+Recently IR spectro has emerged as a promising candidate to improve taxonomic resolution and automation ofpollen counting.
+EXAMPLES
 
-Pollen is preserved in lake sediments and has shown to be resistant to diagenetic processes and found in most palaeoecological records. 
 
 FTIR used on fossil papers in the past use acetolysed pollen or other chemically extracted pollen. 
 There has not been a comparison between fresh and untreated fossil pollen.
 In order to compare which compounds are missing and still present in fossil pollen.
+chemical degradation of pollen during diagenesis or depth.
 
 
 RQs
