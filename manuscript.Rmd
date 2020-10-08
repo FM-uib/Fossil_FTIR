@@ -109,9 +109,13 @@ Pollengrains are resistant to the diagenetic processes that occur in the formati
 an important tool to reconstruct past vegetational, environmental and climatic changes. 
 EXAMPLES
 
-The main component, which makes pollen grains so resistant is sporopollenin, a highly resistant biopolymer, making up the majority of the outer pollen grain wall (exine). 
+The high preservation of pollen grains in the geological record is because of the resistant biopolymer sporopollenin, which is the main building block of the outer pollen grain wall (exine).
+The exact structure of sporopollenin is unknown, but recent studies give a more detailed picture of this complex substance [@liMolecularStructurePlant2019]. 
 
-In recent years, the study of pollen grain chemistry has lead to new information on the chemical structure of sporopollenin as well as taxonomic and environmental information stored in the chemistry of pollen. 
+
+In recent years, the study of pollen grain chemistry has lead to new information on the chemical structure of sporopollenin.
+Taxonomic differences have been identified in the chemistry of pollen, as well as environmental information stored in the chemistry of pollen (UV Proxy). 
+
 
 pollengrains are higly resistant to the processes that occur in the formation of sediments, bogs and other deposits (diagenesis).
 Sporopollenin is a biopolymer, which is the main building block for pollen grains. 
