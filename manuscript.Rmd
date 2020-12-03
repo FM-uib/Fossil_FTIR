@@ -10,6 +10,46 @@ bibliography: references.bib
 csl: biology-letters.csl
 ---
 
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(here)
+source(here("R","authors_and_affiliations.R"))
+```
+
+
+---
+author: `r Authors`
+---
+`r Affiliations`
+
+as
+
+```{r}
+if (file.exists(here("data","output","DAL_spectra.rds"))) {
+  DAL = readRDS(here("data","output","DAL_spectra.rds"))
+} else {
+  source(here("R","read_data.R"))
+  read_data("DAL")
+  DAL = readRDS(here("data","output","DAL_spectra.rds"))
+}
+
+if (file.exists(here("data","output","MFM_spectra.rds"))) {
+  MFM = readRDS(here("data","output","MFM_spectra.rds"))
+} else {
+  source(here("R","read_data.R"))
+  read_data("MFM")
+  MFM = readRDS(here("data","output","MFM_spectra.rds"))
+}
+
+if (file.exists(here("data","output","TSK_spectra.rds"))) {
+  TSK = readRDS(here("data","output","TSK_spectra.rds"))
+} else {
+  source(here("R","read_data.R"))
+  read_data("TSK")
+  TSK = readRDS(here("data","output","TSK_spectra.rds"))
+}
+```
+
 # Notes
 extracted fossil pollen from sediment.
 ca 5 common taxa: Alnus, Picea, Pinus,
