@@ -10,19 +10,20 @@ bibliography: references.bib
 csl: biology-letters.csl
 ---
 
-
 ```{r message=FALSE, warning=FALSE, include=FALSE}
 library(here)
+source(here("R","packages.R"))
 source(here("R","authors_and_affiliations.R"))
 ```
-
 
 ---
 author: `r Authors`
 ---
 `r Affiliations`
 
-as
+Abstract
+
+
 
 ```{r}
 if (file.exists(here("data","output","DAL_spectra.rds"))) {
@@ -49,6 +50,17 @@ if (file.exists(here("data","output","TSK_spectra.rds"))) {
   TSK = readRDS(here("data","output","TSK_spectra.rds"))
 }
 ```
+
+```{r}
+count_grains = function(core){
+  counts = core %>%
+    group_by(type, depth, treatment) %>%
+    summarise(count=n())
+  return(counts)
+}
+count_grains(TSK)
+```
+
 
 # Notes
 extracted fossil pollen from sediment.

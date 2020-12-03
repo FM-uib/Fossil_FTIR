@@ -1,6 +1,3 @@
-library(tidyr)
-library(dplyr)
-
 dat <- data.frame(FirstName = c("Florian", 
                                 "Valeria", 
                                 "Boris", 

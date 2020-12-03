@@ -1,6 +1,3 @@
-library(here)
-library(stringi)
-
 repl = function(data, c){
   tmp = rep("", nrow(data))
   for (i in c) {
@@ -28,6 +25,13 @@ read_data = function(sc){
   spectra_meta$species = repl(spectra_meta, c("Blank", "Pinus", "Abies", "BetCor", "Alnus"))
   spectra_meta$treatment = repl(spectra_meta, c("acet"))
   spectra_meta$orientation = repl(spectra_meta,c("_side"))
+  dpth = str_split_fixed(spectra_meta$`Sample Name`, "_", 4)
+  if (sc == "MFM") {
+    dpth = paste0(dpth[,2],"_",dpth[,3])
+  } else {
+    dpth = dpth[,2]
+  }
+  spectra_meta$depth = dpth
   
   rownames(spectra_raw) = ids
   

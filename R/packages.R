@@ -1,0 +1,8 @@
+library(tidyr)
+library(stringi)
+library(dplyr)
+library(ggplot2)
+library(EMSC)
+library(pls)
+library(kableExtra)
+library(reshape2)
