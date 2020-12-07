@@ -1,5 +1,5 @@
 ---
-title: 'Viability of FTIR on fossil pollen'
+title: 'Chemistry of fossil Pinus pollen and the effect of acetolysis'
 date: '2020/02/04'
 output:
   bookdown::pdf_document2:
@@ -25,9 +25,9 @@ author: `r Authors`
 figures separate legends in text
 separate cover letter
 
-# Chemistry of fossil Pinus pollen and the effect of acetolysis
+ 
 
-## Abstract
+# Abstract
 200 words no abreviations/refs
 
 Keywords: FTIR, fossil pollen, Holocene, density separation, acetolysis, pollen chemistry
@@ -85,6 +85,74 @@ kable(count_grains(MFM), booktabs = T, format = "latex",
 ```
 
 
+# Introduction
+
+Main Goal: Explore the chemical differences between fresh and untreated fossil pollen.
+
+The study of plant micro and macrofossil (spores, seed and pollen), recovered from lake sediments and peat bogs, is an integral part of Palaeoecology and Palaeobotany.
+Pollengrains are resistant to the diagenetic processes that occur in the formation of sediments, bogs and other deposits, which makes pollen records an important tool to reconstruct past floristic, vegetational and environmental changes. 
+EXAMPLES
+
+The high preservation of pollen grains in the geological record is because of the resistant biopolymer sporopollenin, which is the main building block of the outer pollen grain wall (exine).
+
+More and more details have been revealed about the exact structure of sporopollenin, e.g. importance of aromatic compounds, cross-linked aliphatic components [@liMolecularStructurePlant2019], similarity to lignins. 
+
+In recent years, the study of pollen grain chemistry has lead to new information important for biological and palaeoecological research.
+Taxonomic differences have been identified in the chemistry of pollen, which highlight the potential of pollen identification with chemical methods in palaeoecological research.
+Chemical fingerprinting of pollen has the potential of higher taxonomic resolution, automation of pollen identification and offers a more objective method than traditional morphological methods.
+as well as an environmental signal stored in the chemistry of pollen (UV Proxy), which could be used as a UV-proxy.
+
+
+acetolysis alters sporopollenin [@dominguezIsolationIntactPollen1998; @schulzeosthoffPhenolsIntegratedCompounds1987] affecting solubility
+
+FTIR used on fossil papers in the past use acetolysed pollen or other chemically extracted pollen. 
+There has not been a comparison between fresh and untreated fossil pollen.
+In order to compare which compounds are missing and still present in fossil pollen.
+chemical degradation of pollen during diagenesis or depth.
+
+
+RQs
+i. Difference between fresh and fossil grains.
+i.i effect of orientation on chemistry
+i.ii effect of depth/age on chemistry
+ii Differences between cores
+    
+
+# Methods and Materials
+
+Pollen extraction:
+
+1. add 1 cube to vial (~1cm^-3^)
+2. wash with water -> dissolve sediment vortex
+3. centrifuge 3min 3000rpm
+4. decant; save decant
+5. add 3 ml 1.43 SPT solution
+6. vortex
+7. centrifuge 3min 3000rpm
+8. decant supernatant into new vial
+9. repeat 5-7; decant into same vial
+10. wash with water; save decant for checking
+11. wash with water; save decant x2
+12. wash residue with water; save in vial
+
+Preprocessing:
+- SG 2nd degree, 2 poly, windowsize 5 or 6
+- EMSC linear (probably needs to involve background spectra to filter them out)
+
+PCA on grains for exploration
+
+PLS regression of spectra on depth
+
+repeat on different grain averages (1, 3, 5, 10)
+
+average all spectra and stack plots of different depth
+
+Pollen extracted from sediment samples 
+[@kampsAgentSeparationDissolved1985] SPT patent
+[@nakagawaDensemediaSeparationMore1998] 
+[@regnellPreparativeCentrifugationNew1996] density of pollen 1.4
+
+
 # Notes
 extracted fossil pollen from sediment.
 ca 5 common taxa: Alnus, Picea, Pinus,
@@ -104,17 +172,10 @@ Younger Dryas [@brauerHighResolutionSediment1999]:
 - quercus throughout in low conc (<1%)
 - graminoids/cyperaceae/artemisia common
 
-Tiefer See:
+Tiefer See [@theuerkaufEffectsChangesLand2015]:
 - 1870-2010
 - laminated sediments
 - Pinus pollen
-
-Tinner/Cesar cores:
-Urio Quattrocchi (supra mediterranean) [@bisculmHoloceneVegetationFire2012]
-Sa Curcurica (thermo mediterranean) [@beffaVegetationFireHistory2016]
-Lago del Sangiatto (southern alps)
-
-
 
 Research Questions:
 1. chemical variation between taxa in the same cores.
@@ -174,75 +235,6 @@ extensions to this set:
 - mark Alnus and BetCor on images
 - extract Alnus BetCor from Dal samples
 - extract fresh Alnus BetCor
-
-# Introduction
-
-Main Goal: Explore the chemical differences between fresh and untreated fossil pollen.
-
-The study of plant micro and macrofossil (spores, seed and pollen),recovered from lake sediments and peat bogs, is an integral part of Palaeoecology and Palaeobotany.
-Pollengrains are resistant to the diagenetic processes that occur in the formation of sediments, bogs and other deposits, which makes pollen records 
-an important tool to reconstruct past floristic, vegetational and environmental changes. 
-EXAMPLES
-
-The high preservation of pollen grains in the geological record is because of the resistant biopolymer sporopollenin, which is the main building block of the outer pollen grain wall (exine).
-
-More and more details have been revealed about the exact structure of sporopollenin, e.g. importance of aromatic compounds, cross-linked aliphatic components [@liMolecularStructurePlant2019], similarity to lignins. 
-
-In recent years, the study of pollen grain chemistry has lead to new information important for biological and palaeoecological research.
-Taxonomic differences have been identified in the chemistry of pollen, which highlight the potential of pollen identification with chemical methods in palaeoecological research.
-Chemical fingerprinting of pollen has the potential of higher taxonomic resolution, automation of pollen identification and offers a more objective method than traditional morphological methods.
-as well as an environmental signal stored in the chemistry of pollen (UV Proxy), which could be used as a UV-proxy.
-
-
-acetolysis alters sporopollenin [@dominguezIsolationIntactPollen1998; @schulzeosthoffPhenolsIntegratedCompounds1987] affecting solubility
-
-FTIR used on fossil papers in the past use acetolysed pollen or other chemically extracted pollen. 
-There has not been a comparison between fresh and untreated fossil pollen.
-In order to compare which compounds are missing and still present in fossil pollen.
-chemical degradation of pollen during diagenesis or depth.
-
-
-RQs
-i. Difference between fresh and fossil grains.
-ii. effect of orientation and depth/age on chemistry
-iii. difference to other species
-    -> needs extracting of spectra from files (marking of grains on images)
-    -> add another core
-    
-
-# Methods and Materials
-
-Pollen extraction:
-
-1. add 1 cube to vial (~1cm^-3^)
-2. wash with water -> dissolve sediment vortex
-3. centrifuge 3min 3000rpm
-4. decant; save decant
-5. add 3 ml 1.43 SPT solution
-6. vortex
-7. centrifuge 3min 3000rpm
-8. decant supernatant into new vial
-9. repeat 5-7; decant into same vial
-10. wash with water; save decant for checking
-11. wash with water; save decant x2
-12. wash residue with water; save in vial
-
-Preprocessing:
-- SG 2nd degree, 2 poly, windowsize 5 or 6
-- EMSC linear (probably needs to involve background spectra to filter them out)
-
-PCA on grains for exploration
-
-PLS regression of spectra on depth
-
-repeat on different grain averages (1, 3, 5, 10)
-
-average all spectra and stack plots of different depth
-
-Pollen extracted from sediment samples 
-[@kampsAgentSeparationDissolved1985] SPT patent
-[@nakagawaDensemediaSeparationMore1998] 
-[@regnellPreparativeCentrifugationNew1996] density of pollen 1.4
 
 
 # References
