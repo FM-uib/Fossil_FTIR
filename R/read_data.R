@@ -1,5 +1,5 @@
-repl = function(data, c){
-  tmp = rep("", nrow(data))
+repl = function(data, c, default=""){
+  tmp = rep(default, nrow(data))
   for (i in c) {
     tmp[grep(i,data$Filename)] = i
   }
@@ -23,7 +23,7 @@ read_data = function(sc){
   
   spectra_meta$ids = ids
   spectra_meta$species = repl(spectra_meta, c("Blank", "Pinus", "Abies", "BetCor", "Alnus"))
-  spectra_meta$treatment = repl(spectra_meta, c("acet"))
+  spectra_meta$treatment = repl(spectra_meta, c("acet"),c("SPT"))
   spectra_meta$orientation = repl(spectra_meta,c("_side"))
   dpth = str_split_fixed(spectra_meta$`Sample Name`, "_", 4)
   if (sc == "MFM") {

@@ -1,6 +1,5 @@
 ---
 title: 'Viability of FTIR on fossil pollen'
-author: 'Florian Muthreich'
 date: '2020/02/04'
 output:
   bookdown::pdf_document2:
@@ -21,10 +20,19 @@ author: `r Authors`
 ---
 `r Affiliations`
 
-Abstract
+2500 words not including in tables title page references
+2 figs and 2 tables
+figures separate legends in text
+separate cover letter
 
+# Chemistry of fossil Pinus pollen and the effect of acetolysis
 
+## Abstract
+200 words no abreviations/refs
 
+Keywords: FTIR, fossil pollen, Holocene, density separation, acetolysis, pollen chemistry
+
+<!-- READ DATA -->
 ```{r}
 if (file.exists(here("data","output","DAL_spectra.rds"))) {
   DAL = readRDS(here("data","output","DAL_spectra.rds"))
@@ -51,14 +59,29 @@ if (file.exists(here("data","output","TSK_spectra.rds"))) {
 }
 ```
 
-```{r}
+```{r DALcounts, echo=FALSE, results='asis'}
 count_grains = function(core){
   counts = core %>%
+    subset(type == "pollen" & species == "Pinus") %>% 
     group_by(type, depth, treatment) %>%
     summarise(count=n())
   return(counts)
 }
-count_grains(TSK)
+kable(count_grains(DAL), booktabs = T, format = "latex",
+      caption = "Pinus pollen grain count in Dalmutladdo core.")
+#      digits = 1, format.args = list(scientific = F),
+#      col.names = c("")) %>% 
+#  add_header_above()
+```
+
+```{r TSKcounts, echo=FALSE, results='asis'}
+kable(count_grains(TSK), booktabs = T, format = "latex",
+      caption = "Pinus pollen grain count in Tiefer See core.")
+```
+
+```{r MFMcounts, echo=FALSE, results='asis'}
+kable(count_grains(MFM), booktabs = T, format = "latex",
+      caption = "Pinus pollen grain count in Meerfelder Maar core.")
 ```
 
 
