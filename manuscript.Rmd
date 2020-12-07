@@ -228,13 +228,5 @@ extensions to this set:
 - add cores (e.g. MFM, Tiefer See or Italian cores), Festi core was quite organic rich
 - add more grains from already measured samples (to hit min 25 or 50)
 
-# TODO
-
-- extract fresh Pinus from images
-- measure samples from 2 more cores (9 each)
-- mark Alnus and BetCor on images
-- extract Alnus BetCor from Dal samples
-- extract fresh Alnus BetCor
-
 
 # References
