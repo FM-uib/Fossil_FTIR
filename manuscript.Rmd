@@ -66,6 +66,18 @@ if (!hasName(DAL, "sg2")) {
 }
 ```
 
+<!-- PCA -->
+```{r}
+DAL$Label = "DAL"
+TSK$Label = "TSK"
+MFM$Label = "MFM"
+
+pca_data = rbind(subset(DAL, species == "Pinus"), 
+        subset(TSK, species == "Pinus"), 
+        subset(MFM, species == "Pinus"))
+
+```
+
 
 ```{r DALcounts, echo=FALSE, results='asis'}
 count_grains = function(core){
