@@ -61,14 +61,8 @@ if (file.exists(here("data","output","TSK_spectra.rds"))) {
 
 <!-- PRE-PROCESS DATA -->
 ```{r}
-pre_process = TRUE
-source(here("R","helper_functions.R"))
 if (!hasName(DAL, "sg2")) {
   source(here("R","pre_process.R"))
-} else {
-  TSK = readRDS(here("data","output","TSK_spectra.rds"))
-  MFM = readRDS(here("data","output","MFM_spectra.rds"))
-  DAL = readRDS(here("data","output","DAL_spectra.rds"))
 }
 ```
 

@@ -13,9 +13,9 @@ pre_processing = function(spectra, ws, cut=T){
   return(foo_emsc)
 }
 
-DAL$sg2 = pre_processing(DAL$raw, 6)
-TSK$sg2 = pre_processing(TSK$raw, 6)
-MFM$sg2 = pre_processing(MFM$raw, 6)
+DAL$sg2 = pre_processing(DAL$raw, 5)
+TSK$sg2 = pre_processing(TSK$raw, 5)
+MFM$sg2 = pre_processing(MFM$raw, 5)
 
 saveRDS(DAL, here("data","output","DAL_spectra.rds"))
 saveRDS(TSK, here("data","output","TSK_spectra.rds"))
