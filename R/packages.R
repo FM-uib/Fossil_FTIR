@@ -1,5 +1,6 @@
 library(tidyr)
 library(stringi)
+library(stringr)
 library(dplyr)
 library(ggplot2)
 library(EMSC)

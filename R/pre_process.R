@@ -19,4 +19,4 @@ MFM$sg2 = pre_processing(MFM$raw, 5)
 
 saveRDS(DAL, here("data","output","DAL_spectra.rds"))
 saveRDS(TSK, here("data","output","TSK_spectra.rds"))
-saveRDS(MFM, here("data","output","DAL_spectra.rds"))
+saveRDS(MFM, here("data","output","MFM_spectra.rds"))
