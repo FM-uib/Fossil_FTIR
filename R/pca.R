@@ -3,8 +3,8 @@ TSK$Label = "TSK"
 MFM$Label = "MFM"
 pca_wrap = function(pca_data,sel){
   pca_data[pca_data$treatment == "","treatment"] = "SPT"
-  if (!sel=="None") {
-    pca_data = subset(pca_data, Label == sel)
+  if (is.expression(sel)) {
+    pca_data = subset(pca_data, eval(sel))
   }
   pca_res = prcomp(pca_data$sg2)
   scores =  as.data.frame(pca_res$x[,1:10]) %>%
@@ -20,7 +20,7 @@ pca_data = rbind(subset(DAL, species == "Pinus"),
                  subset(MFM, species == "Pinus"))
  #%>%
 #melt(.,id.vars = "ids")
-scores = pca_wrap(pca_data,"DAL")
+scores = pca_wrap(pca_data, expression(Label == "DAL"))
 ggplot(scores, aes(PC1, PC2, color = depth)) + geom_point(aes(shape = treatment), size = 4)
 DAL_outliers = pca_data[pca_data$ids %in% scores[scores[,2] < -.05 | scores[,1] > .035,"ids"],"ids"]
 
@@ -29,7 +29,7 @@ DAL_outliers = pca_data[pca_data$ids %in% scores[scores[,2] < -.05 | scores[,1] 
 #plot_spectra(DAL,"raw",sel = expression(ids == "DAL_VzFi0"))
 #plot_spectra(DAL,"raw",sel = expression(ids == "DAL_ANdP0"))
 
-scores = pca_wrap(pca_data,"MFM")
+scores = pca_wrap(pca_data, expression(Label == "MFM"))
 ggplot(scores, aes(PC1, PC2, color = depth)) + geom_point(aes(shape = treatment), size = 2)
 MFM_outliers = pca_data[pca_data$ids %in% scores[scores[,1] > 0.01 & scores[,2] < 0.0,"ids"],"ids"]
 
@@ -39,7 +39,7 @@ MFM_outliers = pca_data[pca_data$ids %in% scores[scores[,1] > 0.01 & scores[,2] 
 #plot_spectra(MFM,"raw",sel = expression(ids == "MFM_hoG4y"))
 #plot_spectra(MFM,"raw",sel = expression(ids == "MFM_5UNIJ"))
 
-scores = pca_wrap(pca_data,"TSK")
+scores = pca_wrap(pca_data, expression(Label == "TSK"))
 ggplot(scores, aes(PC1, PC2, color = depth)) + geom_point(aes(shape = treatment), size = 2)
 TSK_outliers = pca_data[pca_data$ids %in% scores[scores[,2] < -.2,"ids"],"ids"] # TSK_NM3bb
 
@@ -48,11 +48,11 @@ TSK_outliers = pca_data[pca_data$ids %in% scores[scores[,2] < -.2,"ids"],"ids"] 
 outliers = c(DAL_outliers, MFM_outliers, TSK_outliers)
 
 pca_data_outliers_removed = pca_data[!pca_data$ids %in% outliers,]
-scores = pca_wrap(pca_data_outliers_removed,"DAL")
+scores = pca_wrap(pca_data_outliers_removed, expression(Label == "DAL"))
 DAL_outliers_2 = pca_data_outliers_removed[pca_data_outliers_removed$ids 
                           %in% scores[scores[,2] < -.02,"ids"],"ids"]
 
-scores = pca_wrap(pca_data_outliers_removed,"TSK")
+scores = pca_wrap(pca_data_outliers_removed, expression(Label == "TSK"))
 TSK_outliers_2 = pca_data_outliers_removed[pca_data_outliers_removed$ids 
                                            %in% scores[scores[,2] < -.02,"ids"],"ids"]
 
@@ -60,6 +60,13 @@ outliers = c(outliers, DAL_outliers_2, TSK_outliers_2)
 
 pca_data_outliers_removed_2 = pca_data[!pca_data$ids %in% outliers,]
 
-scores = pca_wrap(pca_data_outliers_removed_2,"DAL")
-scores = pca_wrap(pca_data_outliers_removed_2,"MFM")
-scores = pca_wrap(pca_data_outliers_removed_2,"TSK")
+scores = pca_wrap(pca_data_outliers_removed_2, expression(Label == "DAL"))
+scores = pca_wrap(pca_data_outliers_removed_2, expression(Label == "MFM"))
+scores = pca_wrap(pca_data_outliers_removed_2, expression(Label == "TSK"))
+
+# All cores
+scores = pca_wrap(pca_data_outliers_removed_2, "None")
+
+ggplot(scores, aes(PC1, PC2, color = core)) + geom_point(aes(shape = treatment), size = 2)
+
+scores = pca_wrap(pca_data_outliers_removed_2, expression(!treatment == "acet"))
