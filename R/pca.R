@@ -64,9 +64,18 @@ scores = pca_wrap(pca_data_outliers_removed_2, expression(Label == "DAL"))
 scores = pca_wrap(pca_data_outliers_removed_2, expression(Label == "MFM"))
 scores = pca_wrap(pca_data_outliers_removed_2, expression(Label == "TSK"))
 
+ggplot(scores, aes(PC1, PC2, color = depth)) + geom_point(aes(shape = treatment), size = 2)
+
 # All cores
 scores = pca_wrap(pca_data_outliers_removed_2, "None")
 
 ggplot(scores, aes(PC1, PC2, color = core)) + geom_point(aes(shape = treatment), size = 2)
 
 scores = pca_wrap(pca_data_outliers_removed_2, expression(!treatment == "acet"))
+
+#PLSR depth regression
+library(pls)
+plsr_data = subset(pca_data_outliers_removed_2, Label == "DAL")
+plsr_data$depth = as.numeric(plsr_data$depth)
+pls_res = plsr(depth ~ sg2, data = plsr_data, ncomp = 4, validation = "LOO")
+plot(pls_res)
