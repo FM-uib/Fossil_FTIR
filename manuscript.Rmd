@@ -113,21 +113,21 @@ kable(count_grains(MFM), booktabs = T, format = "latex",
       caption = "Pinus pollen grain count in Meerfelder Maar core.")
 ```
 
+\newpage
 
 # Introduction
+<!--Main Goal: Explore the chemical differences between fresh and untreated fossil pollen.-->
 
-Main Goal: Explore the chemical differences between fresh and untreated fossil pollen.
-
-The study of plant micro and macrofossil (spores, seed and pollen), recovered from lake sediments and peat bogs, is an integral part of Palaeoecology and Palaeobotany.
-Pollengrains are resistant to the diagenetic processes that occur in the formation of sediments, bogs and other deposits, which makes pollen records an important tool to reconstruct past floristic, vegetational and environmental changes. 
+The study of plant micro and macrofossil (spores, seed and pollen) is an integral part of Palaeoecology and Palaeobotany.
+Pollengrains are extracted from sediments, bogs and other deposits and counted.
+These pollen records are an important tool to reconstruct past floristic, vegetational and environmental changes. 
 EXAMPLES
 
 The high preservation of pollen grains in the geological record is because of the resistant biopolymer sporopollenin, which is the main building block of the outer pollen grain wall (exine).
-
-More and more details have been revealed about the exact structure of sporopollenin, e.g. importance of aromatic compounds, cross-linked aliphatic components [@liMolecularStructurePlant2019], similarity to lignins. 
+The structure of sporopollenin has been described as similar to lignins, e.g. importance of aromatic compounds, cross-linked aliphatic components [@liMolecularStructurePlant2019], but the exact structure remains unknown.
 
 In recent years, the study of pollen grain chemistry has shown promising results for biological and palaeoecological research.
-Fourier Transform Infrares (FTIR) spectroscopy has become a popular method for analysing pollen chemsitry
+Fourier Transform Infrares (FTIR) spectroscopy has become a popular method for analysing pollen chemistry.
 A number of FTIR studies have identified pollen chemical differences on genus level, which may extent to species level differences. 
 This is a promising finding for the application of pollen identification with chemical methods in palaeoecological research, because it has the potential to increase taxomonic resolution.
 Further, chemical methods are suitable for automation and offer a more objective method than traditional morphological methods.
@@ -135,7 +135,7 @@ In addition to taxonomic differences in pollen chemistry, there is evidence of e
 Several studies have shown links between solar and UV radiation and pollen chemistry as well as responses in pollen chemistry to temperature changes.
 
 So far, most FTIR studies have used modern material or material extracted from herbarium specimens.
-In some cases the pollen samples are processed with acetolysis following standard palynological methods (Erdman) to simulate fossilization.
+In some cases the pollen samples are processed with acetolysis following standard palynological methods [@erdtmanSixNotesPollen1959; @faegriTextbookPollenAnalysis1989] to simulate fossilization.
 The assumption is that acetolysis does not alter the chemistry of sporopollenin and is not affecting any chemical signal.
 To date, there has not been a comparison between acetolysed and untreated fossil pollen to examine any effect of acetolysis on sporopollenin or chemical degradation of pollen during diagenesis.
 
@@ -155,6 +155,8 @@ ii Differences between cores
 acetolysis alters sporopollenin [@dominguezIsolationIntactPollen1998; @schulzeosthoffPhenolsIntegratedCompounds1987] affecting solubility
 
 # Methods and Materials
+
+The pollen was extracted from three cores: Dalmuttlado in Norwa
 
 Three cores from different environments and age ranges
 
