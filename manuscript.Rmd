@@ -25,13 +25,14 @@ author: `r Authors`
 figures separate legends in text
 separate cover letter
 
- 
+\newpage
 
 # Abstract
 200 words no abreviations/refs
 
 Keywords: FTIR, fossil pollen, Holocene, density separation, acetolysis, pollen chemistry
 
+\newpage
 <!-- READ DATA -->
 ```{r}
 if (file.exists(here("data","output","DAL_spectra.rds"))) {

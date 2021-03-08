@@ -3,7 +3,12 @@
 .Rhistory
 *.RData
 .Ruserdata
-data
+data/*
+data/output/*
+!/data/output/
+!/data/output/DAL_spectra.rds
+!/data/output/MFM_spectra.rds
+!/data/output/TSK_spectra.rds
 figures
 *.pdf
 renv/
