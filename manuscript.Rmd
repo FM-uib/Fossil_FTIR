@@ -25,6 +25,14 @@ author: `r Authors`
 figures separate legends in text
 separate cover letter
 
+<!-- 
+A  200
+I  500
+MM 400
+R  500
+D  800
+-->
+
 \newpage
 
 # Abstract
@@ -159,24 +167,15 @@ acetolysis alters sporopollenin [@dominguezIsolationIntactPollen1998; @schulzeos
 
 # Methods and Materials
 
-The pollen was extracted from three cores: Dalmuttlado in Norwa
-
-Three cores from different environments and age ranges
-
-Pollen extraction:
-
-1. add 1 cube to vial (~1cm^-3^)
-2. wash with water -> dissolve sediment vortex
-3. centrifuge 3min 3000rpm
-4. decant; save decant
-5. add 3 ml 1.43 SPT solution
-6. vortex
-7. centrifuge 3min 3000rpm
-8. decant supernatant into new vial
-9. repeat 5-7; decant into same vial
-10. wash with water; save decant for checking
-11. wash with water; save decant x2
-12. wash residue with water; save in vial
+The pollen was extracted from three cores: Dalmuttlado in Norway, Tiefer See [@dragerVarveMicrofaciesVarve2017] and Meerfelder Maar [@brauerHighResolutionSediment1999] in Germany.
+Tiefer See formed during the last glacial period, while the Meerfelder Maar record is from the largest maar of the Westeifel Volcaniv field and formed ~35000 BP.
+Tiefer See and Meerfelder Maar are varved cores and were the samples used in this study span two different time-periods.
+The sub samples from Tiefer see are from the last 80 yrs of the core (1933 - 2011), while the samples from Meerfelder Maar cover the timeperiod from the late Allerød to the Younger Dryas/Holocene transition (~12900 - ~11000 BP).  
+The samples were extracted using density separation using dissolved Sodium Polytungstate (SPT) at 1.43 (g/ml)? as separation medium. <!--FM: check Unit-->
+During density separation a known volume of SPT (density 1.43) solution is added to the sample and homogenized/vortexed, followed by centrifugation.
+After centrifugation, all particulates/material heavier than 1.43 has deposited at the bottom of the vial and the lighter fraction can be decanted and collected.
+In our case the lighter fraction contained most of the pollen.
+The density of pollen is reported at <1.4 UNIT [@nakagawaDensemediaSeparationMore1998; @regnellPreparativeCentrifugationNew1996].
 
 Preprocessing:
 - SG 2nd degree, 2 poly, windowsize 5 or 6
@@ -194,82 +193,5 @@ Pollen extracted from sediment samples
 [@kampsAgentSeparationDissolved1985] SPT patent
 [@nakagawaDensemediaSeparationMore1998] 
 [@regnellPreparativeCentrifugationNew1996] density of pollen 1.4
-
-
-# Notes
-extracted fossil pollen from sediment.
-ca 5 common taxa: Alnus, Picea, Pinus,
-
-## Cores
-Dalmuttlado:
-- pine
-- holocene
-
-Younger Dryas [@brauerHighResolutionSediment1999]:
-- 12 samples laminated sediment
-- from  11400 to 13120
-- min 500 grains
-- pollen conc highest in 11000-11600 and 12700-12900
-- Pinus betula most common (ca 150 grains counted)
-- salix (ca 25 counted)
-- quercus throughout in low conc (<1%)
-- graminoids/cyperaceae/artemisia common
-
-Tiefer See [@theuerkaufEffectsChangesLand2015]:
-- 1870-2010
-- laminated sediments
-- Pinus pollen
-
-Research Questions:
-1. chemical variation between taxa in the same cores.
-2. chemical variation between taxa between cores 
-3. chemical variation of pollen with depths/age
-
-## Labwork Report
-
-did µFTIR on fresh and fossil pollen using Hyperion-FPA
-
-This is very sample dependent.
-organic rich cores are problematic (requires a better extraction protocol), pollen density is another.
-Dalmutladdo was a very good core for this: low in organic and relatively rich in pollen.
-BSi increased with depth, highest in oldest samples (extracted blanks).
-Still, some depth were more time intensive (130/150), low amount of pollen .
-I managed about 2-3 core samples per day, the fresh samples can be done in a fraction of the time, all done within 1 half day.
-
-9 depth from Dalmutladdo core. targeted and extracted Pinus pollen (Table \@ref(tab:pollencounts), Table \@ref(tab:fresh))
-
-possibilities for Alnus and Betula, even though scattering visible in spectra 
-
-```{r pollencounts, echo=FALSE}
-dalmutladdo = data.frame(ID = c("DAL_08","DAL_20","DAL_40","DAL_60","DAL_90", "DAL_110","DAL_130","DAL_140","DAL_150"),
-                         pinus_pollen = c(23,49,37,47,36,32,39,17,7),
-                         alnus_pollen = c(0,7,0,0,0,0,0,0,0),
-                         betula_pollen = c(0,15,0,0,0,0,0,0,0))
-knitr::kable(dalmutladdo, format="latex", booktabs=TRUE,
-             caption = "Pollen counts")
-```
-
-```{r fresh, echo=FALSE}
-fresh_pollen = data.frame(ID = c("BGO_PS7", "BGO_PS8", "INN_PS13", "INN_PS19A","NMBU_Pin_syl_14E1", "NMBU_Pin_syl_14H1", "NMBU_Aln_glu_14E1", "NMBU_Aln_glu_14J1", "NMBU_Aln_inc_14B1", "NMBU_Aln_inc_14G1", "NMBU_Bet_pub_14A1", "NMBU_Bet_pub_14B1", "NMBU_Cor_ave_14B1", "NMBU_Cor_ave_14C1"),
-                          extracted = c(109,55,51,24,0,0,0,0,0,0,0,0,0,0))
-knitr::kable(fresh_pollen, format="latex", booktabs=TRUE,
-             caption = "Fresh pollen counts")
-```
-
-9 fossil samples from 1 core
-
-2 trees of Pinus at each location
-
-Research questions we could answer with this set:
-
-- Differences between fresh and fossil/near fossil grains of Pinus
-- chemical changes in Pinus pollen with age/depth
-(- chemical differences between Pinus/Alnus/Betula)
-
-extensions to this set:
-- add more samples from Dalmuttladdo highest and lowest depth (maybe labwork)
-- add cores (e.g. MFM, Tiefer See or Italian cores), Festi core was quite organic rich
-- add more grains from already measured samples (to hit min 25 or 50)
-
 
 # References
