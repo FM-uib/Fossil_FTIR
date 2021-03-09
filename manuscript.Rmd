@@ -35,6 +35,7 @@ Keywords: FTIR, fossil pollen, Holocene, density separation, acetolysis, pollen 
 \newpage
 <!-- READ DATA -->
 ```{r}
+source(here("R","ages.R"))
 if (file.exists(here("data","output","DAL_spectra.rds"))) {
   DAL = readRDS(here("data","output","DAL_spectra.rds"))
 } else {
@@ -45,6 +46,8 @@ if (file.exists(here("data","output","DAL_spectra.rds"))) {
 
 if (file.exists(here("data","output","MFM_spectra.rds"))) {
   MFM = readRDS(here("data","output","MFM_spectra.rds"))
+  MFM[MFM$depth=="A4UR_72-74", 'depth'] = "A5UR_72-74" #fixing typo in sample name
+  MFM$age = fn_age(MFM$depth)
 } else {
   source(here("R","read_data.R"))
   read_data("MFM")
@@ -53,6 +56,7 @@ if (file.exists(here("data","output","MFM_spectra.rds"))) {
 
 if (file.exists(here("data","output","TSK_spectra.rds"))) {
   TSK = readRDS(here("data","output","TSK_spectra.rds"))
+  TSK$age = fn_age(TSK$depth)
 } else {
   source(here("R","read_data.R"))
   read_data("TSK")
