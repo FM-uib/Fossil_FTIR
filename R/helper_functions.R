@@ -20,7 +20,7 @@ plot_spectra = function(data, spec_id, sel, id_vars = c("ids","type","species","
                  id.vars=id_vars)
   gdata$variable = as.numeric(as.character(gdata$variable))
   ggplot(gdata, aes(variable, value, color = depth, group = ids)) +
-    geom_line() + scale_x_reverse() +
-    theme_bw()
+    geom_line() + scale_x_reverse() + xlim(1800,900) +
+    theme_bw() + theme(legend.position = "bottom")
   #return(gdata)
 }

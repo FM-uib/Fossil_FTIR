@@ -173,7 +173,7 @@ Tiefer See and Meerfelder Maar are varved cores and were the samples used in thi
 The sub samples from Tiefer see are from the last 80 yrs of the core (1933 - 2011), while the samples from Meerfelder Maar cover the timeperiod from the late Allerød to the Younger Dryas/Holocene transition (~12900 - ~11000 BP).  
 The samples were extracted using density separation using dissolved Sodium Polytungstate (SPT) at 1.43 (g/ml)? as separation medium. <!--FM: check Unit-->
 During density separation a known volume of SPT (density 1.43) solution is added to the sample and homogenized/vortexed, followed by centrifugation.
-After centrifugation, all particulates/material heavier than 1.43 has deposited at the bottom of the vial and the lighter fraction can be decanted and collected.
+After centrifugation, particulates/material heavier than 1.43 has deposited at the bottom of the vial and the lighter fraction can be decanted and collected.
 In our case the lighter fraction contained most of the pollen.
 The density of pollen is reported at <1.4 UNIT [@nakagawaDensemediaSeparationMore1998; @regnellPreparativeCentrifugationNew1996].
 
