@@ -11,4 +11,5 @@ data/output/*
 !/data/output/TSK_spectra.rds
 figures
 *.pdf
-renv/
+renv/*
+!/renv/activate.R
