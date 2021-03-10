@@ -70,6 +70,10 @@ if (file.exists(here("data","output","TSK_spectra.rds"))) {
   read_data("TSK")
   TSK = readRDS(here("data","output","TSK_spectra.rds"))
 }
+
+DAL$Label = "DAL"
+TSK$Label = "TSK"
+MFM$Label = "MFM"
 ```
 
 <!-- PRE-PROCESS DATA -->
