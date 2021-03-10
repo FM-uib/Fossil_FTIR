@@ -14,7 +14,7 @@ plot(as.numeric(colnames(emsc_spectra$X)),emsc_spectra$X[1,], type = "l" )
 plot(as.numeric(colnames(emsc_spectra$X)),emsc_spectra$corrected[1,], type = "l" )
 plot(as.numeric(colnames(emsc_spectra$X)),colMeans(foo_blank$raw[,sel]), type = "l" )
 
-plot_spectra(MFM, "raw", expression(species=="Blank" & depth == unique(MFM$depth)[1]))
+plot_spectra(MFM, "raw", expression(species=="Blank" & depth == unique(MFM$depth)[1] & treatment == "SPT"))
 
 #' check difference in blanks between SPT and acet
 #' 
