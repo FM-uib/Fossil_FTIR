@@ -1,6 +1,3 @@
-DAL$Label = "DAL"
-TSK$Label = "TSK"
-MFM$Label = "MFM"
 pca_wrap = function(pca_data,sel){
   pca_data[pca_data$treatment == "","treatment"] = "SPT"
   if (is.expression(sel)) {
