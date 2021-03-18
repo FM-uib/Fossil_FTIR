@@ -88,20 +88,6 @@ if (!hasName(DAL, "sg2")) {
 DAL$Label = "DAL"
 TSK$Label = "TSK"
 MFM$Label = "MFM"
-
-pca_data = rbind(subset(DAL, species == "Pinus"), 
-        subset(TSK, species == "Pinus"), 
-        subset(MFM, species == "Pinus"))
-pca_data[pca_data$treatment == "","treatment"] = "SPT"
-pca_res = princomp(pca_data$sg2, scores = T)
-scores =  as.data.frame(pca_res$scores[,1:10]) %>%
-  mutate(ids = rownames(.), 
-         core = pca_data$Label, 
-         treatment = pca_data$treatment
-         ) #%>%
-  #melt(.,id.vars = "ids")
-ggplot(scores, aes(Comp.1, Comp.2, color = core)) + geom_point()
-# pca_data[scores[scores[,2] < -.2,"ids"]==pca_data$ids,1:10]
 ```
 
 
@@ -110,6 +96,13 @@ count_grains = function(core){
   counts = core %>%
     subset(type == "pollen" & species == "Pinus") %>% 
     group_by(type, depth, treatment) %>%
+    summarise(count=n())
+  return(counts)
+}
+count_grains = function(core){
+  counts = core %>%
+    subset(type == "pollen") %>% 
+    group_by(treatment, depth, species) %>%
     summarise(count=n())
   return(counts)
 }

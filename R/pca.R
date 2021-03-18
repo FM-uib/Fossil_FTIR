@@ -8,7 +8,8 @@ pca_wrap = function(pca_data,sel){
     mutate(ids = rownames(.),
            core = pca_data$Label,
            treatment = pca_data$treatment,
-           depth = pca_data$depth
+           depth = pca_data$depth,
+           age = pca_data$age
            )
   return(scores)
 }
@@ -76,3 +77,59 @@ plsr_data = subset(pca_data_outliers_removed_2, Label == "DAL")
 plsr_data$depth = as.numeric(plsr_data$depth)
 pls_res = plsr(depth ~ sg2, data = plsr_data, ncomp = 4, validation = "LOO")
 plot(pls_res)
+
+plsr_data = subset(pca_data_outliers_removed_2, Label == "TSK" & treatment == "SPT")
+#plsr_data$depth = as.numeric(plsr_data$depth)
+pls_res = plsr(age ~ sg2, data = plsr_data, ncomp = 4, validation = "LOO")
+plot(pls_res)
+
+plsr_data = subset(pca_data_outliers_removed_2, treatment == "SPT")
+M = model.matrix(~ Label -1, plsr_data)
+pls_res = plsr(M ~ sg2, data = plsr_data, ncomp = 4, validation = "LOO")
+biplot(pls_res, which = c("y"))
+
+#SPLS
+library(spls)
+
+sparse.cv = cv.spls(plsr_data$sg2, M, K = c(1:10), eta = seq(.8,.99,.01))
+sparse.spsl = spls(plsr_data$sg2, M, sparse.cv$K.opt, sparse.cv$eta.opt, scale.x = F)
+
+#caret:::splsda
+
+splsFit <- caret:::splsda(plsr_data$sg2, M, 
+                          K = 5, eta = .9)
+preds = caret:::predict.splsda(splsFit, plsr_data$sg2)
+levels(preds) = c("DAL","MFM","TSK")
+confusionMatrix(preds,
+                as.factor(plsr_data$Label))
+
+## Not run: 
+data(mdrr)
+set.seed(1)
+inTrain <- sample(seq(along = mdrrClass), 450)
+
+nzv <- nearZeroVar(mdrrDescr)
+filteredDescr <- mdrrDescr[, -nzv]
+
+training <- filteredDescr[inTrain,]
+test <- filteredDescr[-inTrain,]
+trainMDRR <- mdrrClass[inTrain]
+testMDRR <- mdrrClass[-inTrain]
+
+preProcValues <- preProcess(training)
+
+trainDescr <- predict(preProcValues, training)
+testDescr <- predict(preProcValues, test)
+
+## Using spls:
+## (As of 11/09, the spls package now has a similar function with
+## the same mane. To avoid conflicts, use caret:::splsda to 
+## get this version)
+
+splsFit <- caret:::splsda(as.matrix(trainDescr), trainMDRR, 
+                          K = 5, eta = .9)
+
+confusionMatrix(caret:::predict.splsda(splsFit, testDescr),
+                testMDRR)
+
+## End(Not run)
