@@ -92,7 +92,7 @@ biplot(pls_res, which = c("y"))
 library(spls)
 
 sparse.cv = cv.spls(plsr_data$sg2, M, K = c(1:10), eta = seq(.8,.99,.01))
-sparse.spsl = spls(plsr_data$sg2, M, sparse.cv$K.opt, sparse.cv$eta.opt, scale.x = F)
+sparse.spsl = spls:::spls(plsr_data$sg2, M, sparse.cv$K.opt, sparse.cv$eta.opt, scale.x = F)
 
 #caret:::splsda
 

@@ -153,12 +153,14 @@ The pollen was collected from three different cores in three locations (Germany 
 One replicate of the pollen samples in each core were acetolysed to analyse any changes caused by the strong acid treatment and compared to the untreated replicate.
 Each core was sub sampled at different depths to allows us to investigate chemical changes in the pollen with age.
 
-
 RQs
-i. Difference between fresh and fossil grains.
-i.i effect of orientation on chemistry
-i.ii effect of depth/age on chemistry
-ii Differences between cores
+i. Differences between cores
+ii.i Difference between acetolysed and fossil
+ii.ii Difference between fresh and fossil grains.
+iii effect of depth/age on chemistry
+
+iv effect of orientation on chemistry
+
     
 acetolysis alters sporopollenin [@dominguezIsolationIntactPollen1998; @schulzeosthoffPhenolsIntegratedCompounds1987] affecting solubility
 
