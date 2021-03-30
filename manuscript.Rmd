@@ -161,7 +161,7 @@ We extracted pollen from three sediment cores using density separation to obtain
 The pollen was collected from three different cores in three locations (Germany and Norway), which allows us to examine potential differences in diagenesis on pollen chemistry at different locations.
 One replicate of the pollen samples in each core were acetolysed to analyse any changes caused by the strong acid treatment and compared to the untreated replicate.
 Each core was sub sampled at different depths to allows us to investigate chemical changes in the pollen with age.
-[@dellannaPollenDiscriminationClassification2009; @nogues-bravoCrackingCodeBiodiversity2018]
+[@nogues-bravoCrackingCodeBiodiversity2018]
 RQs
 i. Differences between cores
 ii.i Difference between acetolysed and fossil
