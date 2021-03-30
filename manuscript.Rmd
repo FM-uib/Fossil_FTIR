@@ -138,7 +138,7 @@ kable(count_grains(MFM), booktabs = T, format = "latex",
 <!--Main Goal: Explore the chemical differences between fresh and untreated fossil pollen.-->
 
 The study of plant micro and macrofossil (spores, seed and pollen) is an integral part of Palaeoecology and Palaeobotany.
-Pollen records are an important tool to reconstruct past floristic, vegetational and environmental changes [@magriNewScenarioQuaternary2006; @tzedakisVegetationChangeGlacialInterglacial1994; @huntleyMigrationSpeciesResponse1989; @nogues-bravoCrackingCodeBiodiversity2018; @tinnerEcologyAbiesAlba2013].
+Pollen records are an important tool to reconstruct past floristic, vegetational and environmental changes [@magriNewScenarioQuaternary2006; @tzedakisVegetationChangeGlacialInterglacial1994; @huntleyMigrationSpeciesResponse1989; @noguesbravoCrackingCodeBiodiversity2018; @tinnerEcologyAbiesAlba2013].
 
 The high preservation of pollen grains in the geological record is because of the resistant biopolymer sporopollenin, which is the main building block of the outer pollen grain wall (exine).
 The structure of sporopollenin has been described as similar to lignins, e.g. importance of aromatic compounds, cross-linked aliphatic components [@liMolecularStructurePlant2019], but the exact structure remains unknown.
@@ -161,7 +161,7 @@ We extracted pollen from three sediment cores using density separation to obtain
 The pollen was collected from three different cores in three locations (Germany and Norway), which allows us to examine potential differences in diagenesis on pollen chemistry at different locations.
 One replicate of the pollen samples in each core were acetolysed to analyse any changes caused by the strong acid treatment and compared to the untreated replicate.
 Each core was sub sampled at different depths to allows us to investigate chemical changes in the pollen with age.
-[@nogues-bravoCrackingCodeBiodiversity2018]
+[@noguesbravoCrackingCodeBiodiversity2018]
 RQs
 i. Differences between cores
 ii.i Difference between acetolysed and fossil
