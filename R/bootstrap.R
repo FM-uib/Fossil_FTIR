@@ -9,7 +9,7 @@ bootstrap = function(data, i) {
   
   #start loop
   for (j in 1:i) {
-    paste0("fitting model "j"/"i)
+    paste0("fitting model ",j,"/",i)
     #shuffle train/test split
     data$train = shuffle_train(nrow(data), .7)
     #fit model

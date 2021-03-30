@@ -71,6 +71,15 @@ if (file.exists(here("data","output","TSK_spectra.rds"))) {
   TSK = readRDS(here("data","output","TSK_spectra.rds"))
 }
 
+if (file.exists(here("data","output","fresh_spectra.rds"))) {
+  FRE = readRDS(here("data","output","fresh_spectra.rds"))
+} else {
+  source(here("R","read_data.R"))
+  read_data_fresh()
+  FRE = readRDS(here("data","output","fresh_spectra.rds"))
+}
+
+FRE$Label = "FRE"
 DAL$Label = "DAL"
 TSK$Label = "TSK"
 MFM$Label = "MFM"
@@ -78,7 +87,7 @@ MFM$Label = "MFM"
 
 <!-- PRE-PROCESS DATA -->
 ```{r}
-if (!hasName(DAL, "sg2")) {
+if (!hasName(DAL, "emsc")) {
   source(here("R","pre_process.R"))
 }
 ```
