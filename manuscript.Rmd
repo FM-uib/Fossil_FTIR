@@ -56,6 +56,7 @@ if (file.exists(here("data","output","MFM_spectra.rds"))) {
   MFM = readRDS(here("data","output","MFM_spectra.rds"))
   MFM[MFM$depth=="A4UR_72-74", 'depth'] = "A5UR_72-74" #fixing typo in sample name
   MFM$age = fn_age(MFM$depth)
+  MFM[MFM$treatment == "","treatment"] = "SPT"
 } else {
   source(here("R","read_data.R"))
   read_data("MFM")
@@ -161,7 +162,7 @@ We extracted pollen from three sediment cores using density separation to obtain
 The pollen was collected from three different cores in three locations (Germany and Norway), which allows us to examine potential differences in diagenesis on pollen chemistry at different locations.
 One replicate of the pollen samples in each core were acetolysed to analyse any changes caused by the strong acid treatment and compared to the untreated replicate.
 Each core was sub sampled at different depths to allows us to investigate chemical changes in the pollen with age.
-[@noguesbravoCrackingCodeBiodiversity2018]
+
 RQs
 i. Differences between cores
 ii.i Difference between acetolysed and fossil
