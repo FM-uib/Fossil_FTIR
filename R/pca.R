@@ -4,15 +4,27 @@ pca_wrap = function(pca_data,sel){
     pca_data = subset(pca_data, eval(sel))
   }
   pca_res = prcomp(pca_data$sg2)
-  scores =  as.data.frame(pca_res$x[,1:10]) %>%
+  l = list
+  l[["scores"]] =  as.data.frame(pca_res$x[,1:10]) %>%
     mutate(ids = rownames(.),
            core = pca_data$Label,
            treatment = pca_data$treatment,
            depth = pca_data$depth,
            age = pca_data$age
            )
+  l[["loadings"]] = as.data.frame(pca_res$rotation)
   return(scores)
 }
+
+acet_sel = function(data){
+  data_ = filter(data, (treatment == "acet" & species == "Pinus"))
+  data__ = data %>%
+    filter(species == "Pinus") %>%
+    filter(depth %in% unique(data_$depth))
+  return(rbind(data_, data__))
+}
+
+
 pca_data = rbind(subset(DAL, species == "Pinus"), 
                  subset(TSK, species == "Pinus"), 
                  subset(MFM, species == "Pinus"))

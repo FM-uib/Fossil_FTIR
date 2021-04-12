@@ -102,9 +102,7 @@ if (!hasName(DAL, "emsc")) {
 
 <!-- PCA -->
 ```{r}
-DAL$Label = "DAL"
-TSK$Label = "TSK"
-MFM$Label = "MFM"
+
 ```
 
 
