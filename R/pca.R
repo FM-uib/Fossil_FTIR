@@ -4,16 +4,16 @@ pca_wrap = function(pca_data,sel){
     pca_data = subset(pca_data, eval(sel))
   }
   pca_res = prcomp(pca_data$sg2)
-  l = list
-  l[["scores"]] =  as.data.frame(pca_res$x[,1:10]) %>%
+  l = list()
+  l[["scores"]] =  as.data.frame(pca_res$x[,1:5]) %>%
     mutate(ids = rownames(.),
            core = pca_data$Label,
            treatment = pca_data$treatment,
            depth = pca_data$depth,
            age = pca_data$age
            )
-  l[["loadings"]] = as.data.frame(pca_res$rotation)
-  return(scores)
+  l[["loadings"]] = as.data.frame(pca_res$rotation[,1:5])
+  return(l)
 }
 
 acet_sel = function(data){
@@ -23,6 +23,27 @@ acet_sel = function(data){
     filter(depth %in% unique(data_$depth))
   return(rbind(data_, data__))
 }
+
+# Cores selected for acet and SPT depths and fresh
+pca_data = rbind(FRE,
+                 acet_sel(DAL),
+                 acet_sel(TSK),
+                 acet_sel(MFM))
+
+l = pca_wrap(pca_data, "")
+ggplot(l[["scores"]], aes(PC1, PC2, color = core)) + geom_point(aes(shape = treatment), size = 4)
+
+# Cores SPT only 
+pca_data = rbind(FRE,
+                 filter(DAL, treatment == "SPT" & species == "Pinus"),
+                 filter(TSK, treatment == "SPT" & species == "Pinus"),
+                 filter(MFM, treatment == "SPT" & species == "Pinus"))
+
+# Cores acet only 
+pca_data = rbind(FRE,
+                 filter(DAL, treatment == "acet" & species == "Pinus"),
+                 filter(TSK, treatment == "acet" & species == "Pinus"),
+                 filter(MFM, treatment == "acet" & species == "Pinus"))
 
 
 pca_data = rbind(subset(DAL, species == "Pinus"), 

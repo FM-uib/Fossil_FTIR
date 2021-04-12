@@ -23,6 +23,7 @@ read_data_fresh = function() {
   spectra_meta$depth = 0
   spectra_meta$age = 2019
   spectra_meta$species = "Pinus"
+  spectra_meta$orientation = repl(spectra_meta,c("_side"))
   
   rownames(spectra_raw) = ids
   

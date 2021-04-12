@@ -74,11 +74,11 @@ if (file.exists(here("data","output","TSK_spectra.rds"))) {
 }
 
 if (file.exists(here("data","output","fresh_spectra.rds"))) {
-  FRE = readRDS(here("data","output","fresh_spectra.rds"))
+  FRE = readRDS(here("data","output","FRE_spectra.rds"))
 } else {
   source(here("R","read_data.R"))
   read_data_fresh()
-  FRE = readRDS(here("data","output","fresh_spectra.rds"))
+  FRE = readRDS(here("data","output","FRE_spectra.rds"))
 }
 
 FRE$Label = "FRE"
@@ -86,7 +86,7 @@ DAL$Label = "DAL"
 TSK$Label = "TSK"
 MFM$Label = "MFM"
 
-outliers = c("DAL_rx1GZ", "DAL_2cxp7", "DAL_VzFi0", "DAL_ANdP0", "MFM_av67v", "MFM_OftM2", "MFM_xogJr", "MFM_hoG4y", "MFM_5UNIJ", "TSK_vvgOZ", "DAL_xgYjM", "TSK_m4hN6", "TSK_e04Go")
+outliers = c("DAL_rx1GZ", "DAL_2cxp7", "DAL_VzFi0", "DAL_ANdP0", "MFM_av67v", "MFM_OftM2", "MFM_xogJr", "MFM_hoG4y", "MFM_5UNIJ", "TSK_vvgOZ", "DAL_xgYjM", "TSK_m4hN6", "TSK_e04Go") #THese MFM ids dont exist anymore
 
 DAL = DAL[!DAL$ids %in% outliers,]
 TSK = TSK[!TSK$ids %in% outliers,]
