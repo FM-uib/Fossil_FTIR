@@ -46,6 +46,7 @@ Keywords: FTIR, fossil pollen, Holocene, density separation, acetolysis, pollen 
 source(here("R","ages.R"))
 if (file.exists(here("data","output","DAL_spectra.rds"))) {
   DAL = readRDS(here("data","output","DAL_spectra.rds"))
+  DAL$age = 0
 } else {
   source(here("R","read_data.R"))
   read_data("DAL")
@@ -84,6 +85,12 @@ FRE$Label = "FRE"
 DAL$Label = "DAL"
 TSK$Label = "TSK"
 MFM$Label = "MFM"
+
+outliers = c("DAL_rx1GZ", "DAL_2cxp7", "DAL_VzFi0", "DAL_ANdP0", "MFM_av67v", "MFM_OftM2", "MFM_xogJr", "MFM_hoG4y", "MFM_5UNIJ", "TSK_vvgOZ", "DAL_xgYjM", "TSK_m4hN6", "TSK_e04Go")
+
+DAL = DAL[!DAL$ids %in% outliers,]
+TSK = TSK[!TSK$ids %in% outliers,]
+MFM = MFM[!MFM$ids %in% outliers,]
 ```
 
 <!-- PRE-PROCESS DATA -->
@@ -202,5 +209,64 @@ Pollen extracted from sediment samples
 [@kampsAgentSeparationDissolved1985] SPT patent
 [@nakagawaDensemediaSeparationMore1998] 
 [@regnellPreparativeCentrifugationNew1996] density of pollen 1.4
+
+# Results
+
+```{r echo=FALSE, fig.cap="FRE", message=FALSE, warning=FALSE, out.width="100%"}
+mean_plots = readRDS(here("data","output","mean_plots.rds"))
+
+mean_plots[[7]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL SPT"}
+mean_plots[[1]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL acet"}
+mean_plots[[2]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK SPT"}
+mean_plots[[3]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK acet"}
+mean_plots[[4]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM SPT"}
+mean_plots[[5]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM acet"}
+mean_plots[[6]]
+```
+
+\newpage
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL SPT"}
+blank_mean_plots = readRDS(here("data","output","blank_mean_plots.rds"))
+blank_mean_plots[[1]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL acet"}
+blank_mean_plots[[2]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK SPT"}
+blank_mean_plots[[3]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK acet"}
+blank_mean_plots[[4]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM SPT"}
+blank_mean_plots[[5]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM acet"}
+blank_mean_plots[[6]]
+```
 
 # References
