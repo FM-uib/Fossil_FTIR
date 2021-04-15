@@ -143,14 +143,14 @@ kable(count_grains(MFM), booktabs = T, format = "latex",
 # Introduction
 <!--Main Goal: Explore the chemical differences between fresh and untreated fossil pollen.-->
 
-The study of plant micro and macrofossil (spores, seed and pollen) is an integral part of Palaeoecology and Palaeobotany.
-Pollen records are an important tool to reconstruct past floristic, vegetational and environmental changes [@magriNewScenarioQuaternary2006; @tzedakisVegetationChangeGlacialInterglacial1994; @huntleyMigrationSpeciesResponse1989; @noguesbravoCrackingCodeBiodiversity2018; @tinnerEcologyAbiesAlba2013].
+The study of plant micro and macrofossil (spores, seed and pollen) is an integral part of palaeoecology and palaeobotany.
+Pollen records are an important tool to reconstruct past floristic, vegetational and environmental changes [@magriNewScenarioQuaternary2006; @tzedakisVegetationChangeGlacialInterglacial1994; @huntleyMigrationSpeciesResponse1989; @noguesbravoCrackingCodeBiodiversity2018; @tinnerEcologyAbiesAlba2013] and are important tools to address ecological processes with timescales that operate on centennial/decadal timescales.
 
 The high preservation of pollen grains in the geological record is because of the resistant biopolymer sporopollenin, which is the main building block of the outer pollen grain wall (exine).
 The structure of sporopollenin has been described as similar to lignins, e.g. importance of aromatic compounds, cross-linked aliphatic components [@liMolecularStructurePlant2019], but the exact structure remains unknown.
 
-In recent years, the study of pollen grain chemistry has shown promising results for biological and palaeoecological research.
-Fourier Transform Infrares (FTIR) spectroscopy has become a popular method for analysing pollen chemistry.
+In recent years, the study of pollen-grain chemistry has shown promising results for biological and palaeoecological research.
+Fourier Transform Infrared (FTIR) spectroscopy has become a popular method  for characterising the chemical variation within pollen and spores.
 A number of FTIR studies have identified pollen chemical differences on genus level, which may extent to species level differences [@zimmermannChemicalCharacterizationIdentification2018; @jardineChemotaxonomyDomesticatedGrasses2019; @muthreichChemicalVariationsQuercus2020; @zimmermannInfraredSpectroscopyPollen2014; @depciuchIdentificationBirchPollen2018; @diehnDiscriminationGrassPollen2020]. 
 This is a promising finding for the application of pollen identification with chemical methods in palaeoecological research, because it has the potential to increase taxomonic resolution @dellannaPollenDiscriminationClassification2009; @zimmermannAnalysisAllergenicPollen2016.
 Further, chemical methods are suitable for automation and offer a more objective method than traditional morphological methods [ @mondolApplicationHighThroughputScreening2019; @zimmermannAnalysisAllergenicPollen2016; @guedesPollenRamanSpectra2014].
