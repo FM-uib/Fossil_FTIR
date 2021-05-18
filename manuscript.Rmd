@@ -42,7 +42,7 @@ Keywords: FTIR, fossil pollen, Holocene, density separation, acetolysis, pollen 
 
 \newpage
 <!-- READ DATA -->
-```{r}
+```{r message=FALSE, warning=FALSE, include=FALSE}
 source(here("R","ages.R"))
 if (file.exists(here("data","output","DAL_spectra.rds"))) {
   DAL = readRDS(here("data","output","DAL_spectra.rds"))
@@ -208,8 +208,17 @@ Pollen extracted from sediment samples
 [@nakagawaDensemediaSeparationMore1998] 
 [@regnellPreparativeCentrifugationNew1996] density of pollen 1.4
 
+\newpage
+
 # Results
 
+```{r}
+readRDS(here("data","output","pca_plots.rds"))
+readRDS(here("data","output","lda_tables.rds"))
+```
+
+
+## Spectra mean plots
 ```{r echo=FALSE, fig.cap="FRE", message=FALSE, warning=FALSE, out.width="100%"}
 mean_plots = readRDS(here("data","output","mean_plots.rds"))
 

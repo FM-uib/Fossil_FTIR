@@ -137,6 +137,13 @@ pca_lda_depth = data.frame(core = c("DAL","DAL","DAL","TSK","TSK","TSK","MFM","M
                            )
 )
 
+figures = list("pca acet select" = pca_plot)
+tables = list("treatment" = pca_lda_treatment,
+              "orientation" = pca_lda_orientation,
+              "depth" = pca_lda_depth)
+
+saveRDS(figures, here("data","output","pca_plots.rds"))
+saveRDS(tables, here("data","output","lda_tables.rds"))
 #####################################END###############################################
 
 # more PCA code
@@ -149,10 +156,10 @@ pca_data = rbind(
                  )
 
 l = pca_wrap(pca_data, "")
-ggplot(l[["scores"]], aes(PC1, PC2, color = core)) + geom_point( size = 4)
+#ggplot(l[["scores"]], aes(PC1, PC2, color = core)) + geom_point( size = 4)
 
-ggplot(l[["loadings"]], aes(as.numeric(rownames(l[["loadings"]])),PC1)) + geom_line()
-ggplot(l[["loadings"]], aes(as.numeric(rownames(l[["loadings"]])),PC2)) + geom_line()
+#ggplot(l[["loadings"]], aes(as.numeric(rownames(l[["loadings"]])),PC1)) + geom_line()
+#ggplot(l[["loadings"]], aes(as.numeric(rownames(l[["loadings"]])),PC2)) + geom_line()
 
 # Cores acet only 
 pca_data = rbind(
@@ -162,10 +169,10 @@ pca_data = rbind(
                  )
 
 l = pca_wrap(pca_data, "")
-ggplot(l[["scores"]], aes(PC1, PC2, color = core)) + geom_point(aes(shape = orientation), size = 4)
+#ggplot(l[["scores"]], aes(PC1, PC2, color = core)) + geom_point(aes(shape = orientation), size = 4)
 
-ggplot(l[["loadings"]], aes(as.numeric(rownames(l[["loadings"]])),PC1)) + geom_line()
-ggplot(l[["loadings"]], aes(as.numeric(rownames(l[["loadings"]])),PC2)) + geom_line()
+#ggplot(l[["loadings"]], aes(as.numeric(rownames(l[["loadings"]])),PC1)) + geom_line()
+#ggplot(l[["loadings"]], aes(as.numeric(rownames(l[["loadings"]])),PC2)) + geom_line()
 
 #DAL
 pca_data = rbind(
@@ -173,5 +180,4 @@ pca_data = rbind(
 )
 
 l = pca_wrap(pca_data, "")
-ggplot(l[["scores"]], aes(PC1, PC2, color = depth)) + geom_point(aes(shape = treatment
-                                                                     ), size = 4)
+#ggplot(l[["scores"]], aes(PC1, PC2, color = depth)) + geom_point(aes(shape = treatment), size = 4)
