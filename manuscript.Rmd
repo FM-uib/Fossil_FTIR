@@ -212,11 +212,33 @@ Pollen extracted from sediment samples
 
 # Results
 
-```{r}
-readRDS(here("data","output","pca_plots.rds"))
-readRDS(here("data","output","lda_tables.rds"))
+i. Differences between cores
+ii.i Difference between acetolysed and fossil
+ii.ii Difference between fresh and fossil grains.
+iii effect of depth/age on chemistry
+
+iv effect of orientation on chemistry
+
+
+There are differences between fresh and fossil grains.
+Most notibly the lipid peak at 1745 is not visible in the fossil grains, neither acetolysed or raw fossil pollen.
+Changes in the carbohydrate region from 1000 to 1250.
+in SPT pollen there is a dominant peak there.
+The most prominent and characteristic sporopollenin peaks are clearly visible in the fossil pollen, 1600, 1510 and 1170, while the rest of the spectra have changed substantially.
+
+
+1170 is more pronounced in spt than acet
+
+
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+pca_acet_select = readRDS(here("data","output","pca_plots.rds"))
+lda_tables = readRDS(here("data","output","lda_tables.rds"))
 ```
 
+```{r pca_acet_sel echo=FALSE, message=FALSE, warning=FALSE, fig.cap = "PCA all cores, only samples present in both acet and SPT"}
+pca_acet_select[1]
+```
 
 ## Spectra mean plots
 ```{r echo=FALSE, fig.cap="FRE", message=FALSE, warning=FALSE, out.width="100%"}
@@ -275,5 +297,9 @@ blank_mean_plots[[5]]
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM acet"}
 blank_mean_plots[[6]]
 ```
+
+
+# Discussion
+
 
 # References
