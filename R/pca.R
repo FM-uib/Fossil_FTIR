@@ -49,7 +49,7 @@ pca_data = rbind(
                  )
 
 l = pca_wrap(pca_data, "")
-ggplot(l[["scores"]], aes(PC1, PC2, color = depth)) + geom_point(aes(shape = treatment), size = 4)
+ggplot(l[["scores"]], aes(PC1, PC2, color = core)) + geom_point( size = 4)
 
 ggplot(l[["loadings"]], aes(as.numeric(rownames(l[["loadings"]])),PC1)) + geom_line()
 ggplot(l[["loadings"]], aes(as.numeric(rownames(l[["loadings"]])),PC2)) + geom_line()
@@ -66,6 +66,15 @@ ggplot(l[["scores"]], aes(PC1, PC2, color = core)) + geom_point(aes(shape = orie
 
 ggplot(l[["loadings"]], aes(as.numeric(rownames(l[["loadings"]])),PC1)) + geom_line()
 ggplot(l[["loadings"]], aes(as.numeric(rownames(l[["loadings"]])),PC2)) + geom_line()
+
+#DAL
+pca_data = rbind(
+  filter(DAL, species == "Pinus")
+)
+
+l = pca_wrap(pca_data, "")
+ggplot(l[["scores"]], aes(PC1, PC2, color = depth)) + geom_point(aes(shape = treatment
+                                                                     ), size = 4)
 
 
 
@@ -97,7 +106,18 @@ bootstrap_pca = function(data, target = "orientation", n = 50){
   return(mean(res))
 }
 
-pca_lda = data.frame(core = c("FRE","DAL","DAL","TSK","TSK","MFM","MFM"),
+pca_lda_treatment = data.frame(core = c("DAL","TSK","MFM"),
+                                 acc = c(bootstrap_pca(filter(DAL, species == "Pinus"), target = "treatment"),
+                                         bootstrap_pca(filter(TSK, species == "Pinus"), target = "treatment"),
+                                         bootstrap_pca(filter(MFM, species == "Pinus"), target = "treatment")
+                                           )*100,
+                                 n = c(nrow(filter(DAL, species == "Pinus")),
+                                       nrow(filter(TSK, species == "Pinus")),
+                                       nrow(filter(MFM, species == "Pinus"))
+                                       )
+)
+
+pca_lda_orientation = data.frame(core = c("FRE","DAL","DAL","TSK","TSK","MFM","MFM"),
                      treatment = c("fresh","SPT","acet","SPT","acet","SPT","acet"),
                      acc = c(bootstrap_pca(FRE),
                              bootstrap_pca(filter(DAL,treatment == "SPT", species == "Pinus")),
@@ -117,23 +137,40 @@ pca_lda = data.frame(core = c("FRE","DAL","DAL","TSK","TSK","MFM","MFM"),
                            )
                      )
 
-pca_lda_depth = data.frame(core = c("FRE","DAL","DAL","TSK","TSK","MFM","MFM"),
-                     treatment = c("fresh","SPT","acet","SPT","acet","SPT","acet"),
-                     acc = c(bootstrap_pca(FRE, target = "type"),
-                             bootstrap_pca(filter(acet_sel(DAL),treatment == "SPT", species == "Pinus"), target = "depth"),
+pca_lda_depth = data.frame(core = c("DAL","DAL","DAL","TSK","TSK","TSK","MFM","MFM","MFM"),
+                     treatment = c("SPT all","SPT sel","acet","SPT all","SPT sel","acet","SPT all","SPT sel","acet"),
+                     acc = c(
+                       bootstrap_pca(filter(DAL,treatment == "SPT", species == "Pinus"), target = "depth"),
+                       bootstrap_pca(filter(acet_sel(DAL),treatment == "SPT", species == "Pinus"), target = "depth"),
                              bootstrap_pca(filter(acet_sel(DAL),treatment == "acet", species == "Pinus"), target = "depth"),
+                       bootstrap_pca(filter(TSK,treatment == "SPT", species == "Pinus"), target = "depth"),
                              bootstrap_pca(filter(acet_sel(TSK),treatment == "SPT", species == "Pinus"), target = "depth"),
                              bootstrap_pca(filter(acet_sel(TSK),treatment == "acet", species == "Pinus"), target = "depth"),
+                       bootstrap_pca(filter(MFM,treatment == "SPT", species == "Pinus"), target = "depth"),
                              bootstrap_pca(filter(acet_sel(MFM),treatment == "SPT", species == "Pinus"), target = "depth"),
                              bootstrap_pca(filter(acet_sel(MFM),treatment == "acet", species == "Pinus"), target = "depth")
                      )*100,
-                     n = c(nrow(FRE),
-                           nrow(filter(acet_sel(DAL),treatment == "SPT", species == "Pinus")),
-                           nrow(filter(acet_sel(DAL),treatment == "acet", species == "Pinus")),
-                           nrow(filter(acet_sel(TSK),treatment == "SPT", species == "Pinus")),
-                           nrow(filter(acet_sel(TSK),treatment == "acet", species == "Pinus")),
-                           nrow(filter(acet_sel(MFM),treatment == "SPT", species == "Pinus")),
-                           nrow(filter(acet_sel(MFM),treatment == "acet", species == "Pinus"))
+                     n = c(
+                       nrow(filter(DAL,treatment == "SPT", species == "Pinus")),
+                       nrow(filter(acet_sel(DAL),treatment == "SPT", species == "Pinus")),
+                       nrow(filter(acet_sel(DAL),treatment == "acet", species == "Pinus")),
+                       nrow(filter(TSK,treatment == "SPT", species == "Pinus")),
+                       nrow(filter(acet_sel(TSK),treatment == "SPT", species == "Pinus")),
+                       nrow(filter(acet_sel(TSK),treatment == "acet", species == "Pinus")),
+                       nrow(filter(MFM,treatment == "SPT", species == "Pinus")),
+                       nrow(filter(acet_sel(MFM),treatment == "SPT", species == "Pinus")),
+                       nrow(filter(acet_sel(MFM),treatment == "acet", species == "Pinus"))
+                     ),
+                     n_class = c(
+                       length(unique(filter(DAL,treatment == "SPT", species == "Pinus")$depth)),
+                       length(unique(filter(acet_sel(DAL),treatment == "SPT", species == "Pinus")$depth)),
+                       length(unique(filter(acet_sel(DAL),treatment == "acet", species == "Pinus")$depth)),
+                       length(unique(filter(TSK,treatment == "SPT", species == "Pinus")$depth)),
+                       length(unique(filter(acet_sel(TSK),treatment == "SPT", species == "Pinus")$depth)),
+                       length(unique(filter(acet_sel(TSK),treatment == "acet", species == "Pinus")$depth)),
+                       length(unique(filter(MFM,treatment == "SPT", species == "Pinus")$depth)),
+                       length(unique(filter(acet_sel(MFM),treatment == "SPT", species == "Pinus")$depth)),
+                       length(unique(filter(acet_sel(MFM),treatment == "acet", species == "Pinus")$depth))
                      )
 )
 
