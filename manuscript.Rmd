@@ -220,14 +220,31 @@ iii effect of depth/age on chemistry
 iv effect of orientation on chemistry
 
 
+we see a peak in the SPT wide spectra at 1090 - 1100 that is not caused by pollen.
+wide peak indicates inorganic compound.
+This peak is not present in either fresh pollen or acetolysed pollen.
+1090 peak is present in all three cores, in addition Tiefer See shows a similar lower peak at 1620 - 1630.
+The most prominent and characteristic sporopollenin peaks are visible in the fossil pollen, 1600, 1510 and 1170 in all three cores.
+PCA ordination shows that the fossil pollen are clearly separated from the fresh pollen, but not clearly separable into cores (Fig pca_acet_sel)
+
 There are differences between fresh and fossil grains.
 Most notibly the lipid peak at 1745 is not visible in the fossil grains, neither acetolysed or raw fossil pollen.
 Changes in the carbohydrate region from 1000 to 1250.
 in SPT pollen there is a dominant peak there.
-The most prominent and characteristic sporopollenin peaks are clearly visible in the fossil pollen, 1600, 1510 and 1170, while the rest of the spectra have changed substantially.
+The most prominent and characteristic sporopollenin peaks are visible in the fossil pollen, 1600, 1510 and 1170, while the rest of the spectra have changed substantially.
 
 
-1170 is more pronounced in spt than acet
+1170 is more pronounced in spt than acet.
+the 1090 peak dissappear after acetolysis from all spectra as does the 1630 in TSK. 
+a peak at 1040 is now visible in acetolysed pollen that was covered by the wide peak in the SPT pollen.
+The region 1000 - 1200 is now dominated by two peaks 1040 and 1170 and its shoulders.
+In the PCA ordination the acetolysed pollen is separated from the SPT pollen, stronger separation for TSK than for DAL and MFM.
+A LDA on each core separately had `r signif(mean(lda_tables[[1]]$acc),1)` % accuracy to distinguish between sample treatment (Table LDA treatment).
+
+LDA to classify the pollen into depths showed higher accuracy for acetolysed pollen than SPT pollen.
+For the SPT pollen the accuracy increased when the depths were restricted to the same depths as the acetolysed samples.
+Generally lower number of depths to classify increased accuracy.
+sporopollenin peaks are similar between depths, changes in the other parts of the spectra are driving separation. 
 
 
 
@@ -301,5 +318,30 @@ blank_mean_plots[[6]]
 
 # Discussion
 
+strange peak in SPT samples most likely biogenic silica.
+is removed with acetolysis (check references of this happening anywhere else)
+
+some effect of the core on chemistry, because TSK is more dissimilar than the other two cores and TSK is laminated sediment.
+BSi peak at 1630 was only present here.
+TSK samples are also youngest, most dissimilar between SPT and acetolysed pollen, maybe because these pollen had still remnants of non sporopollenin parts that were removed by acetolysis
+
+acetolysation had an effect on pollen chemistry.
+especially in the 1000-1200 region, which had the BSi peak but also the region from 1150 to 1250 changes, which is outside of the main effects of the BSi peak. These regions are mainly caused by carbohydrates, which could be cellulose from the grain wall.
+
+the pollen spectra are way different from fresh pollen.
+the sporopollenin peaks are all present, but since so much of the rest of the spectra changes, we cant clearly associate any relative changes in these peaks to changes in composition of the sporopollenin or simply changes that only affect other components of the pollen (e.g. carbohydrates).
+GCMS on these pollen can give more answers
+
+no clear patterns with depths chemically. the more depths are added, the more inaccurate the LDA became.
+for acetolysed pollen samples with the youngest and oldest pollen were used, while SPT had all samples.
+
+
+Paragraph on practicality
+This is an improvement on previous single grain measurements with hyperion, where each grain had to be targeted individually.
+instead a large area could be measured and spectra selected post-hoc.
+This introduced also the possibilities of automization, such as machinelearning, which have shown to be very adapt at extracting object from larger images.
+the spectra can be seen as images, suitable for image segmentation/object location deep neural networks such as RCNN/YOLO etc.
+Nevertheless this introduces another challenge: concentration of pollen.
+Some of our samples had very low concentration of pollen
 
 # References
