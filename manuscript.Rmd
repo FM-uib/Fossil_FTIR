@@ -274,61 +274,76 @@ kable(lda_tables[["depth"]], booktabs = T, format = "latex",
 ```
 
 ## Spectra mean plots
+
 ```{r echo=FALSE, fig.cap="FRE", message=FALSE, warning=FALSE, out.width="100%"}
 mean_plots = readRDS(here("data","output","mean_plots.rds"))
 
 mean_plots[[7]]
 ```
 
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL SPT"}
+```{r echo=FALSE, fig.cap="DAL whole core mean plots", message=FALSE, warning=FALSE, out.width="100%"}
+mean_plots = readRDS(here("data","output","mean_plots_whole.rds"))
+
 mean_plots[[1]]
 ```
 
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL acet"}
+```{r echo=FALSE, fig.cap="MFM whole core mean plots", message=FALSE, warning=FALSE, out.width="100%"}
 mean_plots[[2]]
 ```
 
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK SPT"}
+```{r echo=FALSE, fig.cap="TSK whole core mean plots", message=FALSE, warning=FALSE, out.width="100%"}
 mean_plots[[3]]
 ```
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK acet"}
-mean_plots[[4]]
-```
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM SPT"}
-mean_plots[[5]]
-```
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM acet"}
-mean_plots[[6]]
-```
-
-\newpage
 <!--
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL SPT"}
-blank_mean_plots = readRDS(here("data","output","blank_mean_plots.rds"))
-blank_mean_plots[[1]]
+#mean_plots[[1]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL acet"}
-blank_mean_plots[[2]]
+#mean_plots[[2]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK SPT"}
-blank_mean_plots[[3]]
+#mean_plots[[3]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK acet"}
-blank_mean_plots[[4]]
+#mean_plots[[4]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM SPT"}
-blank_mean_plots[[5]]
+#mean_plots[[5]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM acet"}
-blank_mean_plots[[6]]
+#mean_plots[[6]]
+```
+-->
+\newpage
+<!--
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL SPT"}
+#blank_mean_plots = readRDS(here("data","output","blank_mean_plots.rds"))
+#blank_mean_plots[[1]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL acet"}
+#blank_mean_plots[[2]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK SPT"}
+#blank_mean_plots[[3]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK acet"}
+#blank_mean_plots[[4]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM SPT"}
+#blank_mean_plots[[5]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM acet"}
+#blank_mean_plots[[6]]
 ```
 -->
 

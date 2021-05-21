@@ -34,6 +34,18 @@ offset_spectra = function(data, variable, value, offset) {
   return(data)
 }
 
+### Treatments mean plots over whole core
+
+l = list()
+
+l[["DAL"]] = plot_mean_spectra(DAL, expression(species == "Pinus"), spec_id = "emsc", group = "treatment")
+
+l[["MFM"]] = plot_mean_spectra(MFM, expression(species == "Pinus"), spec_id = "emsc", group = "treatment")
+
+l[["TSK"]] = plot_mean_spectra(TSK, expression(species == "Pinus"), spec_id = "emsc", group = "treatment")
+
+saveRDS(l, here("data","output","mean_plots_whole.rds"))
+
 ### creating Plots
 
 DAL_acet = DAL_ %>%
