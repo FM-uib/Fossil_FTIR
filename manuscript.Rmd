@@ -162,6 +162,8 @@ In some cases the pollen samples are processed with acetolysis following standar
 The assumption is that acetolysis does not alter the chemistry of sporopollenin and is not affecting any chemical signal.
 To date, there has not been a comparison between acetolysed and untreated fossil pollen to examine any effect of acetolysis on sporopollenin or chemical degradation of pollen during diagenesis.
 
+(NEEDS SHORT PARAGRAPH ON NEW MICROSCOPE SETUP. capturing of larger area instead of single grain targeting)
+
 In this study we investigate the chemistry of fossil pollen to explore three potential sources of chemical alteration: i. the effects of diagenesis, ii. acetolysis and iii. age on pollen chemistry.
 We extracted pollen from three sediment cores using density separation to obtain chemically untreated fossil spectra.
 The pollen was collected from three different cores in three locations (Germany and Norway), which allows us to examine potential differences in diagenesis on pollen chemistry at different locations.
@@ -217,7 +219,6 @@ ii.i Difference between acetolysed and fossil
 ii.ii Difference between fresh and fossil grains.
 iii effect of depth/age on chemistry
 
-iv effect of orientation on chemistry
 
 There are differences between fresh and fossil grains.
 The most prominent and characteristic sporopollenin peaks are visible in the fossil pollen, 1600, 1510 and 1170, while the rest of the spectra have changed substantially.
@@ -230,17 +231,19 @@ we see a peak in the SPT wide spectra at 1090 - 1100 that is not caused by polle
 This peak is not present in either fresh pollen or acetolysed pollen.
 1090 peak is present in all three cores, in addition Tiefer See shows a similar lower peak at 1630.
 The most prominent and characteristic sporopollenin peaks are visible in the fossil pollen, 1600, 1510 and 1170 in all three cores.
-PCA ordination shows that the fossil pollen are clearly separated from the fresh pollen, but not clearly separable into cores (Fig pca_acet_sel)
+PCA ordination shows that the fossil pollen are clearly separated from the fresh pollen, but not clearly separable into three cores (Fig \@ref(fig:pca_acet_sel)).
+Tiefer See pollen is separated from the other two cores, which cluster closer together.
+This is the same for acetolysed and SPT pollen. 
 
-
+## Differences between acetolysed and SPT pollen
 1170 is more pronounced in spt than acet.
 the 1090 peak dissappear after acetolysis from all spectra as does the 1630 in TSK. 
 a peak at 1040 is now visible in acetolysed pollen that was covered by the wide peak in the SPT pollen.
 The region 1000 - 1200 is now dominated by two peaks 1040 and 1170 and its shoulders.
 In the PCA ordination the acetolysed pollen is separated from the SPT pollen, stronger separation for TSK than for DAL and MFM.
-A LDA on each core separately had `r signif(mean(lda_tables[[1]]$acc),1)` % accuracy to distinguish between sample treatment (Table LDA treatment).
+A LDA on each core separately had `r signif(mean(lda_tables[[1]]$acc),1)` % accuracy to distinguish between sample treatment (Table \@ref(tab:ldatreatment)).
 
-LDA to classify the pollen into depths showed higher accuracy for acetolysed pollen than SPT pollen.
+LDA to classify the pollen into depths showed higher accuracy for acetolysed pollen than SPT pollen (Table \@ref(tab:ldadepth)).
 For the SPT pollen the accuracy increased when the depths were restricted to the same depths as the acetolysed samples.
 Generally lower number of depths to classify increased accuracy.
 sporopollenin peaks are similar between depths, changes in the other parts of the spectra are driving separation. 
@@ -254,6 +257,18 @@ lda_tables = readRDS(here("data","output","lda_tables.rds"))
 
 ```{r pca_acet_sel echo=FALSE, message=FALSE, warning=FALSE, fig.cap = "PCA all cores, only samples present in both acet and SPT"}
 pca_acet_select[1]
+```
+
+```{r ldatreatment, echo=FALSE, results='asis'}
+
+kable(lda_tables[["treatment"]], booktabs = T, format = "latex",
+      caption = "Accuracy of bootstrapped PCA LDA to distinguish treatment (SPT vs acet)")
+```
+
+```{r ldadepth, echo=FALSE, results='asis'}
+
+kable(lda_tables[["depth"]], booktabs = T, format = "latex",
+      caption = "Accuracy of bootstrapped PCA LDA to distinguish depths for each core. treatments are separate.")
 ```
 
 ## Spectra mean plots
@@ -288,7 +303,7 @@ mean_plots[[6]]
 ```
 
 \newpage
-
+<!--
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL SPT"}
 blank_mean_plots = readRDS(here("data","output","blank_mean_plots.rds"))
 blank_mean_plots[[1]]
@@ -313,23 +328,27 @@ blank_mean_plots[[5]]
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM acet"}
 blank_mean_plots[[6]]
 ```
-
+-->
 
 # Discussion
 
 .Overall intro to discussion
 
 .difference to fresh pollen
-the pollen spectra are way different from fresh pollen.
-the sporopollenin peaks are all present, but since so much of the rest of the spectra changes, we cant clearly associate any relative changes in these peaks to changes in composition of the sporopollenin or simply changes that only affect other components of the pollen (e.g. carbohydrates).
+the fossil pollen spectra show changes from fresh pollen.
+lipid and protein peaks have dissappeared and there is a lot of differences in the carbohydrate region.
+this part of the spectra has changed substantially and most fresh components are most likely removed.
+Nevertheless some peaks in the carb region indicate some amount of cellulose or grain material still present.
+the characteristic sporopollenin peaks are all present, but since so much of the rest of the spectra changes, we cant clearly associate any relative changes in these peaks to changes in composition of the sporopollenin or simply changes that only affect other components of the pollen (e.g. carbohydrates).
 
 .on bsi peak in spt samples
 wide peak indicates inorganic compound.
-strange peak in SPT samples most likely biogenic silica [@alipourInfraredMicrospectroscopyBionanomaterials2016].
-is removed with acetolysis (check references of this happening anywhere else)
+strange peak in SPT samples most likely biogenic silica, when compared to this biogenic silica spectra from diatoms [@alipourInfraredMicrospectroscopyBionanomaterials2016].
+we observed a crystalline layer over our pollen grains, when observed under the microscope. 
+this peak is removed with acetolysis (check references of this happening anywhere else)
 
 .core effects
-some effect of the core on chemistry, because TSK is more dissimilar than the other two cores and TSK is laminated sediment.
+some effect of the core on chemistry, because TSK is more dissimilar than the other two core, could be connected to the fact that TSK is laminated sediment.
 BSi peak at 1630 was only present here.
 TSK samples are also youngest, most dissimilar between SPT and acetolysed pollen, maybe because these pollen had still remnants of non sporopollenin parts that were removed by acetolysis
 
@@ -347,10 +366,12 @@ for acetolysed pollen samples with the youngest and oldest pollen were used, whi
 Paragraph on practicality
 This is an improvement on previous single grain measurements with hyperion, where each grain had to be targeted individually.
 instead a large area could be measured and spectra selected post-hoc.
-This introduced also the possibilities of automization, such as machinelearning, which have shown to be very adapt at extracting object from larger images.
+This introduces also the possibilities of automization, such as machinelearning, which have shown to be very adapt at extracting object from larger images.
 the spectra can be seen as images, suitable for image segmentation/object location deep neural networks such as RCNN/YOLO etc.
 Nevertheless this introduces another challenge: concentration of pollen.
-Some of our samples had very low concentration of pollen
+Some of our samples had very low concentration of pollen and would need a concentration step in sample processing.
+Our results do show that acetolysis does not remove any of the sporopollenin peaks, but some of the other parts of the spectra, and could therefore be seen as a standardizing procedure.
+Further studies with GCMS methods on fossil pollen and several species have to be performed. 
 
 .conclusions
 

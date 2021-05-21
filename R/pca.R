@@ -8,7 +8,7 @@ pca_wrap = function(pca_data,sel){
   l[["pca"]] = pca_res
   l[["scores"]] =  as.data.frame(pca_res$x[,1:10]) %>%
     mutate(ids = rownames(.),
-           core = pca_data$Label,
+           Label = pca_data$Label,
            treatment = pca_data$treatment,
            depth = pca_data$depth,
            age = pca_data$age,
@@ -145,6 +145,18 @@ tables = list("treatment" = pca_lda_treatment,
 saveRDS(figures, here("data","output","pca_plots.rds"))
 saveRDS(tables, here("data","output","lda_tables.rds"))
 #####################################END###############################################
+spt = rbind(
+  filter(DAL, treatment == "SPT" & species == "Pinus"),
+  filter(TSK, treatment == "SPT" & species == "Pinus"),
+  filter(MFM, treatment == "SPT" & species == "Pinus")
+)
+bootstrap_pca(spt, target = "Label")
+acet = rbind(
+    filter(DAL, treatment == "acet" & species == "Pinus"),
+  filter(TSK, treatment == "acet" & species == "Pinus"),
+  filter(MFM, treatment == "acet" & species == "Pinus")
+)
+bootstrap_pca(acet, target = "Label")
 
 # more PCA code
 
