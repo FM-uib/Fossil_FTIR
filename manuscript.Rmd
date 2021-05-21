@@ -212,6 +212,11 @@ Pollen extracted from sediment samples
 
 \newpage
 
+```{r message=FALSE, warning=FALSE, include=FALSE}
+pca_acet_select = readRDS(here("data","output","pca_plots.rds"))
+lda_tables = readRDS(here("data","output","lda_tables.rds"))
+```
+
 # Results
 
 i. Differences between cores
@@ -250,12 +255,9 @@ sporopollenin peaks are similar between depths, changes in the other parts of th
 
 
 
-```{r message=FALSE, warning=FALSE, include=FALSE}
-pca_acet_select = readRDS(here("data","output","pca_plots.rds"))
-lda_tables = readRDS(here("data","output","lda_tables.rds"))
-```
 
-```{r pca_acet_sel echo=FALSE, message=FALSE, warning=FALSE, fig.cap = "PCA all cores, only samples present in both acet and SPT"}
+
+```{r pca_acet_sel, echo=FALSE, message=FALSE, warning=FALSE, fig.cap = "PCA all cores, only samples present in both acet and SPT"}
 pca_acet_select[1]
 ```
 
