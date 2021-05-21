@@ -219,19 +219,18 @@ iii effect of depth/age on chemistry
 
 iv effect of orientation on chemistry
 
-
-we see a peak in the SPT wide spectra at 1090 - 1100 that is not caused by pollen.
-wide peak indicates inorganic compound.
-This peak is not present in either fresh pollen or acetolysed pollen.
-1090 peak is present in all three cores, in addition Tiefer See shows a similar lower peak at 1620 - 1630.
-The most prominent and characteristic sporopollenin peaks are visible in the fossil pollen, 1600, 1510 and 1170 in all three cores.
-PCA ordination shows that the fossil pollen are clearly separated from the fresh pollen, but not clearly separable into cores (Fig pca_acet_sel)
-
 There are differences between fresh and fossil grains.
+The most prominent and characteristic sporopollenin peaks are visible in the fossil pollen, 1600, 1510 and 1170, while the rest of the spectra have changed substantially.
 Most notibly the lipid peak at 1745 is not visible in the fossil grains, neither acetolysed or raw fossil pollen.
 Changes in the carbohydrate region from 1000 to 1250.
-in SPT pollen there is a dominant peak there.
-The most prominent and characteristic sporopollenin peaks are visible in the fossil pollen, 1600, 1510 and 1170, while the rest of the spectra have changed substantially.
+
+
+we see a peak in the SPT wide spectra at 1090 - 1100 that is not caused by pollen.
+
+This peak is not present in either fresh pollen or acetolysed pollen.
+1090 peak is present in all three cores, in addition Tiefer See shows a similar lower peak at 1630.
+The most prominent and characteristic sporopollenin peaks are visible in the fossil pollen, 1600, 1510 and 1170 in all three cores.
+PCA ordination shows that the fossil pollen are clearly separated from the fresh pollen, but not clearly separable into cores (Fig pca_acet_sel)
 
 
 1170 is more pronounced in spt than acet.
@@ -318,24 +317,33 @@ blank_mean_plots[[6]]
 
 # Discussion
 
-strange peak in SPT samples most likely biogenic silica.
+.Overall intro to discussion
+
+.difference to fresh pollen
+the pollen spectra are way different from fresh pollen.
+the sporopollenin peaks are all present, but since so much of the rest of the spectra changes, we cant clearly associate any relative changes in these peaks to changes in composition of the sporopollenin or simply changes that only affect other components of the pollen (e.g. carbohydrates).
+
+.on bsi peak in spt samples
+wide peak indicates inorganic compound.
+strange peak in SPT samples most likely biogenic silica [@alipourInfraredMicrospectroscopyBionanomaterials2016].
 is removed with acetolysis (check references of this happening anywhere else)
 
+.core effects
 some effect of the core on chemistry, because TSK is more dissimilar than the other two cores and TSK is laminated sediment.
 BSi peak at 1630 was only present here.
 TSK samples are also youngest, most dissimilar between SPT and acetolysed pollen, maybe because these pollen had still remnants of non sporopollenin parts that were removed by acetolysis
 
+.acetolysis effects
 acetolysation had an effect on pollen chemistry.
 especially in the 1000-1200 region, which had the BSi peak but also the region from 1150 to 1250 changes, which is outside of the main effects of the BSi peak. These regions are mainly caused by carbohydrates, which could be cellulose from the grain wall.
 
-the pollen spectra are way different from fresh pollen.
-the sporopollenin peaks are all present, but since so much of the rest of the spectra changes, we cant clearly associate any relative changes in these peaks to changes in composition of the sporopollenin or simply changes that only affect other components of the pollen (e.g. carbohydrates).
 GCMS on these pollen can give more answers
 
+.depth patterns
 no clear patterns with depths chemically. the more depths are added, the more inaccurate the LDA became.
 for acetolysed pollen samples with the youngest and oldest pollen were used, while SPT had all samples.
 
-
+.application for palaeoecology
 Paragraph on practicality
 This is an improvement on previous single grain measurements with hyperion, where each grain had to be targeted individually.
 instead a large area could be measured and spectra selected post-hoc.
@@ -343,5 +351,7 @@ This introduced also the possibilities of automization, such as machinelearning,
 the spectra can be seen as images, suitable for image segmentation/object location deep neural networks such as RCNN/YOLO etc.
 Nevertheless this introduces another challenge: concentration of pollen.
 Some of our samples had very low concentration of pollen
+
+.conclusions
 
 # References
