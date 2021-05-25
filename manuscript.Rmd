@@ -225,39 +225,34 @@ ii.ii Difference between fresh and fossil grains.
 iii effect of depth/age on chemistry
 
 
-There are differences between fresh and fossil grains.
-The most prominent and characteristic sporopollenin peaks are visible in the fossil pollen, 1600, 1510 and 1170, while the rest of the spectra have changed substantially.
-Most notibly the lipid peak at 1745 is not visible in the fossil grains, neither acetolysed or raw fossil pollen.
-Changes in the carbohydrate region from 1000 to 1250.
+There are differences between fresh and fossil grains (Fig. \@ref(fig:meanDAL), \@ref(fig:meanMFM) and \@ref(fig:meanTSK).
+The prominent and characteristic sporopollenin peaks (1600, 1510 and 1170 cm^-1^) are visible in the fossil pollen, while other parts of the spectra show substantial differences.
+Most notibly the lipid peak at 1745 cm^-1^, caused by triglycerides, is not visible in the fossil pollen grains, neither acetolysed or raw.
+There are also several differences in the carbohydrate region from 1000 to 1250 cm^-1^ between fresh and fossil pollen grains.
+A peak at 1030  and ~1200 cm^-1^ is visible in the acetolysed pollen but not in the fresh spectra, while we see a broad peak at 1090-1100 cm^-1^ in the SPT spectra of all three cores.
+This peak is not present in either fresh pollen or acetolysed pollen, additionally Tiefer See shows a similar peak at 1630.
 
-
-we see a peak in the SPT wide spectra at 1090 - 1100 that is not caused by pollen.
-
-This peak is not present in either fresh pollen or acetolysed pollen.
-1090 peak is present in all three cores, in addition Tiefer See shows a similar lower peak at 1630.
-The most prominent and characteristic sporopollenin peaks are visible in the fossil pollen, 1600, 1510 and 1170 in all three cores.
-PCA ordination shows that the fossil pollen are clearly separated from the fresh pollen, but not clearly separable into three cores (Fig \@ref(fig:pca_acet_sel)).
+PCA ordination shows that the fossil pollen are clearly separated from the fresh pollen, but not clearly separable into the three cores (Fig \@ref(fig:pcaacetsel)).
 Tiefer See pollen is separated from the other two cores, which cluster closer together.
 This is the same for acetolysed and SPT pollen. 
+A PCA-LDA model to differentiate fossil pollen into the three cores achieved ~60% accuracy to classify MFM and DAL pollen and 85% accuracy to identify TSK pollen (REF TO SM).
 
-## Differences between acetolysed and SPT pollen
-1170 is more pronounced in spt than acet.
-the 1090 peak dissappear after acetolysis from all spectra as does the 1630 in TSK. 
-a peak at 1040 is now visible in acetolysed pollen that was covered by the wide peak in the SPT pollen.
-The region 1000 - 1200 is now dominated by two peaks 1040 and 1170 and its shoulders.
+
+the peak at 1170 cm^-1^ is more pronounced in spt than acetolyzed pollen.
+
+the 1090 cm^-1^ peak dissappears after acetolysis from all spectra as does the 1630 cm^-1^ peak in TSK. 
+a peak at 1040 cm^-1^ is now visible in acetolysed pollen that is not visible in the SPT pollen.
+The region 1000 - 1200 cm^-1^ is now dominated by two peaks at 1040 and 1170 and its shoulders.
 In the PCA ordination the acetolysed pollen is separated from the SPT pollen, stronger separation for TSK than for DAL and MFM.
 A LDA on each core separately had `r signif(mean(lda_tables[[1]]$acc),1)` % accuracy to distinguish between sample treatment (Table \@ref(tab:ldatreatment)).
 
 LDA to classify the pollen into depths showed higher accuracy for acetolysed pollen than SPT pollen (Table \@ref(tab:ldadepth)).
 For the SPT pollen the accuracy increased when the depths were restricted to the same depths as the acetolysed samples.
 Generally lower number of depths to classify increased accuracy.
-sporopollenin peaks are similar between depths, changes in the other parts of the spectra are driving separation. 
+sporopollenin peaks are similar between depths, changes in the other parts of the spectra are driving separation.
 
 
-
-
-
-```{r pca_acet_sel, echo=FALSE, message=FALSE, warning=FALSE, fig.cap = "PCA all cores, only samples present in both acet and SPT"}
+```{r pcaacetsel, echo=FALSE, message=FALSE, warning=FALSE, fig.cap = "PCA all cores, only samples present in both acet and SPT"}
 pca_acet_select[1]
 ```
 
@@ -275,50 +270,110 @@ kable(lda_tables[["depth"]], booktabs = T, format = "latex",
 
 ## Spectra mean plots
 
-```{r echo=FALSE, fig.cap="FRE", message=FALSE, warning=FALSE, out.width="100%"}
-mean_plots = readRDS(here("data","output","mean_plots.rds"))
+```{r meanFRE, echo=FALSE, fig.cap="FRE", message=FALSE, warning=FALSE, out.width="100%"}
+mean_plotsSM = readRDS(here("data","output","mean_plots.rds"))
 
-mean_plots[[7]]
+mean_plotsSM[[7]]
 ```
 
-```{r echo=FALSE, fig.cap="DAL whole core mean plots", message=FALSE, warning=FALSE, out.width="100%"}
+```{r meanDAL, echo=FALSE, fig.cap="DAL whole core mean plots", message=FALSE, warning=FALSE, out.width="100%"}
 mean_plots = readRDS(here("data","output","mean_plots_whole.rds"))
 
 mean_plots[[1]]
 ```
 
-```{r echo=FALSE, fig.cap="MFM whole core mean plots", message=FALSE, warning=FALSE, out.width="100%"}
+```{r meanMFM, echo=FALSE, fig.cap="MFM whole core mean plots", message=FALSE, warning=FALSE, out.width="100%"}
 mean_plots[[2]]
 ```
 
-```{r echo=FALSE, fig.cap="TSK whole core mean plots", message=FALSE, warning=FALSE, out.width="100%"}
+```{r meanTSK, echo=FALSE, fig.cap="TSK whole core mean plots", message=FALSE, warning=FALSE, out.width="100%"}
 mean_plots[[3]]
 ```
-<!--
+
+
+# Discussion
+
+.Overall intro to discussion
+
+.difference to fresh pollen
+the fossil pollen spectra show changes from fresh pollen.
+lipid and protein peaks have dissappeared and there is a lot of differences in the carbohydrate region.
+this part of the spectra has changed substantially and most fresh components are most likely removed.
+Nevertheless some peaks in the carb region indicate some amount of cellulose or grain material still present.
+the characteristic sporopollenin peaks are all present, but since so much of the rest of the spectra changes, we cant clearly associate any relative changes in these peaks to changes in composition of the sporopollenin or simply changes that only affect other components of the pollen (e.g. carbohydrates).
+
+.on bsi peak in spt samples
+wide peak indicates inorganic compound.
+This peak in the SPT samples is most likely biogenic silica, when compared to this biogenic silica spectra from diatoms [@alipourInfraredMicrospectroscopyBionanomaterials2016].
+we observed a crystalline layer over our pollen grains, when observed under the microscope. 
+this peak is removed with acetolysis (check references of this happening anywhere else)
+
+.acetolysis effects
+acetolysation had an effect on pollen chemistry.
+especially in the 1000-1200 region, which had the BSi peak but also the region from 1150 to 1250 changes, which is outside of the main effects of the BSi peak. These regions are mainly caused by carbohydrates, which could be cellulose from the grain wall.
+
+GCMS on these pollen can give more answers
+
+.core effects
+some effect of the core on chemistry, because TSK is more dissimilar than the other two core, could be connected to the fact that TSK is laminated sediment.
+BSi peak at 1630 was only present here.
+
+We saw large overlap between MFM and DAL in the PCA ordination and lower accuracies in LDA differentiating between cores, both in SPT and acetolysed pollen.
+This seems to indicate that pine pollen from different cores are chemically quite similar, even cores that are far apart.
+TSK pollen on the other hand could be clearly separated from the other two cores, in both SPT and acetolysed pollen. 
+In fact acetolysed TSK pollen is even further apart from the rest of the acetolysed pollen than SPT pollen is.
+There seem to be chemical differences between TSK and the other two cores that are present in SPT and acetolysed pollen.
+One reason for the dissimilarity of SPT TSK pollen is the BSi peak at 1630 which is only present in TSK, but even acetolysed pollen from TSK is quite different from the other cores according to PCA and LDA analysis.
+The main difference of TSK pollen to the other cores is that TSK pollen is much younger than the other two cores.
+Our TSK samples are from the past 80 years, while MFM covers the YD/Holocene transition and DAL samples are from throughout the Holocene.
+The other difference is that TSK is a varved core, while MFM and DAL are not.
+Our findings suggest a chemical difference in fossil pollen grains, either caused by diagenesis (varved vs non-varved), age or combination of the two that is persistent even after acetolysis. 
+
+
+.depth patterns
+no clear patterns with depths chemically. the more depths are added, the more inaccurate the LDA became.
+for acetolysed pollen samples with the youngest and oldest pollen were used, while SPT had all samples.
+
+.application for palaeoecology
+Paragraph on practicality
+This is an improvement on previous single grain measurements with hyperion, where each grain had to be targeted individually.
+instead a large area could be measured and spectra selected post-hoc.
+This introduces also the possibilities of automization, such as machinelearning, which have shown to be very adapt at extracting object from larger images.
+the spectra can be seen as images, suitable for image segmentation/object location deep neural networks such as RCNN/YOLO etc.
+Nevertheless this introduces another challenge: concentration of pollen.
+Some of our samples had very low concentration of pollen and would need a concentration step in sample processing.
+Our results do show that acetolysis does not remove any of the sporopollenin peaks, but some of the other parts of the spectra, and could therefore be seen as a standardizing procedure.
+Further studies with GCMS methods on fossil pollen and several species have to be performed. 
+
+.conclusions
+
+# Mean spectra figures SM
+
+
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL SPT"}
-#mean_plots[[1]]
+mean_plotsSM[[1]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL acet"}
-#mean_plots[[2]]
+mean_plotsSM[[2]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK SPT"}
-#mean_plots[[3]]
+mean_plotsSM[[3]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK acet"}
-#mean_plots[[4]]
+mean_plotsSM[[4]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM SPT"}
-#mean_plots[[5]]
+mean_plotsSM[[5]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM acet"}
-#mean_plots[[6]]
+mean_plotsSM[[6]]
 ```
--->
+
 \newpage
 <!--
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL SPT"}
@@ -347,49 +402,6 @@ mean_plots[[3]]
 ```
 -->
 
-# Discussion
 
-.Overall intro to discussion
-
-.difference to fresh pollen
-the fossil pollen spectra show changes from fresh pollen.
-lipid and protein peaks have dissappeared and there is a lot of differences in the carbohydrate region.
-this part of the spectra has changed substantially and most fresh components are most likely removed.
-Nevertheless some peaks in the carb region indicate some amount of cellulose or grain material still present.
-the characteristic sporopollenin peaks are all present, but since so much of the rest of the spectra changes, we cant clearly associate any relative changes in these peaks to changes in composition of the sporopollenin or simply changes that only affect other components of the pollen (e.g. carbohydrates).
-
-.on bsi peak in spt samples
-wide peak indicates inorganic compound.
-strange peak in SPT samples most likely biogenic silica, when compared to this biogenic silica spectra from diatoms [@alipourInfraredMicrospectroscopyBionanomaterials2016].
-we observed a crystalline layer over our pollen grains, when observed under the microscope. 
-this peak is removed with acetolysis (check references of this happening anywhere else)
-
-.core effects
-some effect of the core on chemistry, because TSK is more dissimilar than the other two core, could be connected to the fact that TSK is laminated sediment.
-BSi peak at 1630 was only present here.
-TSK samples are also youngest, most dissimilar between SPT and acetolysed pollen, maybe because these pollen had still remnants of non sporopollenin parts that were removed by acetolysis
-
-.acetolysis effects
-acetolysation had an effect on pollen chemistry.
-especially in the 1000-1200 region, which had the BSi peak but also the region from 1150 to 1250 changes, which is outside of the main effects of the BSi peak. These regions are mainly caused by carbohydrates, which could be cellulose from the grain wall.
-
-GCMS on these pollen can give more answers
-
-.depth patterns
-no clear patterns with depths chemically. the more depths are added, the more inaccurate the LDA became.
-for acetolysed pollen samples with the youngest and oldest pollen were used, while SPT had all samples.
-
-.application for palaeoecology
-Paragraph on practicality
-This is an improvement on previous single grain measurements with hyperion, where each grain had to be targeted individually.
-instead a large area could be measured and spectra selected post-hoc.
-This introduces also the possibilities of automization, such as machinelearning, which have shown to be very adapt at extracting object from larger images.
-the spectra can be seen as images, suitable for image segmentation/object location deep neural networks such as RCNN/YOLO etc.
-Nevertheless this introduces another challenge: concentration of pollen.
-Some of our samples had very low concentration of pollen and would need a concentration step in sample processing.
-Our results do show that acetolysis does not remove any of the sporopollenin peaks, but some of the other parts of the spectra, and could therefore be seen as a standardizing procedure.
-Further studies with GCMS methods on fossil pollen and several species have to be performed. 
-
-.conclusions
 
 # References
