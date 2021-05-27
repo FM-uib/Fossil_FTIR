@@ -157,18 +157,33 @@ Further, chemical methods are suitable for automation and offer a more objective
 In addition to taxonomic differences in pollen chemistry, there is evidence of environmental signals that are recorded in the chemistry of pollen [@bagciogluMultiscaleVibrationalSpectroscopic2015; @kendelChemicalAnalysisPollen2020; @diehnCombiningChemicalInformation2020].
 Several studies have shown links between solar and UV radiation and pollen chemistry as well as responses in pollen chemistry to temperature changes.
 
-So far, most FTIR studies have used modern material or material extracted from herbarium specimens .
-In some cases the pollen samples are processed with acetolysis following standard palynological methods [@erdtmanSixNotesPollen1959; @faegriTextbookPollenAnalysis1989] to simulate fossilization [@julierChemotaxonomyToolInterpreting2016; @woutersenNovelApproachStudy2018].
-The assumption is that acetolysis does not alter the chemistry of sporopollenin and is not affecting any chemical signal.
-To date, there has not been a comparison between acetolysed and untreated fossil pollen to examine any effect of acetolysis on sporopollenin or chemical degradation of pollen during diagenesis.
 
-(NEEDS SHORT PARAGRAPH ON NEW MICROSCOPE SETUP. capturing of larger area instead of single grain targeting)
+So far, most FTIR studies focused on identification of pollen have used modern material and bulk measurements, while some used FTIR microscopes.
+These FTIR microscopes required manual targeting of small areas of the sample slides to record spectra of single or groups of pollen grains.
+FTIR as a method has advanced on a technical level over the past 5 to 10 years.
+The development and capabilities of microscopes with connected FTIR spectrometers now allow easier and faster capture of spectra of pollen grains.
+With these newer machines a larger area is irradiated with FTIR and spectra are recorded at higher resolution over the entire irradiated area.
+This allows capture of an image and matrix of spectra over the same sample area, which enables e.g. the extraction of spectra from several single grains from the same area on the sample without the need to relocate the detector of the microscope or move the slide.
 
-In this study we investigate the chemistry of fossil pollen to explore three potential sources of chemical alteration: i. the effects of diagenesis, ii. acetolysis and iii. age on pollen chemistry.
-We extracted pollen from three sediment cores using density separation to obtain chemically untreated fossil spectra.
+
+Palaeoecologists use a combination of several chemical extractions to isolate and concentrate pollen from the sediment matrix.
+Most common is acetolysis in addition to HF treatment [@erdtmanSixNotesPollen1959; @faegriTextbookPollenAnalysis1989].
+These strong acid treatments aim to remove other organic particulates and silicates, while preserving morphological integrity of pollen grains [REF].
+A limited number of studies have used acetolysis and other chemical treatments in combination with FTIR on pollen to simulate fossilization [@julierChemotaxonomyToolInterpreting2016; @jardinePollenSporesBiological2016; @woutersenNovelApproachStudy2018] or study the effects of acid extractions [@jardineImpactOxidationSpore2015; @jardineSporopolleninChemistryIts2021].
+@jardineImpactOxidationSpore2015 found limited to no effect of short acetolysis (<10 min) on *Lycopodium* spore exine chemistry, while labile outer compounds and the intine/protoplast where removed.
+
+An alternative to chemical extraction is density separation using e.g. sodium polytungstate (SPT), which is used to isolate pollen from minerogenic sediments [REFS] or as preparations for pollen isotope studies [REFS].
+Density separation may be a an alternative to acid extractions for pollen studies concerned with chemical alteration of pollen grain chemistry.
+SPT is an inorganic compound, which should not alter pollen chemistry in any way and is removed with several washes after extraction.
+Contamination of the sample is easily identifiable by characteristic wavebands visible in the spectra. 
+
+In this study we explore the use of SPT density separation as an alternative to acetolysis by investigating the chemical alteration of SPT and acetolyis on modern pollen and apply both extraction methods to three fossil cores.
+With this, we aim to investigate changes in fossil pollen chemistry, due to: i. differences between modern and fossil material, ii. extraction method and iii. effect of diagenesis (age of fossil pollen).
+The effect of treatment with SPT on pollen chemistry is tested on modern material to establish if any chemical changes occur.
 The pollen was collected from three different cores in three locations (Germany and Norway), which allows us to examine potential differences in diagenesis on pollen chemistry at different locations.
-One replicate of the pollen samples in each core were acetolysed to analyse any changes caused by the strong acid treatment and compared to the untreated replicate.
 Each core was sub sampled at different depths to allows us to investigate chemical changes in the pollen with age.
+The pollen was extracted from the sediment cores using density separation, with one replicate being acetolysed afterwards.
+
 
 RQs
 i. Differences between cores
@@ -178,7 +193,7 @@ iii effect of depth/age on chemistry
 
 iv effect of orientation on chemistry
 
-    
+
 acetolysis alters sporopollenin [@dominguezIsolationIntactPollen1998; @schulzeosthoffPhenolsIntegratedCompounds1987] affecting solubility
 
 # Methods and Materials
@@ -375,32 +390,31 @@ mean_plotsSM[[6]]
 ```
 
 \newpage
-<!--
+
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL SPT"}
-#blank_mean_plots = readRDS(here("data","output","blank_mean_plots.rds"))
-#blank_mean_plots[[1]]
+blank_mean_plots = readRDS(here("data","output","blank_mean_plots.rds"))
+blank_mean_plots[[1]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL acet"}
-#blank_mean_plots[[2]]
+blank_mean_plots[[2]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK SPT"}
-#blank_mean_plots[[3]]
+blank_mean_plots[[3]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK acet"}
-#blank_mean_plots[[4]]
+blank_mean_plots[[4]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM SPT"}
-#blank_mean_plots[[5]]
+blank_mean_plots[[5]]
 ```
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM acet"}
-#blank_mean_plots[[6]]
+blank_mean_plots[[6]]
 ```
--->
 
 
 

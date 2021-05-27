@@ -63,7 +63,7 @@ pca_data = rbind(FRE,
                  )
 
 l = pca_wrap(pca_data, "")
-pca_plot = ggplot(l[["scores"]], aes(PC1, PC2, color = core)) + geom_point(aes(shape = treatment), size = 4)
+pca_plot = ggplot(l[["scores"]], aes(PC1, PC2, color = core)) + geom_point(aes(shape = treatment), size = 2)
 
 ggplot(l[["loadings"]], aes(as.numeric(rownames(l[["loadings"]])),PC1)) + geom_line()
 ggplot(l[["loadings"]], aes(as.numeric(rownames(l[["loadings"]])),PC2)) + geom_line()
