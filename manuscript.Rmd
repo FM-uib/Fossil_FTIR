@@ -199,11 +199,27 @@ The pollen was extracted from three cores: Dalmuttlado in Norway, Tiefer See [@d
 Tiefer See formed during the last glacial period, while the Meerfelder Maar record is from the largest maar of the Westeifel Volcaniv field and formed ~35000 BP.
 Tiefer See and Meerfelder Maar are varved cores and were the samples used in this study span two different time-periods.
 The sub samples from Tiefer see are from the last 80 yrs of the core (1933 - 2011), while the samples from Meerfelder Maar cover the timeperiod from the late Allerød to the Younger Dryas/Holocene transition (~12900 - ~11000 BP).  
-The samples were extracted using density separation using dissolved Sodium Polytungstate (SPT) at 1.43 (g/ml)? as separation medium. <!--FM: check Unit-->
-During density separation a known volume of SPT (density 1.43) solution is added to the sample and homogenized/vortexed, followed by centrifugation.
-After centrifugation, particulates/material heavier than 1.43 has deposited at the bottom of the vial and the lighter fraction can be decanted and collected.
+The samples were extracted using density separation using dissolved Sodium Polytungstate (SPT) [@kampsAgentSeparationDissolved1985] at 1.43 g cm^-3^ as separation medium.
+During density separation a known volume of SPT (density 1.43 g cm^-3^) solution is added to the sample and homogenized/vortexed, followed by centrifugation.
+After centrifugation, particulates/material heavier than 1.43 g cm^-3^ has deposited at the bottom of the vial and the lighter fraction can be decanted and collected.
 In our case the lighter fraction contained most of the pollen.
-The density of pollen is reported at <1.4 UNIT [@nakagawaDensemediaSeparationMore1998; @regnellPreparativeCentrifugationNew1996].
+There is no agreement on the density of the pollen exine and reported values vary between  <1.4 g cm^-3^ [@faegriTextbookPollenAnalysis1989; @flenley1971measurements; @regnellPreparativeCentrifugationNew1996], 1.88 cm^-3^ [@nakagawaDensemediaSeparationMore1998] and 2.2 cm^-3^  [@juvigneDensiteExinesQuelques1973].
+
+## FTIR measurements
+
+The spectra were measured with a Vertex 70 FTIR spectrometer connected to a Hyperion 3000 IR microscope (Bruker Optik, Ettlingen, Germany) equipped with a focal plane array (FPA) nitrogen cooled mercury cadmium telluride (MCT) detector and a 15x magnification objective.
+The FPA-MCT detector allows the capture of FTIR images, where each pixel is a full spectra, instead point measurements.
+For this study images of 128x128 pixels were taken and each spectra was recorded with 64 scans.
+The accompanied visible images were obtained by a charge coupled device (CCD) camera coupled to the microscope.
+Single grain pollen grain spectra were extracted from the FTIR images, by averaging all pixel spectra in the image area of the pollen grain. 
+Data acquisition and instrument control was performed using the OPUS 7.5 software (Bruker Optik GmbH, Germany).
+
+The extracted pollen was applied to ZnSe slides and a background spectra was measured before each sample on an empty area of the slide.
+The pollen treated with SPT and acetolysis were applied onto the slide suspended in water and dried out before measurement under a fume hood.
+The extracted sediment samples contained other small material than pollen (e.g. diatom fragments, organic material fragments, etc).
+We recorded several "blank" spectra of dried residue that formed over the dried pollen residue (see also SM).
+
+## Spectra preprocessing and analysis 
 
 Preprocessing:
 - SG 2nd degree, 2 poly, windowsize 5 or 6
@@ -217,10 +233,7 @@ repeat on different grain averages (1, 3, 5, 10)
 
 average all spectra and stack plots of different depth
 
-Pollen extracted from sediment samples 
-[@kampsAgentSeparationDissolved1985] SPT patent
-[@nakagawaDensemediaSeparationMore1998] 
-[@regnellPreparativeCentrifugationNew1996] density of pollen 1.4
+
 
 \newpage
 
