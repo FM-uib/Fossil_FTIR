@@ -1,5 +1,22 @@
 # Stepwise Regression
 
+plot_coef = function(obj, comp = 1){
+  tmp = as.data.frame(obj[,,comp])
+  n = ncol(tmp)
+  tmp$wavenumbers = as.numeric(rownames(obj[,,comp]))
+  for (i in 1:n) {
+    tmp[,i] = tmp[,i] + i * max(abs(obj[,,comp]))
+  }
+  tmp2 = melt(tmp, id.vars = c("wavenumbers"))
+  colnames(tmp2) = c("wavenumbers", "treatment", "coef")
+  g = ggplot(tmp2, aes(x = wavenumbers, y = coef, color = treatment)) + 
+    geom_line() + xlim(1900,900) + theme_bw() +
+    theme(axis.ticks.y = element_blank(),
+          axis.text.y = element_blank())
+    
+  return(g)
+}
+
 library(pls)
 
 FRE$treat = "fresh"
@@ -43,42 +60,3 @@ colnames(pls_data$sg2) = colnames(DAL$sg2)
 results = plsr(y ~sg2, 6, data = pls_data, validation = "LOO")
 plot(results, plottype = "coefficients")
 
-
-
-## 
-pca_data = rbind(
-                 acet_sel(DAL),
-                 acet_sel(TSK),
-                 acet_sel(MFM)
-)
-pca_data$core = model.matrix(~Label -1, data=pca_data)
-plsr = plsr(model.matrix(~treatment -1, data=acet_sel(DAL))~sg2,
-            6, data = acet_sel(DAL), 
-            validation = "LOO")
-
-DAL_ = acet_sel(DAL)
-colnames(DAL_$sg2)=colnames(DAL$sg2)
-plsr = plsr(model.matrix(~treatment -1, data=DAL_)~sg2,
-           6, data = DAL_,
-           validation = "LOO", center=F, scale=F)
-plot(rownames(plsr$loadings), plsr$loadings[,1], type = "l")
-plot(plsr$scores[,1], plsr$scores[,2])
-
-
-colnames(pca_data$sg2)=colnames(DAL$sg2)
-plsr = plsr(model.matrix(~Label -1, data=pca_data)~sg2,
-            6, data = pca_data,
-            validation = "LOO", center=F, scale=T)
-plot(rownames(plsr$loadings), plsr$loadings[,1], type = "l")
-plot(plsr$scores[,1], plsr$scores[,2])
-
-reg_data = cbind(pca_data$Label, as.data.frame(pca_data$sg2))
-colnames(reg_data)[1] = "core"
-reg_data$core = model.matrix(~core -1, data=reg_data)
-intercept_only = lm(core ~ 1, data=reg_data)
-all = lm(core ~ ., data = reg_data)
-both <- step(intercept_only, direction='backward', scope=formula(all))
-
-data(yarn)
-## Default methods:
-yarn.pcr <- pcr(density ~ NIR, 6, data = yarn, validation = "CV")
