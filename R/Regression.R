@@ -17,6 +17,17 @@ plot_coef = function(obj, comp = 1){
   return(g)
 }
 
+plot_scor = function(obj, meta){
+  meta = meta[,c("Label","treatment")]
+  tmp = as.data.frame(obj[])
+  n = ncol(tmp)
+  colnames(tmp) = c("PC1","PC2","PC3","PC4","PC5","PC6")
+  tmp = cbind(tmp, meta)
+  g = ggplot(tmp, aes_string(x = "PC1", y =  "PC2", color = "Label")) +
+    geom_point(aes_string(shape = "treatment"), size = 1) + scale_shape_manual(values = c(17, 19, 15)) + theme_bw()
+  return(g)
+}
+
 library(pls)
 
 FRE$treat = "fresh"
@@ -32,6 +43,7 @@ colnames(pls_data$sg2) = colnames(DAL$sg2)
 
 results = plsr(y ~sg2, 6, data = pls_data, validation = "LOO")
 plot_coef(results$coefficients)
+plot_scor(results$scores, pls_data)
 
 # PLS SPT vs acet
 ## all cores

@@ -257,9 +257,9 @@ There are also several differences in the "fingerprint" region (1500 to 1800 cm^
 A peak at 1030 and ~1200 cm^-1^ is visible in the acetolysed pollen but not in the modern spectra, while we see a broad peak at 1090-1100 cm^-1^ in the SPT spectra of all three cores.
 This peak is not present in either modern pollen or acetolysed pollen, additionally Tiefer See shows a similar peak at 1630.
 
-After visual inspection of the spectra, the chemical differences between modern and fossil polle were explored with a PLSR.
+After visual inspection of the spectra, the chemical differences between modern and fossil pollen were explored with a PLSR model.
 The ordination showed that the fossil pollen are clearly separated from the modern pollen (Fig \@ref(fig:plsrord)).
-The regression coefficients reflect our observations from the mean spectra and show high importance of the 1745 lipid peak, the 1500 - 1800 region and the 1170 peak.
+The regression coefficients reflect our observations from the visual inspection and show high importance of the 1745 lipid peak, the 1500 - 1800 region and the 1170 peak (Fig \@ref(fig:plsrcoef)).
 
 
 
