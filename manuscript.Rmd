@@ -225,7 +225,7 @@ Preprocessing:
 - SG 2nd degree, 2 poly, windowsize 5 or 6
 - EMSC linear (probably needs to involve background spectra to filter them out)
 
-PCA on grains for exploration
+PLSR second deriv on treatment (fresh vs fossil)
 
 PLS regression of spectra on depth
 
@@ -250,17 +250,25 @@ ii.ii Difference between fresh and fossil grains.
 iii effect of depth/age on chemistry
 
 
-There are differences between fresh and fossil grains (Fig. \@ref(fig:meanDAL), \@ref(fig:meanMFM) and \@ref(fig:meanTSK).
+There are differences between modern and fossil grains (Fig. \@ref(fig:meanDAL), \@ref(fig:meanMFM) and \@ref(fig:meanTSK).
 The prominent and characteristic sporopollenin peaks (1600, 1510 and 1170 cm^-1^) are visible in the fossil pollen, while other parts of the spectra show substantial differences.
-Most notibly the lipid peak at 1745 cm^-1^, caused by triglycerides, is not visible in the fossil pollen grains, neither acetolysed or raw.
-There are also several differences in the carbohydrate region from 1000 to 1250 cm^-1^ between fresh and fossil pollen grains.
-A peak at 1030  and ~1200 cm^-1^ is visible in the acetolysed pollen but not in the fresh spectra, while we see a broad peak at 1090-1100 cm^-1^ in the SPT spectra of all three cores.
-This peak is not present in either fresh pollen or acetolysed pollen, additionally Tiefer See shows a similar peak at 1630.
+Most notibly the lipid peak at 1745 cm^-1^, caused by triglycerides, is not visible in the fossil pollen grains, neither in the SPT treated or acetolysed pollen.
+There are also several differences in the "fingerprint" region (1500 to 1800 cm^-1^) and carbohydrate region from 1000 to 1250 cm^-1^ between modern and fossil pollen grains.
+A peak at 1030 and ~1200 cm^-1^ is visible in the acetolysed pollen but not in the modern spectra, while we see a broad peak at 1090-1100 cm^-1^ in the SPT spectra of all three cores.
+This peak is not present in either modern pollen or acetolysed pollen, additionally Tiefer See shows a similar peak at 1630.
 
-PCA ordination shows that the fossil pollen are clearly separated from the fresh pollen, but not clearly separable into the three cores (Fig \@ref(fig:pcaacetsel)).
+After visual inspection of the spectra, the chemical differences between modern and fossil polle were explored with a PLSR.
+The ordination showed that the fossil pollen are clearly separated from the modern pollen (Fig \@ref(fig:plsrord)).
+The regression coefficients reflect our observations from the mean spectra and show high importance of the 1745 lipid peak, the 1500 - 1800 region and the 1170 peak.
+
+
+
+<!-- 
 Tiefer See pollen is separated from the other two cores, which cluster closer together.
 This is the same for acetolysed and SPT pollen. 
-A PCA-LDA model to differentiate fossil pollen into the three cores achieved ~60% accuracy to classify MFM and DAL pollen and 85% accuracy to identify TSK pollen (REF TO SM).
+A PCA-LDA model to differentiate fossil pollen into the three cores achieved ~60% accuracy to classify MFM and DAL pollen and 85% accuracy to identify TSK pollen (REF TO SM). 
+
+-->
 
 
 the peak at 1170 cm^-1^ is more pronounced in spt than acetolyzed pollen.
