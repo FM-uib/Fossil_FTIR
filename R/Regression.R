@@ -27,11 +27,11 @@ TSK$treat = "fossil"
 # PLS fresh vs fossil
 
 pls_data = filter(rbind(FRE,DAL,MFM,TSK), species == "Pinus")
-pls_data$y = model.matrix(~treatment -1, data = pls_data)
+pls_data$y = model.matrix(~treat -1, data = pls_data)
 colnames(pls_data$sg2) = colnames(DAL$sg2)
 
 results = plsr(y ~sg2, 6, data = pls_data, validation = "LOO")
-plot(results, plottype = "coefficients")
+plot_coef(results$coefficients)
 
 # PLS SPT vs acet
 ## all cores
@@ -46,7 +46,7 @@ pls_data$y = model.matrix(~treatment -1, data = pls_data)
 colnames(pls_data$sg2) = colnames(DAL$sg2)
 
 results = plsr(y ~sg2, 6, data = pls_data, validation = "LOO")
-plot(results, plottype = "coefficients")
+plot_coef(results$coefficients)
 
 ## DAL
 pls_data = filter(
