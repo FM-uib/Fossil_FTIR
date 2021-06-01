@@ -48,6 +48,19 @@ colnames(pls_data$sg2) = colnames(DAL$sg2)
 results = plsr(y ~sg2, 6, data = pls_data, validation = "LOO")
 plot_coef(results$coefficients)
 
+## SPT core only lda on cores
+pls_data = filter(
+  rbind(
+    acet_sel(DAL),
+    acet_sel(MFM),
+    acet_sel(TSK)
+  ), 
+  species == "Pinus" & treatment == "SPT")
+pls_data$y = model.matrix(~Label -1, data = pls_data)
+colnames(pls_data$sg2) = colnames(DAL$sg2)
+
+results = plsr(y ~sg2, 6, data = pls_data, validation = "LOO")
+
 ## DAL
 pls_data = filter(
   rbind(
