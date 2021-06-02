@@ -1,12 +1,23 @@
 # Stepwise Regression
 
-plot_coef = function(obj, comp = 1){
-  tmp = as.data.frame(obj[,,comp])
-  n = ncol(tmp)
-  tmp$wavenumbers = as.numeric(rownames(obj[,,comp]))
-  for (i in 1:n) {
-    tmp[,i] = tmp[,i] + i * max(abs(obj[,,comp]))
+plot_coef = function(obj, comp = 1, coef = T){
+  if (coef) {
+    tmp = as.data.frame(obj[,,comp])
+    n = ncol(tmp)
+    tmp$wavenumbers = as.numeric(rownames(obj[,,comp]))
+    for (i in 1:n) {
+      tmp[,i] = tmp[,i] + i * max(abs(obj[,,comp]))
+    }
+
+  } else {
+    tmp = as.data.frame(obj[,comp])
+    n = ncol(tmp)
+    tmp$wavenumbers = as.numeric(rownames(obj[,comp]))
+    for (i in 1:n) {
+      tmp[,i] = tmp[,i] + i * max(abs(obj[,comp]))
+    }
   }
+
   tmp2 = melt(tmp, id.vars = c("wavenumbers"))
   colnames(tmp2) = c("wavenumbers", "treatment", "coef")
   g = ggplot(tmp2, aes(x = wavenumbers, y = coef, color = treatment)) + 
@@ -175,27 +186,25 @@ ggsave(here("figures","mean_plots.png"), plot = g, width = 17, height = 25, unit
 plsr_plot = readRDS(here("data","output","ordplot.rds"))
 
 design = "
-11112222
-11112222
-33334444
-33334444
-55556666
-55556666
-77778888
-77778888
+1111112222
+1111112222
+1111113333
+1111113333
+4444445555
+4444445555
+4444446666
+4444446666
 "
 
 #create_layout(3,2,2,4)
 
 o = plsr_plot[[1]] +
   plsr_plot[[2]] +
-  plsr_plot[[4]] +
-  plsr_plot[[5]] +
-  plsr_plot[[7]] +
-  plsr_plot[[8]] +
-  plsr_plot[[10]] +
-  plsr_plot[[11]] +
+  plsr_plot[[3]] +
+  plsr_plot[[13]] +
+  plsr_plot[[14]] +
+  plsr_plot[[15]] +
   plot_layout(design = design , byrow = T, guides = "collect") + 
   plot_annotation(tag_levels = c("a"))
 
-ggsave(here("figures","ord_plots.png"), plot = o, width = 17, height = 25, units = c("cm"))
+ggsave(here("figures","ord_plots.png"), plot = o, width = 20, height = 17, units = c("cm"))

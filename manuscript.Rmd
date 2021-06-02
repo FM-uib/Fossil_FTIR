@@ -310,7 +310,7 @@ mean_plotsSM = readRDS(here("data","output","mean_plots.rds"))
 mean_plots = readRDS(here("data","output","mean_plots_whole.rds"))
 ```
 
-```{r ordinations, echo=FALSE, fig.cap="FRE", message=FALSE, warning=FALSE, out.width="100%"}
+```{r ordinations, echo=FALSE, fig.cap="a. plsr ordination scores all samples diff fresh vs fossil b. regression coef; PC1 c. regression coef PC2; d plsr ordination scores only samples from cores diff spt vs acet; e. regression coef PC1; f. regression coef PC2", message=FALSE, warning=FALSE, out.width="100%"}
 knitr::include_graphics(here("figures", "ord_plots.png"))
 ```
 
