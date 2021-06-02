@@ -254,8 +254,7 @@ There are differences between modern and fossil grains (Fig. \@ref(fig:meanDAL),
 The prominent and characteristic sporopollenin peaks (1600, 1510 and 1170 cm^-1^) are visible in the fossil pollen, while other parts of the spectra show substantial differences.
 Most notibly the lipid peak at 1745 cm^-1^, caused by triglycerides, is not visible in the fossil pollen grains, neither in the SPT treated or acetolysed pollen.
 There are also several differences in the "fingerprint" region (1500 to 1800 cm^-1^) and carbohydrate region from 1000 to 1250 cm^-1^ between modern and fossil pollen grains.
-A peak at 1030 and ~1200 cm^-1^ is visible in the acetolysed pollen but not in the modern spectra, while we see a broad peak at 1090-1100 cm^-1^ in the SPT spectra of all three cores.
-This peak is not present in either modern pollen or acetolysed pollen, additionally Tiefer See shows a similar peak at 1630.
+
 
 After visual inspection of the spectra, the chemical differences between modern and fossil pollen were explored with a PLSR model.
 The ordination showed that the fossil pollen are clearly separated from the modern pollen (Fig \@ref(fig:plsrord)).
@@ -270,8 +269,9 @@ A PCA-LDA model to differentiate fossil pollen into the three cores achieved ~60
 
 -->
 
-
-the peak at 1170 cm^-1^ is more pronounced in spt than acetolyzed pollen.
+A peak at 1030 and ~1200 cm^-1^ is visible in the acetolysed pollen but not in the modern spectra or SPT pollen.
+We see a broad peak at 1090-1100 cm^-1^ in the SPT spectra of all three cores.
+This peak is not present in either modern pollen or acetolysed pollen, additionally Tiefer See shows a similar peak at 1630.
 
 the 1090 cm^-1^ peak dissappears after acetolysis from all spectra as does the 1630 cm^-1^ peak in TSK. 
 a peak at 1040 cm^-1^ is now visible in acetolysed pollen that is not visible in the SPT pollen.
@@ -303,26 +303,16 @@ kable(lda_tables[["depth"]], booktabs = T, format = "latex",
 
 ## Spectra mean plots
 
-```{r meanFRE, echo=FALSE, fig.cap="FRE", message=FALSE, warning=FALSE, out.width="100%"}
+```{r meanspectra, echo=FALSE, fig.cap="FRE", message=FALSE, warning=FALSE, out.width="100%"}
+knitr::include_graphics(here("figures", "mean_plots.png"))
+
 mean_plotsSM = readRDS(here("data","output","mean_plots.rds"))
-
-mean_plotsSM[[7]]
-```
-
-```{r meanDAL, echo=FALSE, fig.cap="DAL whole core mean plots", message=FALSE, warning=FALSE, out.width="100%"}
 mean_plots = readRDS(here("data","output","mean_plots_whole.rds"))
-
-mean_plots[[1]]
 ```
 
-```{r meanMFM, echo=FALSE, fig.cap="MFM whole core mean plots", message=FALSE, warning=FALSE, out.width="100%"}
-mean_plots[[2]]
+```{r ordinations, echo=FALSE, fig.cap="FRE", message=FALSE, warning=FALSE, out.width="100%"}
+knitr::include_graphics(here("figures", "ord_plots.png"))
 ```
-
-```{r meanTSK, echo=FALSE, fig.cap="TSK whole core mean plots", message=FALSE, warning=FALSE, out.width="100%"}
-mean_plots[[3]]
-```
-
 
 # Discussion
 
@@ -380,6 +370,8 @@ Further studies with GCMS methods on fossil pollen and several species have to b
 
 .conclusions
 
+\newpage
+\newpage
 # Mean spectra figures SM
 
 

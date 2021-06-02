@@ -28,12 +28,32 @@ plot_scor = function(obj, meta){
   return(g)
 }
 
+create_layout = function(h,w,x,y,split = 2){
+  c = 1
+  h = h-1
+  w = w-1
+  layout = list("t" = rep(0,x*y), "l" =rep(0,x*y), "b" =rep(0,x*y), "r" =rep(0,x*y))
+  for (x in 1:x) {
+    for (y in 1:y) {
+      layout[["t"]][c] = y+(y-1)*(h)
+      layout[["l"]][c] =x+(x-1)*(w)
+      layout[["b"]][c] =y+h*y
+      layout[["r"]][c] =x+w*x
+      c = c+1
+    }
+  }
+  attr(layout,  "class") = "patch_area"
+  return(layout)
+}
+
 library(pls)
 
 FRE$treat = "fresh"
 DAL$treat = "fossil"
 MFM$treat = "fossil"
 TSK$treat = "fossil"
+
+ord_plots = list()
 
 # PLS fresh vs fossil
 
@@ -42,8 +62,10 @@ pls_data$y = model.matrix(~treat -1, data = pls_data)
 colnames(pls_data$sg2) = colnames(DAL$sg2)
 
 results = plsr(y ~sg2, 6, data = pls_data, validation = "LOO")
-plot_coef(results$coefficients)
-plot_scor(results$scores, pls_data)
+
+ord_plots[["allcoresord"]] = plot_scor(results$scores, pls_data)
+ord_plots[["allcorescoepc1"]] = plot_coef(results$coefficients)
+ord_plots[["allcorescoepc2"]] = plot_coef(results$coefficients, 2)
 
 # PLS SPT vs acet
 ## all cores
@@ -54,11 +76,13 @@ pls_data = filter(
     acet_sel(TSK)
     ), 
   species == "Pinus")
-pls_data$y = model.matrix(~treatment -1, data = pls_data)
+pls_data$y = model.matrix(~Label -1, data = pls_data)
 colnames(pls_data$sg2) = colnames(DAL$sg2)
 
-results = plsr(y ~sg2, 6, data = pls_data, validation = "LOO")
-plot_coef(results$coefficients)
+results = plsr(y ~ sg2, 6, data = pls_data, validation = "LOO")
+ord_plots[["allcoressptacetord"]] = plot_scor(results$scores, pls_data)
+ord_plots[["allcoressptacetpc1"]] = plot_coef(results$coefficients)
+ord_plots[["allcoressptacetpc2"]] = plot_coef(results$coefficients,2)
 
 ## SPT core only lda on cores
 pls_data = filter(
@@ -71,17 +95,107 @@ pls_data = filter(
 pls_data$y = model.matrix(~Label -1, data = pls_data)
 colnames(pls_data$sg2) = colnames(DAL$sg2)
 
-results = plsr(y ~sg2, 6, data = pls_data, validation = "LOO")
+results = plsr(y ~ sg2, 6, data = pls_data, validation = "LOO")
+ord_plots[["allcoressptord"]] = plot_scor(results$scores, pls_data)
+ord_plots[["allcoressptpc1"]] = plot_coef(results$coefficients)
+ord_plots[["allcoressptpc2"]] = plot_coef(results$coefficients,2)
 
-## DAL
+## acet core only lda on cores
 pls_data = filter(
   rbind(
-    acet_sel(DAL)
+    acet_sel(DAL),
+    acet_sel(MFM),
+    acet_sel(TSK)
   ), 
-  species == "Pinus")
-pls_data$y = model.matrix(~treatment -1, data = pls_data)
+  species == "Pinus" & treatment == "acet")
+pls_data$y = model.matrix(~Label -1, data = pls_data)
 colnames(pls_data$sg2) = colnames(DAL$sg2)
 
-results = plsr(y ~sg2, 6, data = pls_data, validation = "LOO")
-plot(results, plottype = "coefficients")
+results = plsr(y ~ sg2, 6, data = pls_data, validation = "LOO")
+ord_plots[["allcoresacetord"]] = plot_scor(results$scores, pls_data)
+ord_plots[["allcoresacetpc1"]] = plot_coef(results$coefficients)
+ord_plots[["allcoresacetsp2"]] = plot_coef(results$coefficients,2)
 
+## SPT vs acet
+pls_data = filter(
+  rbind(
+    acet_sel(DAL),
+    acet_sel(MFM),
+    acet_sel(TSK)
+  ), 
+  species == "Pinus")
+pls_data$y = model.matrix(~ treatment -1, data = pls_data)
+colnames(pls_data$sg2) = colnames(DAL$sg2)
+
+results = plsr(y ~ sg2, 6, data = pls_data, validation = "LOO")
+ord_plots[["allcorestreatmentord"]] = plot_scor(results$scores, pls_data)
+ord_plots[["allcorestreatmentpc1"]] = plot_coef(results$coefficients)
+ord_plots[["allcorestreatmentpc"]] = plot_coef(results$coefficients,2)
+
+saveRDS(ord_plots, here("data","output","ordplot.rds"))
+
+
+#plots
+
+mean_plotsSM = readRDS(here("data","output","mean_plots.rds"))
+mean_plots = readRDS(here("data","output","mean_plots_whole.rds"))
+
+g = mean_plotsSM[[7]] + theme(
+  axis.title.x = element_blank(),
+  axis.ticks.x = element_blank(),
+  axis.text.x = element_blank(),
+  axis.ticks.y = element_blank(),
+  axis.text.y = element_blank(),
+  legend.position = "top") + 
+  mean_plots[[1]] + theme(
+    axis.title.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.text.x = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.y = element_blank(),
+    legend.position = "none") + 
+  mean_plots[[2]] + theme(
+    axis.title.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.text.x = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.y = element_blank(),
+    legend.position = "none") + 
+  mean_plots[[3]] + theme(
+    axis.ticks.y = element_blank(),
+    axis.text.y = element_blank(),
+    legend.position = "bottom") + 
+  plot_layout(design = create_layout(3,2,1,4)) + 
+  plot_annotation(tag_levels = c("a"))
+
+ggsave(here("figures","mean_plots.png"), plot = g, width = 17, height = 25, units = c("cm"))
+
+##
+
+plsr_plot = readRDS(here("data","output","ordplot.rds"))
+
+design = "
+11112222
+11112222
+33334444
+33334444
+55556666
+55556666
+77778888
+77778888
+"
+
+#create_layout(3,2,2,4)
+
+o = plsr_plot[[1]] +
+  plsr_plot[[2]] +
+  plsr_plot[[4]] +
+  plsr_plot[[5]] +
+  plsr_plot[[7]] +
+  plsr_plot[[8]] +
+  plsr_plot[[10]] +
+  plsr_plot[[11]] +
+  plot_layout(design = design , byrow = T, guides = "collect") + 
+  plot_annotation(tag_levels = c("a"))
+
+ggsave(here("figures","ord_plots.png"), plot = o, width = 17, height = 25, units = c("cm"))
