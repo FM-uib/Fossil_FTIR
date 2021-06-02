@@ -285,22 +285,6 @@ Generally lower number of depths to classify increased accuracy.
 sporopollenin peaks are similar between depths, changes in the other parts of the spectra are driving separation.
 
 
-```{r pcaacetsel, echo=FALSE, message=FALSE, warning=FALSE, fig.cap = "PCA all cores, only samples present in both acet and SPT"}
-pca_acet_select[1]
-```
-
-```{r ldatreatment, echo=FALSE, results='asis'}
-
-kable(lda_tables[["treatment"]], booktabs = T, format = "latex",
-      caption = "Accuracy of bootstrapped PCA LDA to distinguish treatment (SPT vs acet)")
-```
-
-```{r ldadepth, echo=FALSE, results='asis'}
-
-kable(lda_tables[["depth"]], booktabs = T, format = "latex",
-      caption = "Accuracy of bootstrapped PCA LDA to distinguish depths for each core. treatments are separate.")
-```
-
 ## Spectra mean plots
 
 ```{r meanspectra, echo=FALSE, fig.cap="FRE", message=FALSE, warning=FALSE, out.width="100%"}
