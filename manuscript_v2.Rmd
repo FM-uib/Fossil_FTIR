@@ -94,14 +94,14 @@ MFM = MFM[!MFM$ids %in% outliers,]
 ```
 
 <!-- PRE-PROCESS DATA -->
-```{r}
+```{r message=FALSE, warning=FALSE, include=FALSE}
 if (!hasName(DAL, "emsc")) {
   source(here("R","pre_process.R"))
 }
 ```
 
 <!-- PCA -->
-```{r}
+```{r message=FALSE, warning=FALSE, include=FALSE}
 
 ```
 
@@ -482,4 +482,4 @@ blank_mean_plots[[6]]
 
 
 # References
-
+
