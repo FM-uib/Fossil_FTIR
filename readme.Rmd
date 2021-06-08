@@ -12,6 +12,39 @@ The 'renv.lock' file can be used to initiate the library after 'renv' is install
 
 # Detailed Methods and Materials
 
+## Pollen Counts
+```{r DALcounts, echo=FALSE, results='asis'}
+count_grains = function(core){
+  counts = core %>%
+    subset(type == "pollen" & species == "Pinus") %>% 
+    group_by(type, depth, treatment) %>%
+    summarise(count=n())
+  return(counts)
+}
+count_grains = function(core){
+  counts = core %>%
+    subset(type == "pollen") %>% 
+    group_by(treatment, depth, species) %>%
+    summarise(count=n())
+  return(counts)
+}
+kable(count_grains(DAL), booktabs = T, format = "latex",
+      caption = "Pinus pollen grain count in Dalmutladdo core.")
+#      digits = 1, format.args = list(scientific = F),
+#      col.names = c("")) %>% 
+#  add_header_above()
+```
+
+```{r TSKcounts, echo=FALSE, results='asis'}
+kable(count_grains(TSK), booktabs = T, format = "latex",
+      caption = "Pinus pollen grain count in Tiefer See core.")
+```
+
+```{r MFMcounts, echo=FALSE, results='asis'}
+kable(count_grains(MFM), booktabs = T, format = "latex",
+      caption = "Pinus pollen grain count in Meerfelder Maar core.")
+```
+
 ## SPT extraction
 
 Pollen extraction:
