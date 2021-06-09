@@ -188,7 +188,7 @@ Chemical treatment...
 <!-- SPT is removed from the sample with several washes after extraction and any contamination of the sample is easily identifiable by characteristic wavebands in the spectra.  -->
 
 # Methods and Materials
-The pollen was extracted from three sediment cores: Dalmuttlado in Norway, Tiefer See [@dragerVarveMicrofaciesVarve2017] and Meerfelder Maar [@brauerHighResolutionSediment1999] in Germany.
+The pollen was extracted from three sediment cores: Dalmuttlado in Norway [@bjuneHoloceneVegetationClimate2004], Tiefer See [@theuerkaufEffectsChangesLand2015]  and Meerfelder Maar [@brauerHighResolutionSediment1999] in Germany.
 The three sediment cores were selected because they contain *Pinus* pollen types, spanning three different periods in the late Quaternary **[it would be useful to include a summary table here, instead of the descriptions you had below]**
 
 Prior to chemical characterisation using FTIR, all sediment samples were processed in two ways.
@@ -205,6 +205,28 @@ Under these conditions it is possible that acetolysis may alter the chemical com
 Thus, incorporating the acetolysis step on this analysis allows us to compare the effects of pollen grains spectra from the both treated and untreated pollen grains.
 
 ## Need to have something on the modern samples
+
+```{r sites, echo=false, results='asis'}
+sites = data.frame(name = c("Tiefer See",
+                            "Dalmutladdo",
+                            "Meerfelder Maar"),
+                   abbreviation = c("TSK",
+                                    "DAL",
+                                    "MFM"),
+                   age_range = c("1932 - 2015 AD",
+                                 "9836 - 595 BP",
+                                 "13120 - 11400 BP"),
+                   description = c("varved sediment, formed during the last last glacial period, Mecklenburg-Vorpommern, Germany",
+                                   "formed after the last deglaciation, near Tromsø, Norway ",
+                                   "varved sediment, formed in a volcanic crater in the Westeifel, Germany"),
+                   publication = c("[@theuerkaufEffectsChangesLand2015]",
+                                   "[@bjuneHoloceneVegetationClimate2004]",
+                                   "[@brauerHighResolutionSediment1999]"))
+
+kable(sites, booktabs = T, format = "latex",
+      caption = "")
+```
+
 
 <!-- Put this into a table -->
 <!-- Tiefer See formed during the last glacial period, while the Meerfelder Maar record is from the largest maar of the Westeifel Volcaniv field and formed ~35000 BP. -->
@@ -251,9 +273,6 @@ lda_tables = readRDS(here("data","output","lda_tables.rds"))
 
 ```{r meanspectra, echo=FALSE, fig.cap="FRE", message=FALSE, warning=FALSE, out.width="100%"}
 knitr::include_graphics(here("figures", "mean_plots.png"))
-
-mean_plotsSM = readRDS(here("data","output","mean_plots.rds"))
-mean_plots = readRDS(here("data","output","mean_plots_whole.rds"))
 ```
 
 There are differences between modern and fossil grains (Fig. \@ref(fig:meanspectra)).
@@ -386,64 +405,6 @@ While sample processing and computational methods exist to minimize or avoid sca
 Further studies with GCMS methods on fossil pollen and several species have to be performed. 
 
 .conclusions
-
-\newpage
-\newpage
-# Mean spectra figures SM
-
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL SPT"}
-mean_plotsSM[[1]]
-```
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL acet"}
-mean_plotsSM[[2]]
-```
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK SPT"}
-mean_plotsSM[[3]]
-```
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK acet"}
-mean_plotsSM[[4]]
-```
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM SPT"}
-mean_plotsSM[[5]]
-```
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM acet"}
-mean_plotsSM[[6]]
-```
-
-\newpage
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL SPT"}
-blank_mean_plots = readRDS(here("data","output","blank_mean_plots.rds"))
-blank_mean_plots[[1]]
-```
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL acet"}
-blank_mean_plots[[2]]
-```
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK SPT"}
-blank_mean_plots[[3]]
-```
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK acet"}
-blank_mean_plots[[4]]
-```
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM SPT"}
-blank_mean_plots[[5]]
-```
-
-```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM acet"}
-blank_mean_plots[[6]]
-```
-
-
 
 # References
 
