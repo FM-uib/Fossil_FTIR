@@ -206,7 +206,7 @@ Thus, incorporating the acetolysis step on this analysis allows us to compare th
 
 ## Need to have something on the modern samples
 
-```{r sites, echo=false, results='asis'}
+```{r sites, echo=F, results='asis'}
 sites = data.frame(name = c("Tiefer See",
                             "Dalmutladdo",
                             "Meerfelder Maar"),
@@ -219,14 +219,20 @@ sites = data.frame(name = c("Tiefer See",
                    description = c("varved sediment, formed during the last last glacial period, Mecklenburg-Vorpommern, Germany",
                                    "formed after the last deglaciation, near Tromsø, Norway ",
                                    "varved sediment, formed in a volcanic crater in the Westeifel, Germany"),
-                   publication = c("[@theuerkaufEffectsChangesLand2015]",
-                                   "[@bjuneHoloceneVegetationClimate2004]",
-                                   "[@brauerHighResolutionSediment1999]"))
+                   publication = c("(ref:tsk)",
+                                   "(ref:dal)",
+                                   "(ref:mfm)"))
 
-kable(sites, booktabs = T, format = "latex",
-      caption = "")
+knitr::kable(sites, booktabs = T, format = "latex", 
+             caption = "",
+             col.names = c("Name", "Abbr.", "Age", "Description", "Publ.")) %>%
+  column_spec(4, width = "5cm")
 ```
 
+
+(ref:tsk) @theuerkaufEffectsChangesLand2015
+(ref:dal) @bjuneHoloceneVegetationClimate2004
+(ref:mfm) @brauerHighResolutionSediment1999
 
 <!-- Put this into a table -->
 <!-- Tiefer See formed during the last glacial period, while the Meerfelder Maar record is from the largest maar of the Westeifel Volcaniv field and formed ~35000 BP. -->
