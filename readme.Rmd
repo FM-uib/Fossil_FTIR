@@ -12,6 +12,98 @@ The 'renv.lock' file can be used to initiate the library after 'renv' is install
 
 # Detailed Methods and Materials
 
+## Pollen Counts
+```{r DALcounts, echo=FALSE, results='asis'}
+count_grains = function(core){
+  counts = core %>%
+    subset(type == "pollen" & species == "Pinus") %>% 
+    group_by(type, depth, treatment) %>%
+    summarise(count=n())
+  return(counts)
+}
+count_grains = function(core){
+  counts = core %>%
+    subset(type == "pollen") %>% 
+    group_by(treatment, depth, species) %>%
+    summarise(count=n())
+  return(counts)
+}
+kable(count_grains(DAL), booktabs = T, format = "latex",
+      caption = "Pinus pollen grain count in Dalmutladdo core.")
+#      digits = 1, format.args = list(scientific = F),
+#      col.names = c("")) %>% 
+#  add_header_above()
+```
+
+```{r TSKcounts, echo=FALSE, results='asis'}
+kable(count_grains(TSK), booktabs = T, format = "latex",
+      caption = "Pinus pollen grain count in Tiefer See core.")
+```
+
+```{r MFMcounts, echo=FALSE, results='asis'}
+kable(count_grains(MFM), booktabs = T, format = "latex",
+      caption = "Pinus pollen grain count in Meerfelder Maar core.")
+```
+
+
+## Mean spectra
+
+```{r}
+mean_plotsSM = readRDS(here("data","output","mean_plots.rds"))
+mean_plots = readRDS(here("data","output","mean_plots_whole.rds"))
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL SPT"}
+mean_plotsSM[[1]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL acet"}
+mean_plotsSM[[2]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK SPT"}
+mean_plotsSM[[3]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK acet"}
+mean_plotsSM[[4]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM SPT"}
+mean_plotsSM[[5]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM acet"}
+mean_plotsSM[[6]]
+```
+
+\newpage
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL SPT"}
+blank_mean_plots = readRDS(here("data","output","blank_mean_plots.rds"))
+blank_mean_plots[[1]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="DAL acet"}
+blank_mean_plots[[2]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK SPT"}
+blank_mean_plots[[3]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="TSK acet"}
+blank_mean_plots[[4]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM SPT"}
+blank_mean_plots[[5]]
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, out.width = "100%", fig.cap="MFM acet"}
+blank_mean_plots[[6]]
+```
+
 ## SPT extraction
 
 Pollen extraction:
