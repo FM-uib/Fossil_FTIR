@@ -11,7 +11,7 @@ plot_mean_spectra = function(data, subset_sel, spec_id, id.vars = c("ids", "trea
   pdata$variable = as.numeric(as.character(pdata$variable))
   
   #offset
-  pdata = offset_spectra(pdata, group, "value", seq(0, by=1, length.out = length(levels(pdata[,group])))) #max(pdata$value)/2
+  pdata = offset_spectra(pdata, group, "value", seq(0, by=max(pdata$value)/5, length.out = length(levels(pdata[,group])))) #
   
   # mean data over groups
   pdata_mean = pdata %>%
@@ -21,7 +21,7 @@ plot_mean_spectra = function(data, subset_sel, spec_id, id.vars = c("ids", "trea
   
   g = ggplot(pdata, aes_string("variable", "value", color = group))+
     geom_line(aes(group = ids), alpha = .15) + #mean spectra
-    #geom_line(data = pdata_mean, aes_string("variable", "mean", group = group), inherit.aes = F, size = 1) + #all spectra
+    geom_line(data = pdata_mean, aes_string("variable", "mean", group = group), inherit.aes = F, size = 1) + #all spectra
     xlim(1800,900) +
     theme_bw() + theme(legend.position = "bottom") +
     guides(colour = guide_legend(override.aes = list(alpha = 1)))
