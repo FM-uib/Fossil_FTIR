@@ -10,26 +10,44 @@ plot_mean_spectra = function(data, subset_sel, spec_id, id.vars = c("ids", "trea
   # wavenumbers to numeric  
   pdata$variable = as.numeric(as.character(pdata$variable))
   
+  # reorder
+  pdata %>%
+    mutate(group = factor(group, levels = c("DAL_SPT","DAL_acet",
+                                            "MFM_SPT","MFM_acet",
+                                            "TSK_SPT","TSK_acet",
+                                            "FRE_Bergen","FRE_Innsbruck"))) %>%
+    arrange(group, variable)
+  
   #offset
-  pdata = offset_spectra(pdata, group, "value", seq(0, by=max(pdata$value)/3, length.out = length(unique(pdata[,group]))))
+  pdata = offset_spectra(pdata, group, "value", seq(0, by=1, length.out = length(levels(pdata[,group])))) #max(pdata$value)/2
   
   # mean data over groups
   pdata_mean = pdata %>%
     group_by_at(c(group, "variable")) %>%
     summarise(mean = mean(value))
   
+  # reorder
+  pdata_mean %>%
+    mutate(group = factor(group, levels = c(
+                                            "DAL_SPT","DAL_acet",
+                                            "MFM_SPT","MFM_acet",
+                                            "TSK_SPT","TSK_acet",
+                                            "FRE_Bergen","FRE_Innsbruck"))) %>%
+    arrange(group)
+  
   g = ggplot(pdata, aes_string("variable", "value", color = group))+
     geom_line(aes(group = ids), alpha = .15) + #mean spectra
-    geom_line(data = pdata_mean, aes_string("variable", "mean", group = group), inherit.aes = F, size = 1) + #all spectra
+    #geom_line(data = pdata_mean, aes_string("variable", "mean", group = group), inherit.aes = F, size = 1) + #all spectra
     xlim(1800,900) +
-    theme_bw() + theme(legend.position = "bottom")  
+    theme_bw() + theme(legend.position = "bottom") +
+    guides(colour = guide_legend(override.aes = list(alpha = 1)))
   
   return(g)
 }  
 
 offset_spectra = function(data, variable, value, offset) {
-  for (i in 1:length(unique(data[, variable]))) {
-    data[data[, variable] == unique(data[, variable])[i],value] = data[data[, variable] == unique(data[, variable])[i],value] + offset[i]
+  for (i in 1:length(levels(data[, variable]))) {
+    data[data[, variable] == levels(data[, variable])[i],value] = data[data[, variable] == levels(data[, variable])[i],value] + offset[i]
   }
   return(data)
 }
@@ -37,6 +55,32 @@ offset_spectra = function(data, variable, value, offset) {
 ### Treatments mean plots over whole core
 
 l = list()
+
+FRE = FRE %>%
+  mutate(off = paste(Label, type, sep = "_"))
+DAL = DAL %>%
+  mutate(off = paste(Label, treatment, sep = "_"))
+MFM = MFM %>%
+  mutate(off = paste(Label, treatment, sep = "_"))
+TSK = TSK %>%
+  mutate(off = paste(Label, treatment, sep = "_"))
+  
+data = rbind(
+  FRE,
+  DAL,
+  MFM,
+  TSK
+)
+data= data%>%
+  mutate(off = factor(off, levels = c(
+    "DAL_SPT","DAL_acet",
+    "MFM_SPT","MFM_acet",
+    "TSK_SPT","TSK_acet",
+    "FRE_Bergen","FRE_Innsbruck"))) %>%
+  arrange(off)
+colnames(data$emsc) = colnames(FRE$emsc)
+
+plot_mean_spectra(data, expression(species == "Pinus"), spec_id = "emsc", group = "off", id.vars = c("ids", "treatment", "Label", "depth", "age", "type", "off"))
 
 l[["DAL"]] = plot_mean_spectra(DAL, expression(species == "Pinus"), spec_id = "emsc", group = "treatment")
 
