@@ -10,14 +10,6 @@ plot_mean_spectra = function(data, subset_sel, spec_id, id.vars = c("ids", "trea
   # wavenumbers to numeric  
   pdata$variable = as.numeric(as.character(pdata$variable))
   
-  # reorder
-  pdata %>%
-    mutate(group = factor(group, levels = c("DAL_SPT","DAL_acet",
-                                            "MFM_SPT","MFM_acet",
-                                            "TSK_SPT","TSK_acet",
-                                            "FRE_Bergen","FRE_Innsbruck"))) %>%
-    arrange(group, variable)
-  
   #offset
   pdata = offset_spectra(pdata, group, "value", seq(0, by=1, length.out = length(levels(pdata[,group])))) #max(pdata$value)/2
   
@@ -26,14 +18,6 @@ plot_mean_spectra = function(data, subset_sel, spec_id, id.vars = c("ids", "trea
     group_by_at(c(group, "variable")) %>%
     summarise(mean = mean(value))
   
-  # reorder
-  pdata_mean %>%
-    mutate(group = factor(group, levels = c(
-                                            "DAL_SPT","DAL_acet",
-                                            "MFM_SPT","MFM_acet",
-                                            "TSK_SPT","TSK_acet",
-                                            "FRE_Bergen","FRE_Innsbruck"))) %>%
-    arrange(group)
   
   g = ggplot(pdata, aes_string("variable", "value", color = group))+
     geom_line(aes(group = ids), alpha = .15) + #mean spectra
