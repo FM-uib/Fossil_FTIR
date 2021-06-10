@@ -22,8 +22,12 @@ plot_mean_spectra = function(data, subset_sel, spec_id, id.vars = c("ids", "trea
   g = ggplot(pdata, aes_string("variable", "value", color = group))+
     geom_line(aes(group = ids), alpha = .15) + #mean spectra
     geom_line(data = pdata_mean, aes_string("variable", "mean", group = group), inherit.aes = F, size = 1) + #all spectra
-    xlim(1800,900) +
-    theme_bw() + theme(legend.position = "bottom") +
+    scale_x_reverse(name = "wavenumbers",limits = c(1800,900), breaks = seq(1800,900,-100)) +
+    scale_y_continuous(name = "Absorbance (arbitrary units)",breaks = NULL) +
+    theme_bw() + 
+    theme(legend.position = "bottom",
+          axis.ticks.y = element_blank(),
+          axis.text.y = element_blank()) +
     guides(colour = guide_legend(override.aes = list(alpha = 1)))
   
   return(g)
