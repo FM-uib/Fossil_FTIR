@@ -24,6 +24,15 @@ plot_mean_spectra = function(data, subset_sel, spec_id, id.vars = c("ids", "trea
     geom_line(data = pdata_mean, aes_string("variable", "mean", group = group), inherit.aes = F, size = 1) + #all spectra
     scale_x_reverse(name = "wavenumbers",limits = c(1800,900), breaks = seq(1800,900,-100)) +
     scale_y_continuous(name = "Absorbance (arbitrary units)",breaks = NULL) +
+    scale_color_manual(name = NULL,
+                       values = c("#e66101","#ff6c01",
+                                  "#ac7d43","#fdb863",
+                                  "#b2abd2","#d8d0ff",
+                                  "#5e3c99","#9d64ff"),
+                       labels = c("DAL non acet.","DAl acet.",
+                                  "MFM non acet.","MFM acet.",
+                                  "TSK non acet.","TSK acet.",
+                                  "Bergen","Innsbruck")) +
     theme_bw() + 
     theme(legend.position = "bottom",
           axis.ticks.y = element_blank(),
