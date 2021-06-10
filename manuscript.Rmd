@@ -189,7 +189,7 @@ Chemical treatment...
 
 # Methods and Materials
 The pollen was extracted from three sediment cores: Dalmuttlado in Norway [@bjuneHoloceneVegetationClimate2004], Tiefer See [@theuerkaufEffectsChangesLand2015]  and Meerfelder Maar [@brauerHighResolutionSediment1999] in Germany.
-The three sediment cores were selected because they contain *Pinus* pollen types, spanning three different periods in the late Quaternary **[it would be useful to include a summary table here, instead of the descriptions you had below]**
+The three sediment cores were selected because they contain *Pinus* pollen types, spanning three different periods in the late Quaternary (Table \@ref(tab:sites)).
 
 Prior to chemical characterisation using FTIR, all sediment samples were processed in two ways.
 First, the samples were extracted using density separation using dissolved Sodium Polytungstate (SPT) [@kampsAgentSeparationDissolved1985] at 1.43 g cm^-3^ as separation medium.
@@ -200,9 +200,9 @@ In our case the lighter fraction contained majority of the pollen grains.
 Sample residues were then washed three times in using distilled H2O to remove any excess SPT, resulting in sample residues with a higher pollen concentration compared to other organic and inorganic materials on the slide.
 
 We then applied an acetolysis treatment [e.g. @erdtmanSixNotesPollen1959; @faegriTextbookPollenAnalysis1989] to one subset of the samples following washing and extracting using SPT.
-Although acetolysis treatments at low temperatures did not create major chemical differences in Lycopodium spores [Jardine2015], it is uncommon for low temperature treatments to be applied to fossil sediment samples since the higher temperatures are required for oxidation of the non-pollen organic material.
+Although acetolysis treatments at low temperatures did not create major chemical differences in Lycopodium spores [@jardineImpactOxidationSpore2015], it is uncommon for low temperature treatments to be applied to fossil sediment samples since the higher temperatures are required for oxidation of the non-pollen organic material.
 Under these conditions it is possible that acetolysis may alter the chemical composition of sporopollenin, and so in many cases it may be preferable to use alternative approaches to extract fossil pollen grains before analysis using FTIR.
-Thus, incorporating the acetolysis step on this analysis allows us to compare the effects of pollen grains spectra from the both treated and untreated pollen grains.
+Thus, incorporating the acetolysis step on this analysis allows us to compare the effects of pollen grains spectra from both treated and untreated pollen grains.
 
 ## Need to have something on the modern samples
 
@@ -248,17 +248,14 @@ We recorded several "blank" spectra of dried residue that formed over the dried 
 
 ## Spectra preprocessing and analysis 
 
-Preprocessing:
-- SG 2nd degree, 2 poly, windowsize 5 or 6
-- EMSC linear (probably needs to involve background spectra to filter them out)
+The spectra were preprocessed before analysis consisted of smoothing and calculation of second derivative and normalization.
+We used the Savitzky Golay (SG) algorithm [@savitzkySmoothingDifferentiationData1964] as implemented by the extended multiplicative signal correction (EMSC) package in R [@lilandPackageEMSC2017] and used second degree polynomial and windowsize five as parameters.
+The second derivative spectra was then normalized using a EMSC model with a linear component [@lilandPackageEMSC2017].
+Preprocessing with SG and EMSC has been shown to improve performance of multivariate analysis, such as principal component analysis (PCA) or models in the partial least squares regression (PLSR) family [@woutersenNovelApproachStudy2018; @zimmermannOptimizingSavitzkyGolayParameters2013].
 
-PLSR second deriv on treatment (fresh vs fossil)
-
-PLS regression of spectra on depth
-
-repeat on different grain averages (1, 3, 5, 10)
-
-average all spectra and stack plots of different depth
+We used two PLSR models to explore the chemical differences between modern and fossil grains (model 1), and acetolyzed and non acetolyzed fossil grains (model 2).
+For these models the explanatory variables were the preprocessed spectra and the response variables were hot-one encoded response variables (Model 1: modern/fossil; Model 2: acet./ non acet.).
+By using PLSR we can maximize the distance between responses and identify chemical differences between the responses by looking at the regression coefficients.
 
 \newpage
 
@@ -298,7 +295,7 @@ The fossil poaceae data set (Amazon Fan and Western Amazon) from @jardineSporopo
 These fossil poaceae set was treated differently than ours and jardines extant poaceae set (combination of heavy liquid separation, Na~4~P~2~O~7~, lignite).
 
 @jardineImpactOxidationSpore2015 showed limited effect on pollen chemistry of cold acetolysis if it was shorter than 10 minutes.
-Hot acetolysis (90), which is standard procedure in palynology, had an effect after the first minute. 
+Hot acetolysis (90&deg;C), which is standard procedure in palynology, had an effect from the first minute. 
 The simililarities of the acetolysed extant set to our acetolysed fossil set and dissimilarities to pollen treated with a different combination of extractions (Amazon Western and Fan), suggest that chemical treatment of the pollen has a large effect on the chemistry of pollen, both modern and fossil origin.
 This is important to consider going forward for the application of IR methods in palaeoecology, where extraction methods are often dependent on sediment type.
 The effects of these extraction methods need to be explored on modern and fossil material side by side to see if there are links to bridge the transition from modern to fossil pollen.
