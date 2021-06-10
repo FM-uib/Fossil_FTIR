@@ -68,6 +68,7 @@ data = rbind(
   MFM,
   TSK
 )
+
 data= data%>%
   mutate(off = factor(off, levels = c(
     "DAL_SPT","DAL_acet",
@@ -77,14 +78,9 @@ data= data%>%
   arrange(off)
 colnames(data$emsc) = colnames(FRE$emsc)
 
-plot_mean_spectra(data, expression(species == "Pinus"), spec_id = "emsc", group = "off", id.vars = c("ids", "treatment", "Label", "depth", "age", "type", "off"))
+l = plot_mean_spectra(data, expression(species == "Pinus"), spec_id = "emsc", group = "off", id.vars = c("ids", "treatment", "Label", "depth", "age", "type", "off"))
 
-l[["DAL"]] = plot_mean_spectra(DAL, expression(species == "Pinus"), spec_id = "emsc", group = "treatment")
-
-l[["MFM"]] = plot_mean_spectra(MFM, expression(species == "Pinus"), spec_id = "emsc", group = "treatment")
-
-l[["TSK"]] = plot_mean_spectra(TSK, expression(species == "Pinus"), spec_id = "emsc", group = "treatment")
-
+ggsave(here("figures","mean_plots.png"), l, width = 17, height = 25,units = "cm")
 saveRDS(l, here("data","output","mean_plots_whole.rds"))
 
 ### creating Plots
