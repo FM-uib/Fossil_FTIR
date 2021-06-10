@@ -375,11 +375,11 @@ Capturing spectra from a larger area is only advantageous over single point meas
 This was not always possible, we found, because the pollen was very scarce in some samples.
 
 Acetolysis is the conventional method to extract pollen in high concentration, but as discussed before, we believe there is value in extracting non acetolysed pollen from sediments, because of the substantial differences in pollen chemistry we found between acetolysed and non acetolysed pollen.
-We believe that density separation is a viable alternative [REF], but may have been one possible cause for our low concentration in some samples.
-The reported density of pollen is variable [REFS] and our extraction was done on the lower end of these reported densities (1.44 g cm ^-3^).
+We believe that density separation is a viable alternative [@caffreyUseLithiumHeteropolytungstate2013; @leipeTestingPerformanceSodium2019; @regnellPreparativeCentrifugationNew1996], but may have been one possible cause for our low concentration in some samples.
+The reported density of pollen is variable [@faegriTextbookPollenAnalysis1989; @flenley1971measurements; @regnellPreparativeCentrifugationNew1996; @nakagawaDensemediaSeparationMore1998; @juvigneDensiteExinesQuelques1973] and our extraction was done on the lower end of these reported densities (1.44 g cm ^-3^).
 We opted for this density because test extractions using a higher density (1.98 g cm ^-3^), also introduced even more organic material to clutter our samples.
 A refinement of the right extraction medium density in combination with sieving of the samples to remove non pollen organic material may be one approach.
-XXX have reported similar counts of pollen grains to conventional extraction methods using density separation. 
+@caffreyUseLithiumHeteropolytungstate2013 and @leipeTestingPerformanceSodium2019 have reported similar counts of pollen grains to conventional extraction methods using density separation. 
 
 Second, the quality of the optical images captured by our microscope was much worse than convential LM, which made it difficult to identify smaller pollen grains on the slide from other organic debris.
 An objective with higher magnification (20x) may improve this aspect of using a FTIR microscope.
