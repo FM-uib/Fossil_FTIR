@@ -296,9 +296,8 @@ The ordination showed that the fossil pollen are clearly separated from the mode
 The regression coefficients reflect our observations from the visual inspection and show that lipid  and protein peaks (1745 and 1500 - 1800 cm^-1^) have disappeared and there are substantial changes in the carbohydrate region (1000 to 1250 cm^-1^) in fossil pollen (Fig \@ref(fig:ordinations) b and c).
 The region 1000 - 1200 cm^-1^ is now dominated in acetolysed fossil pollen by two peaks and its shoulders at 1040 and 1170 cm^-1^.
 
-ADD COMPARISON TO JARDINE PAPERS and other (e.g. Woutersen)
 Comparisons to other studies that looked at acetolysed and fossil samples show similarities between our acetolysed *Pinus* pollen and other taxa.
-E.g. the carb region 1000 - 1200 in our Pine is most similar to the acetolysed extant poaceae set of @jardineSporopolleninChemistryIts2021, where two large peaks at 1040 and 1190/1170 are visible similar to our samples.
+E.g. the carb region 1000 - 1200 in our Pine is most similar to the acetolysed extant poaceae set of @jardineSporopolleninChemistryIts2021 and acetolyzed herbarium *Nitrariaceae* pollen [@woutersenNovelApproachStudy2018], where two peaks at 1040 and 1190/1170 are visible and similar to our samples.
 
 The fossil poaceae data set (Amazon Fan and Western Amazon) from @jardineSporopolleninChemistryIts2021 on the other looks quite different from our fossil pollen and their extant acetolysed set, with a large peak at 1600 and 1190 peak not clearly visible.
 These fossil poaceae set were treated differently than our pollen and the extant poaceae set, a combination of heavy liquid separation, Na~4~P~2~O~7~ and lignite as opposed to mainly acetolysis.
@@ -326,7 +325,7 @@ From the chemical spectra, it is most likely that it is dissolved silica that cr
 [FM: would probably have to replicate this with BSi in different concentrations and maybe see if thickness of this BSi crystall has an effect on the spectra]
 **I think you need to explain this peak in the context of palaeoecological research a bit- could you talk about the correction factors that might be needed if you were to apply this method everywhere? And that different sediment context might create different baseline spectra so understanding sedimentary context is essential?**
 
-### pollen chemical differences
+### Pollen chemical differences
 
 Acetolysed pollen showed two dominant peaks in the carbohydrate region at 1040 and 1170 - 1190 cm^-1^, which are not visible in the modern spectra or the non acetolysed pollen.
 This change in the 1170 - 1190 cm^-1^ region is unique to acetolysized pollen and not visible in non acetolysed pollen and had higher regression coefficients that the surrounding wavenumbers (Fig. \@ref(fig:ordinations)).
