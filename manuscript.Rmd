@@ -226,7 +226,7 @@ Prior to chemical characterisation using FTIR, all sediment samples were process
 First, the samples were extracted using density separation using dissolved Sodium Polytungstate (SPT) [@kampsAgentSeparationDissolved1985] at 1.43 g cm^-3^ as separation medium.
 During density separation a known volume of SPT (density 1.43 g cm^-3^) solution was added to the sample and homogenized/vortexed, followed by centrifugation.
 After centrifugation, particulates/material heavier than 1.43 g cm^-3^ accumulate of the bottom of the sample vial, whilst the lighter fraction was decanted and collected.
-Note that there is no agreement on the density of the pollen exine, with reported values varyiing between <1.4 g cm^-3^ [@faegriTextbookPollenAnalysis1989; @flenley1971measurements; @regnellPreparativeCentrifugationNew1996], 1.88 cm^-3^ [@nakagawaDensemediaSeparationMore1998] and 2.2 cm^-3^  [@juvigneDensiteExinesQuelques1973]. 
+Note, that there is no agreement on the density of the pollen exine, with reported values varying between <1.4 g cm^-3^ [@faegriTextbookPollenAnalysis1989; @flenley1971measurements; @regnellPreparativeCentrifugationNew1996], 1.88 cm^-3^ [@nakagawaDensemediaSeparationMore1998] and 2.2 cm^-3^  [@juvigneDensiteExinesQuelques1973]. 
 In our case the lighter fraction contained majority of the pollen grains.
 Sample residues were then washed three times in using distilled H~2~O to remove any excess SPT, resulting in sample residues with a higher pollen concentration compared to other organic and inorganic materials on the slide.
 
