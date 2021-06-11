@@ -361,12 +361,12 @@ We used *Pinus sylvestris* to explore chemical differences between modern and fo
 
 Here we used a detector in combination with a FTIR microscope that allows capture of several spectra of single grains at the same time.
 This is an improvement on previous single grain measurements, where each grain had to be targeted individually.
-The FPA-MCT detector on our FTIR microscope allows simultaneous capture of a larger area of the sample (XXX x XXX µm), compared to other detectors (XXX x XXX µm).
+The FPA-MCT detector on our FTIR microscope allows simultaneous capture of a larger area of the sample (XXX x XXX µm ), compared to other detectors (e.g. 100 x 100 µm @jardineChemotaxonomyDomesticatedGrasses2019, 50 x 50 ?µm? @zimmermannChemicalCharacterizationIdentification2018).
 An image with a spectra for each pixel is created, from which spectra of single grains were extracted.
 For this study the spectra were extracted by hand, but this process is possible to automate.
 Approaches using deep learing have shown to be capable of extracting objects from larger images, using deep neural networks specialised on image segmentation/object location [@renFasterRCNNRealTime2015].
 Conceptually the problem of locating pollen on a FTIR image is similar to locating an object on a optical image and these deep learning approaches can be applied.
-@kangSinglecellClassificationFoodborne2020 used deep neural network to classify bacteria based on images and spectral information, while @grosserueschkampSpatialMolecularResolution2017 used random forests for segmentation and identification of malignant tumor in histological thin sections using FTIR microscope equipped with a FPA detector.
+@kangSinglecellClassificationFoodborne2020 used deep neural network to classify bacteria based on images and spectral information, while @grosserueschkampSpatialMolecularResolution2017 used random forests for segmentation and identification of malignant tumor in histological thin sections using FTIR microscope equipped with a FPA detector (715 x 715 µm).
 These applications from other disciplines with a similar task show the potential of FPA detectors for chemical palynology using FTIR microscopy.
 
 We encountered a number of challenges in this study that need to be addressed for the application of IR microscopes in palaeoecology.

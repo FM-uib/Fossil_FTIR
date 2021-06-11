@@ -12,7 +12,7 @@ plot_coef = function(obj, comp = 1, coef = T){
   } else {
     tmp = as.data.frame(obj[,comp])
     n = ncol(tmp)
-    tmp$wavenumbers = as.numeric(rownames(obj[,comp]))
+    tmp$wavenumbers = as.numeric(rownames(tmp))
     for (i in 1:n) {
       tmp[,i] = tmp[,i] + i * max(abs(obj[,comp]))
     }
@@ -21,20 +21,23 @@ plot_coef = function(obj, comp = 1, coef = T){
   tmp2 = melt(tmp, id.vars = c("wavenumbers"))
   colnames(tmp2) = c("wavenumbers", "treatment", "coef")
   g = ggplot(tmp2, aes(x = wavenumbers, y = coef, color = treatment)) + 
-    geom_line() + xlim(1900,900) + theme_bw() +
+    geom_line() +
+    scale_x_reverse(name = "wavenumbers",limits = c(1800,900), breaks = seq(1800,900,-100)) +
+    scale_y_continuous(name = "Arbitrary units",breaks = NULL)
+    theme_bw() +
     theme(axis.ticks.y = element_blank(),
           axis.text.y = element_blank())
     
   return(g)
 }
 
-plot_scor = function(obj, meta){
+plot_scor = function(obj, meta, comps = c("PC1","PC2")){
   meta = meta[,c("Label","treatment")]
   tmp = as.data.frame(obj[])
   n = ncol(tmp)
   colnames(tmp) = c("PC1","PC2","PC3","PC4","PC5","PC6")
   tmp = cbind(tmp, meta)
-  g = ggplot(tmp, aes_string(x = "PC1", y =  "PC2", color = "Label")) +
+  g = ggplot(tmp, aes_string(x = comps[1], y = comps[2], color = "Label")) +
     geom_point(aes_string(shape = "treatment"), size = 1) + scale_shape_manual(values = c(17, 19, 15)) + theme_bw()
   return(g)
 }
@@ -198,10 +201,10 @@ design = "
 
 #create_layout(3,2,2,4)
 
-o = plsr_plot[[1]] +
+o = plsr_plot[[1]] + xlab("Comp. 1") + ylab("Comp. 2") +
   plsr_plot[[2]] +
   plsr_plot[[3]] +
-  plsr_plot[[13]] +
+  plsr_plot[[13]] + xlab("Comp. 1") + ylab("Comp. 2") +
   plsr_plot[[14]] +
   plsr_plot[[15]] +
   plot_layout(design = design , byrow = T, guides = "collect") + 
