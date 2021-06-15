@@ -335,13 +335,18 @@ It is crucial to understand the changes pollen undergoes during diagenesis, e.g.
 <!-- Hot acetolysis (90&deg;C), which is standard procedure in palynology [@erdtmanSixNotesPollen1959; @faegriTextbookPollenAnalysis1989], had an effect from the first minute.  -->
 
 ## Other effects observed in the fossil pollen spectra
+
+```{r SM, echo=FALSE, fig.cap="FRE", message=FALSE, warning=FALSE, out.width="90%"}
+knitr::include_graphics(here("figures", "SM_BSI.png"))
+```
+
 Spectra from the fossil-pollen samples showed differences between both sediment-core location and fossil-pollen treatment.
 These differences are likely due to a combination of sample processing, chemical variations, and also sediment-core processing effects.
 For example, we observed a broad peak at 1090-1100 cm^-1^ in the non acetolysed spectra of all three sediment cores (Fig. \@ref(fig:meanspectra)).
 In addition, samples from Tiefer See also shows peak at 1630 cm^-1^, but these peaks are not present in either modern- or in the acetolysed-pollen samples.
 
 Comparisons of FTIR spectra from biogenic-silica spectra from diatoms [@alipourInfraredMicrospectroscopyBionanomaterials2016] and hydrated silica spectra [@SilicaATRIRSpectrum] reveal that the peak 1090 cm^-1^ in the non acetolysed samples is most likely biogenic silica, which may have precipitated onto the onto ZnSe slides as the sediment residues being prepared for analysis. 
-During the measurements with the microscope, we applied our extracted pollen as droplets onto ZnSe slides and waited for the water to evaporate and we observed a crystalline layer over the same area that covered all particles and pollen **(ref Foto in SM)**.
+During the measurements with the microscope, we applied our extracted pollen as droplets onto ZnSe slides and waited for the water to evaporate and we observed a crystalline layer over the same area that covered all particles and pollen (Fig. SM \@ref(fig:SM)).
 Interestingly, it appeared that the acetolysis treatment removed this peak, which may be because of the extended washing with several chemicals and water during standard acetolysis.
 For pollen chemistry research this may present a challenge if we are aiming to directly compare spectra from unprocessed pollen samples since it may create differences in the spectra beween modern and fossil.
 Fortunately, the BSi peak does not cover any of the sporopollenin peaks, but obscures the region 1070 to 1110 cm^-1^.
