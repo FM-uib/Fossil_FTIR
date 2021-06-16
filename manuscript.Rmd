@@ -128,7 +128,7 @@ Several studies have shown links between solar and UV radiation and pollen chemi
 Successful application of pollen-chemistry techniques within palaeoecological research requires a thorough understanding of the factors influencing chemical variations in the modern environment and in the accurate estimation of the chemical spectra from pollen grains.
 Any insights gained from studies on modern grains must also be transferable under fossil settings [@jardineImpactOxidationSpore2015; @jardineSporopolleninChemistryIts2021].
 Fourier Transform Infrared (FTIR) spectroscopy has become one of the most popular methods for characterising the chemical variations present within pollen and spores in the modern environment.
-Bulk FTIR techniques, which involve the analysis of large quantities of modern-pollen samples (e.g. 1-2 mg) (e.g. @zimmermannCharacterizationPollenVibrational2010, @lahlaliATRFTIRSpectroscopyReveals2014) **[is it possible to have one very short description here about what these techniques entail- e.g. the resolution of the laser? FM: spectra resolution is the same as micro afaik, but signal to noise is better]**, have the advantage of reducing scattering effects from measurements due to the analysis of large sample quantities, improving signal to noise compared to microscopes.
+Bulk FTIR techniques, which involve the analysis of large quantities of modern-pollen samples (e.g. 1-2 mg) (e.g. @zimmermannCharacterizationPollenVibrational2010, @lahlaliATRFTIRSpectroscopyReveals2014) **[is it possible to have one very short description here about what these techniques entail- e.g. the resolution of the laser? FM: spectra resolution is the same as micro afaik, but signal to noise is better]**, have the advantage of reducing scattering effects from measurements due to the analysis of large sample quantities, which improves signal to noise compared to microscopes.
 As a result, FTIR spectra obtained from bulk pollen samples have been used identify chemical differences at the genus, and in some cases, species level [@muthreichChemicalVariationsQuercus2020; @zimmermannInfraredSpectroscopyPollen2014; @depciuchIdentificationBirchPollen2018; @diehnDiscriminationGrassPollen2020].
 However, these approaches may be less relevant for fossil sequences since the number of pollen grains analysed vastly exceeds the quantity which is practically available from a sediment-core sample. 
 
@@ -336,7 +336,7 @@ It is crucial to understand the changes pollen undergoes during diagenesis, e.g.
 
 ## Other effects observed in the fossil pollen spectra
 
-```{r SM, echo=FALSE, fig.cap="FRE", message=FALSE, warning=FALSE, out.width="90%"}
+```{r SM, echo=FALSE, fig.cap="Image captured from FTIR microscope of sample slide Dalmutladdo 60 cm depth. Pinus pollen is visible as well as debris and dried residue, presumably BSi.", message=FALSE, warning=FALSE, out.width="90%"}
 knitr::include_graphics(here("figures", "SM_BSI.png"))
 ```
 
@@ -372,8 +372,6 @@ The approach has the potential to be an improvement on previous single-grain mea
 The FPA-MCT detector on our FTIR microscope allows simultaneous capture of a larger area of the sample (XXX x XXX µm ), compared to other detectors (e.g. 100 x 100 µm @jardineChemotaxonomyDomesticatedGrasses2019, 50 x 50 ?µm? @zimmermannChemicalCharacterizationIdentification2018).
 An image with a spectra for each pixel is created, from which spectra of single grains were extracted.
 
-Our analysis revealed that 
-
 For this study the spectra were extracted by hand, but this process is possible to automate.
 Approaches using deep learing have shown to be capable of extracting objects from larger images, using deep neural networks specialised on image segmentation/object location [@renFasterRCNNRealTime2015].
 Conceptually the problem of locating pollen on a FTIR image is similar to locating an object on a optical image and these deep learning approaches can be applied.
@@ -390,17 +388,21 @@ We believe that density separation is a viable alternative [@caffreyUseLithiumHe
 The reported density of pollen is variable [@faegriTextbookPollenAnalysis1989; @flenley1971measurements; @regnellPreparativeCentrifugationNew1996; @nakagawaDensemediaSeparationMore1998; @juvigneDensiteExinesQuelques1973] and our extraction was done on the lower end of these reported densities (1.44 g cm ^-3^).
 We opted for this density because test extractions using a higher density (1.98 g cm ^-3^), also introduced even more organic material to clutter our samples.
 A refinement of the right extraction medium density in combination with sieving of the samples to remove non pollen organic material may be one approach.
-@caffreyUseLithiumHeteropolytungstate2013 and @leipeTestingPerformanceSodium2019 have reported similar counts of pollen grains to conventional extraction methods using density separation. 
+@caffreyUseLithiumHeteropolytungstate2013 and @leipeTestingPerformanceSodium2019 have reported similar counts of pollen grains to conventional extraction methods using density separation, but also mention that ideal extraction density varies from core to core. 
 
-Second, the quality of the optical images captured by our microscope was much worse than convential LM, which made it difficult to identify smaller pollen grains on the slide from other organic debris.
+Second, the quality of the optical images captured by our microscope was much worse than convential LM, which made it difficult to identify smaller pollen grains on the slide from other organic debris, e.g. *Betula*/*Corylus*, *Alnus* or *Quercus*.
 An objective with higher magnification (20x) may improve this aspect of using a FTIR microscope.
-The FPA detector in combination with automated localisation of potential pollen grains based on their chemical signature may also help in solving this part of the problem.
+The FPA detector in combination with automated localisation of potential pollen grains based on their chemical signature may also help in solving this part of the problem, because identification by eye won't be necessary.
+Such 
 
 Third, as reported in other studies, FTIR measurements of small particles (5-25 µm) introduces scattering artifacts into the spectra [@lukacsRecoveryAbsorbanceSpectra2015; @zimmermannVibrationalMicrospectroscopyEnables2015].
 A number of pollen species are affected by this scattering because of their size.
 While sample processing and computational methods exist to minimize or avoid scattering artifacts, there may be substantial species specific information stored in scattering artifacts that could be useful for identification and classification.
 
+Fossil pollen from three sediment cores and modern material was analysed by FTIR microspectroscopy using a new detector that allows simultaneous capture of multiple single grain spectra.
+We explore the potential of a workflow for chemical palynology by analysing modern and fossil *Pinus* pollen.
+Our methods reproduces modern *Pinus* spectra well, compared to bulk analysis and other microspectroscopy approaches.
+Acetolysed fossil pollen was compared to non-acetolysed fossil pollen, which revealed differences in their chemical composition (e.g. changes in the 1000-1200 cm^-2^ region) that are most similar to reported acetolysed spectra from other taxa, suggesting that acetolysis alters fossil pollen chemistry.
+We also report contaminations observed in non-acetolysized samples and the applications of high density liquid extraction for FTIR microspectroscopy and Palynology.
 
 # References
-
-
