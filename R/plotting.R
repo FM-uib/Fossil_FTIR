@@ -11,19 +11,19 @@ plot_mean_spectra = function(data, subset_sel, spec_id, id.vars = c("ids", "trea
   pdata$variable = as.numeric(as.character(pdata$variable))
   
   #offset
-  pdata = offset_spectra(pdata, group, "value", seq(0, by=max(pdata$value)/5, length.out = length(levels(pdata[,group])))) #
+  pdata = offset_spectra(pdata, group, "value", rep(c(0, .2), length(levels(pdata[,group])))) #
   
   # mean data over groups
   pdata_mean = pdata %>%
     group_by_at(c(group, "variable")) %>%
-    summarise(mean = mean(value))
+    summarise(mean = mean(value), Label = first(Label))
   
   
   g = ggplot(pdata, aes_string("variable", "value", color = group))+
-    geom_line(aes(group = ids), alpha = .15) + #mean spectra
-    geom_line(data = pdata_mean, aes_string("variable", "mean", group = group), inherit.aes = F, size = 1) + #all spectra
+    geom_line(aes(group = ids), alpha = .15) + facet_wrap(vars(Label), ncol = 2) +#mean spectra
+    geom_line(data = pdata_mean, aes_string("variable", "mean", group = group), inherit.aes = F, size = 1) + facet_wrap(vars(Label), ncol = 2) +#all spectra
     scale_x_reverse(name = "wavenumbers",limits = c(1800,900), breaks = seq(1800,900,-100)) +
-    scale_y_continuous(name = "Absorbance (arbitrary units)",breaks = NULL) +
+    scale_y_continuous(name = "Absorbance (arbitrary units)",limits = c(0,0.5), breaks = NULL) +
     scale_color_manual(name = NULL,
                        values = c("#e66101","#ff6c01",
                                   "#ac7d43","#fdb863",
@@ -36,15 +36,17 @@ plot_mean_spectra = function(data, subset_sel, spec_id, id.vars = c("ids", "trea
     theme_bw() + 
     theme(legend.position = "bottom",
           axis.ticks.y = element_blank(),
-          axis.text.y = element_blank()) +
+          axis.text.y = element_blank()
+          ) +
     guides(colour = guide_legend(override.aes = list(alpha = 1)))
   
   return(g)
 }  
 
 offset_spectra = function(data, variable, value, offset) {
+  off2 = c(0.11,0.11,0.11,0.11,0.22,0.22,.55,.55)
   for (i in 1:length(levels(data[, variable]))) {
-    data[data[, variable] == levels(data[, variable])[i],value] = data[data[, variable] == levels(data[, variable])[i],value] + offset[i]
+    data[data[, variable] == levels(data[, variable])[i],value] = data[data[, variable] == levels(data[, variable])[i],value] + offset[i] - off2[i]
   }
   return(data)
 }

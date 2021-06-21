@@ -322,6 +322,9 @@ Further studies on pollen from different sediment types at fixed age/depths may 
 
 **[one thing to think about- could it be that the SPT residues on TSK were actually influencing the acetolysis effect in some way? FM: I think it is unlikely. The first step of acetolysis is acetic acid wash, which removes most of the water. I would assume that it removes most if not all of the spt there before the heavy acid step.]**
 
+firs jard2020
+if we compare opur set to other acetolysed samples
+
 In general there are similarities between the FTIR spectra from the acetolysed *Pinus* pollen from our study and in the acetolysed pollen grains of other taxa
 For example, the carbohydrate region at 1000 - 1200 cm^-1^ our acetolysised *Pinus* pollen samples is most similar to the acetolysed extant Poaceae set of @jardineSporopolleninChemistryIts2021 and acetolyzed herbarium *Nitrariaceae* pollen [@woutersenNovelApproachStudy2018], where two peaks at 1040 and 1190/1170 are visible and similar to our samples.
 However, spectra from a modern Poaceae data set (sampled from the the Amazon Fan and Western Amazon) [@jardineSporopolleninChemistryIts2021] is quite different in composition to both our fossil pollen, and any extant acetolysed pollen  samples, in which the large peak at 1600 and 1190 peak are not clearly visible.
@@ -390,10 +393,11 @@ We opted for this density because test extractions using a higher density (1.98 
 A refinement of the right extraction medium density in combination with sieving of the samples to remove non pollen organic material may be one approach.
 @caffreyUseLithiumHeteropolytungstate2013 and @leipeTestingPerformanceSodium2019 have reported similar counts of pollen grains to conventional extraction methods using density separation, but also mention that ideal extraction density varies from core to core. 
 
+we targeted pine. maybe there are other pollen in other section
+
 Second, the quality of the optical images captured by our microscope was much worse than convential LM, which made it difficult to identify smaller pollen grains on the slide from other organic debris, e.g. *Betula*/*Corylus*, *Alnus* or *Quercus*.
 An objective with higher magnification (20x) may improve this aspect of using a FTIR microscope.
 The FPA detector in combination with automated localisation of potential pollen grains based on their chemical signature may also help in solving this part of the problem, because identification by eye won't be necessary.
-Such 
 
 Third, as reported in other studies, FTIR measurements of small particles (5-25 µm) introduces scattering artifacts into the spectra [@lukacsRecoveryAbsorbanceSpectra2015; @zimmermannVibrationalMicrospectroscopyEnables2015].
 A number of pollen species are affected by this scattering because of their size.
