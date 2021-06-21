@@ -86,11 +86,11 @@ vlines = data.frame(wn = c(1745, 1710, 1605, 1515, 1170, 1040),
 
 l = plot_mean_spectra(data, expression(species == "Pinus"), spec_id = "emsc", group = "off", id.vars = c("ids", "treatment", "Label", "depth", "age", "type", "off"))
 
-l = l + ylim(.05, 2.3) +
+l = l + #ylim(.05, 2.3) +
   geom_vline(data = vlines, aes(xintercept = wn), linetype = "dashed", alpha = .3) +
-  geom_text(data = vlines, aes(wn, y, label = label), inherit.aes = F)
+  geom_text(data = vlines, aes(wn, y, label = label), angle = 90, inherit.aes = F)
 
-ggsave(here("figures","mean_plots.png"), l, width = 17, height = 25,units = "cm")
+ggsave(here("figures","mean_plots.png"), l, width = 17, height = 17,units = "cm")
 saveRDS(l, here("data","output","mean_plots_whole.rds"))
 
 ### creating Plots
