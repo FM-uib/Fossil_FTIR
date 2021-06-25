@@ -129,32 +129,33 @@ Several studies have shown links between solar and UV radiation and pollen chemi
 Successful application of pollen-chemistry techniques within palaeoecological research requires a thorough understanding of the factors influencing chemical variations in the modern environment and in the accurate estimation of the chemical spectra from pollen grains.
 Any insights gained from studies on modern grains must also be transferable under fossil settings [@jardineImpactOxidationSpore2015; @jardineSporopolleninChemistryIts2021].
 Fourier Transform Infrared (FTIR) spectroscopy has become one of the most popular methods for characterising the chemical variations present within pollen and spores in the modern environment.
-Bulk FTIR techniques, which involve the analysis of large quantities of modern-pollen samples (e.g. 1-2 mg) (e.g. @zimmermannCharacterizationPollenVibrational2010, @lahlaliATRFTIRSpectroscopyReveals2014), have the advantage of reducing scattering effects from measurements due to the analysis of large sample quantities, which improves the signal-to-noise ratio in terms of spectra acquisition..
+Bulk FTIR techniques, which involve the analysis of large quantities of modern-pollen samples (approximately 1-2 mg) (e.g. @zimmermannCharacterizationPollenVibrational2010, @lahlaliATRFTIRSpectroscopyReveals2014), have the advantage of reducing scattering effects from measurements due to the analysis of large sample quantities, which improves the signal-to-noise ratio in terms of spectra acquisition..
 As a result, FTIR spectra obtained from bulk pollen samples have been used to identify chemical differences at the genus, and in some cases, species level [@muthreichChemicalVariationsQuercus2020; @zimmermannInfraredSpectroscopyPollen2014; @depciuchIdentificationBirchPollen2018; @diehnDiscriminationGrassPollen2020].
 However, these approaches may be less relevant for pollen samples extracted from fossil sequences since the number of pollen grains analysed vastly exceeds the quantity which is practically available from a sediment-core sample. 
 
 An alternative approach involves the use of FTIR microscopes, which require manual targeting of small areas of the sample slides to record spectra of single grains or groups of pollen grains.
 Because of their higher spatial resolution, FTIR-microscopes are better suited to sediment samples as a result of the capacity to generate FTIR spectra from individual grains, although spectral-processing procedures may be required to reduce the scattering effects when obtaining spectra from individual pollen grains [@zimmermannVibrationalMicrospectroscopyEnables2015; @zimmermannAnalysisAllergenicPollen2016].
 Nevertheless, microscopic FTIR techniques have now been applied to both modern- and fossil-pollen grains preserved in sediments.
-The approach has been successfully used to show that chemical differences are found between pollen on genus and species level [@julierChemotaxonomyToolInterpreting2016; @woutersenNovelApproachStudy2018;  @zimmermannChemicalCharacterizationIdentification2018; @jardineChemotaxonomyDomesticatedGrasses2019], and microscopic-FTIR techniques have also been used to observe chemical differences to reconstruct changes in UV-B absorbing compounds in different periods across Earth's history [@fraserUVBAbsorbingPigments2011; @jardinePollenSporesBiological2016; @jardineProxyReconstructionUltravioletB2019; @jardineSheddingLightSporopollenin2017].
+The approach has been successfully used to show that chemical differences are found between pollen at the genus and even species level [@julierChemotaxonomyToolInterpreting2016; @woutersenNovelApproachStudy2018;  @zimmermannChemicalCharacterizationIdentification2018; @jardineChemotaxonomyDomesticatedGrasses2019], and microscopic-FTIR techniques have also been used to observe chemical differences to reconstruct changes in UV-B absorbing compounds in different periods across Earth's history [@fraserUVBAbsorbingPigments2011; @jardinePollenSporesBiological2016; @jardineProxyReconstructionUltravioletB2019; @jardineSheddingLightSporopollenin2017].
 
 One of key challenges faced by chemical palynologists using micro-FTIR and other approaches is the time taken to extract and analyse fossil-pollen samples.
 Some microscopes are equipped with automated stages, where multiple point locations on the slide can be targeted manually to record spectra automatically.
 However, recent developments in technologies related to FTIR may allow for easier and faster capture of spectra of pollen grains.
 A focal plane array detector (FPA) allows capture of an image and matrix of spectra over the same sample area instead of a single spectra at a specific point/area [@zimmermannAnalysisAllergenicPollen2016;@zimmermannChemicalCharacterizationIdentification2018; @zimmermannVibrationalMicrospectroscopyEnables2015].
 This enables the extraction of spectra from several single grains from the same area on the sample without the need to relocate the detector of the microscope or move the slide, and is therefore of potentially high relevance for palaeoecological research.
-When combined with imaging processing technology, it potentially allows for more rapid identification and generation of FTIR spectra of pollen grains from sediment samples, but whilst FTIR spectroscopy using FPA detectors have been widely applied with microplastics [@loderEnzymaticPurificationMicroplastics2017; @machadoMicroplasticsEmergingThreat2018; @primpkeAutomatedApproachMicroplastics2017] and some studies on pollen [@chiappePollenGrainsFunctionalized2017], there has been limited investigation into their application on fossil-pollen residues taken from sediment cores.
+When combined with imaging processing technology, it may allow for more rapid identification and generation of FTIR spectra of pollen grains from sediment samples, but whilst FTIR spectroscopy using FPA detectors have been widely applied with microplastics [@loderEnzymaticPurificationMicroplastics2017; @machadoMicroplasticsEmergingThreat2018; @primpkeAutomatedApproachMicroplastics2017] and some studies on pollen [@chiappePollenGrainsFunctionalized2017], there has been limited investigation into their application on fossil-pollen residues taken from sediment cores.
 
 Palaeoecologists may also use a variety of chemical-processing techniques in order to speed-up analyses through the isolation and concentration of pollen from the sediment matrix [@ridingGuidePreparationProtocols2021].
-One of the most common methods for sporopollenin extraction involves an acetolysis treatment, with which a combination with HF and HCl treatments enables removal of organic materials, calcium carbonates and silicates, while preserving the morphological integrity of pollen grains [@erdtmanSixNotesPollen1959; @faegriTextbookPollenAnalysis1989].
+One of the most common methods for sporopollenin extraction involves an acetolysis treatment, which, alongside a combination of HF and HCl treatments, enables removal of organic materials, calcium carbonates and silicates, while preserving the morphological integrity of pollen grains [@erdtmanSixNotesPollen1959; @faegriTextbookPollenAnalysis1989].
 Acetolysis has also often been used in combination with FTIR on pollen as a way to standardise between modern and fossil samples, [@jardinePollenSporesBiological2016; @woutersenNovelApproachStudy2018] or to study the effects of acid extractions [@dominguezIsolationIntactPollen1998; @dominguezPollenSporopolleninDegradation1999; @loaderPreparationPollenStable2000; @schulzeosthoffPhenolsIntegratedCompounds1987; @jardineImpactOxidationSpore2015; @jardineSporopolleninChemistryIts2021].
 Indeed, although acetolysis treatments at low temperatures did not create major chemical differences in *Lycopodium* spores [@jardineImpactOxidationSpore2015], it is uncommon for low-temperature treatments to be applied to fossil-sediment samples since the higher temperatures are required for oxidation of the non-pollen organic material.
 Such treatments may then result in chemically altering effects on fossil-pollen composition [@jardineSporopolleninChemistryIts2021], whilst variations in sediment types mean that different combinations of sample-preparation techniques may be required for different sediment types [@ridingGuidePreparationProtocols2021].
-Given the large variations in FTIR spectra observed across taxa [@diehnCombiningChemicalInformation2020; @muthreichChemicalVariationsQuercus2020], and the variety of sediment types even from Holocene sequences in Europe, more studies are needed investigate the potential effects of the chemical preparation procedures used to isolate pollen-grains from different pollen types.
+Given the large variations in FTIR spectra observed across taxa [@diehnCombiningChemicalInformation2020; @muthreichChemicalVariationsQuercus2020], and the variety of sediment types even from Holocene sequences in Europe, more studies are needed investigate the potential effects of the chemical preparation procedures used to isolate pollen grains from different pollen types.
 
 In this study we aimed to explore the use of an FPA detector to extract FTIR spectra from fossil-pollen *Pinus* grains.
 We develop a workflow which enables comparison of fossil-pollen grains taken from three sediment-core locations (Table \@ref(tab:sites)), and compare the FTIR spectra generated using the FPA detector from both modern- and fossil-pollen samples. 
-Pollen was extracted from the sediment cores using two different approaches (density separation using sodium polytungstate and acetolysis) and the fossil-pollen samples measured using the combined FTIR microscope with FPA detector were compared with modern-pollen samples.
+Pollen was extracted from the sediment cores using two different approaches (density separation using sodium polytungstate and acetolysis) and the fossil-pollen samples were measured using a combined FTIR microscope with FPA detector.
+We also compared the FTIR spectra obtained from fossil-pollen grains with  modern *Pinus* pollen samples.
 Thus, in addition to testing the feasibility of the FPA detector on different sediment types, we were were also able to investigate how the inferred FTIR spectra in *Pinus* pollen can vary as a result of two different extraction procedures.
 
 <!-- Chemical treatment... -->
@@ -217,17 +218,17 @@ The three sediment cores were selected because they contain *Pinus sylvestris*-p
 *Pinus* pollen in these cores has been described as most likely representing *Pinus sylvestris* in Dalmutladdo and Tiefer See, while it is described as *Pinus* in Meerfelder Maar record.
 In this study we focus on *Pinus* pollen for two reasons.
 First, *Pinus* spp. is a shade-intolerant, high pollen producer, and so a number of studies have proposed that *Pinus* spp. pollen may be a useful taxon to use as a biological indicator for reconstructing past changes of UV-B radiation [@jardineProxyReconstructionUltravioletB2020; @willisQuantificationUVFlux2011; @seddonPollenchemistryVariationsElevation2021].
-Second, although prominent in Quaternary sediment records from Europe, and despite it's high species diversity in Europe (**Check number of species**), *Pinus* is currently mostly only split into two different pollen types using fossil pollen, reflecting the two phylogenitic lineages [@beugLeitfadenPollenbestimmungFur2004; @gieseckePostglacialChangeFloristic2019].
+Second, although prominent in Quaternary sediment records from Europe, and despite it's high species diversity in Europe (**Check number of species**), *Pinus* is currently mostly only split into two different pollen types using fossil pollen, reflecting the two phylogenetic lineages [@beugLeitfadenPollenbestimmungFur2004; @gieseckePostglacialChangeFloristic2019].
 Thus, identifying chemical differences in fossil *Pinus* pollen may also allow for identification of crytpic *Pinus* species from the pollen types observed in the fossil record.
 
 Prior to chemical characterisation using FTIR, all sediment samples were processed in two ways.
-First, the samples were extracted using density separation using dissolved Sodium Polytungstate (SPT) [@kampsAgentSeparationDissolved1985] at 1.43 g cm^-3^ as separation medium.
+First, the samples were extracted using density separation using dissolved sodium polytungstate (SPT) [@kampsAgentSeparationDissolved1985] at 1.43 g cm^-3^ as a separation medium.
 During density separation a known volume of SPT (density 1.43 g cm^-3^) solution was added to the sample and homogenized/vortexed, followed by centrifugation.
-After centrifugation, particulates/material heavier than 1.43 g cm^-3^ accumulate of the bottom of the sample vial, whilst the lighter fraction was decanted and collected.
+After centrifugation, particulates heavier than 1.43 g cm^-3^ accumulate of the bottom of the sample vial, whilst the lighter fraction was decanted and collected.
 Note, that there is no agreement on the density of the pollen exine, with reported values varying between <1.4 g cm^-3^ [@faegriTextbookPollenAnalysis1989; @flenley1971measurements; @regnellPreparativeCentrifugationNew1996], 1.88 cm^-3^ [@nakagawaDensemediaSeparationMore1998] and 2.2 cm^-3^  [@juvigneDensiteExinesQuelques1973]. 
 In our case the lighter fraction (<1.4 g cm^-3^) contained majority of the pollen grains, after checking both fractions.
 Sample residues were then washed three times in using distilled H~2~O to remove any excess SPT, resulting in sample residues with a higher pollen concentration compared to other organic and inorganic materials on the slide.
-Since SPT is a chemically inert salt, it was expected that, after washing this treatment should have minimal chemical effect on the chemical spectra inferred from the fossil-pollen grains.
+Since SPT is a chemically inert salt, it was expected that, after washing, this treatment should have minimal chemical effect on the chemical spectra inferred from the fossil-pollen grains.
 
 We then applied an acetolysis treatment [e.g. @erdtmanSixNotesPollen1959; @faegriTextbookPollenAnalysis1989] to one subset of the samples following washing and extracting using SPT.
 The acetolysis was performed at 105&deg;C for 5 minutes.
@@ -285,64 +286,38 @@ knitr::include_graphics(here("figures", "ord_plots.png"))
 Our analyses revealed clear differences between modern- and fossil-pollen grains (Fig. \@ref(fig:meanspectra)).
 Although the prominent and characteristic sporopollenin peaks (1600, 1510 and 1170 cm^-1^) are visible in both the modern and fossil pollen, other parts of the spectra show substantial differences.
 Most notably, the lipid peak at 1745 cm^-1^, caused by triglycerides, is not visible in the fossil-pollen grains, neither in the non-acetolysed and the acetolysed fossil pollen.
-There are also several differences in the "fingerprint" region (1800 - 1500 cm^-1^) and carbohydrate region (1250 - 1000 cm^-1^) between modern and fossil pollen grains.
+There are also several differences in the "fingerprint" region (1800 - 1500 cm^-1^) and carbohydrate region (1250 - 1000 cm^-1^) between modern- and fossil-pollen grains.
 
 These chemical differences are also clearly demonstrated in the results of the PLSR (Fig \@ref(fig:ordinations) a).
 Fossil pollen are clearly separated from the modern pollen along the first component of the PLSR model.
-The regression coefficients reflect our observations from the visual inspection and show that lipid  and protein peaks (1745 and 1800 - 1500 cm^-1^) are no longer present and there are also substantial changes in the carbohydrate region (1250 - 1000 cm^-1^) in the fossil pollen (Fig \@ref(fig:ordinations) b and c).
-The region 1200 - 1000 cm^-1^ is now dominated in acetolysed fossil pollen by two peaks and its shoulders at 1170 and 1040 cm^-1^.
-
-Our modern spectra are very similar to *Pinus sylvestris* spectra measured using FTIR-bulk sample methodologies [@bagciogluMultiscaleVibrationalSpectroscopic2015; @zimmermannCharacterizationPollenVibrational2010] and FTIR microscopy using single point measurements [@zimmermannChemicalCharacterizationIdentification2018].
-The same characteristic peaks described above are visible in all modern spectra captured with bulk and FTIR microscopy, e.g. 1745, 1515, 1170 and 1250 - 1000 cm^-1^.
-
+The regression coefficients reflect our observations from the visual inspection and show that lipid  and protein peaks (1745 and 1800 - 1500 cm^-1^) are no longer present.
+There are also substantial changes in the carbohydrate region (1250 - 1000 cm^-1^) in the fossil pollen compared to the modern (Fig \@ref(fig:ordinations) b and c).
+The region 1250 - 1000 cm^-1^ is now dominated in acetolysed fossil pollen by two peaks and its shoulders at 1170 and 1040 cm^-1^.
 
 ## Effects of acetolysis on the fossil-pollen samples
+
 In addition to the differences between fresh and fossil pollen samples, our analysis revealed large differences in chemical variations as a result of the acetolysis treatment on the fossil *Pinus* spp. pollen grains.
 For example, acetolysed pollen showed two dominant peaks in the carbohydrate region at 1190 - 1170 and 1040 cm^-1^, which are not visible in the modern spectra or the non acetolysed pollen.
-This change in the 1190 - 1170 cm^-1^ region is unique to acetolysized pollenand had higher regression coefficients that the surrounding wavenumbers (Fig. \@ref(fig:ordinations)).
-The 1040 cm^-1^ peak also had high importance for the PLSR model differentiating acetolysed and non acetolysed pollen (Fig. \@ref(fig:ordinations) e and f).
+This change in the 1190 - 1170 cm^-1^ region is unique to acetolysized pollen and had higher regression coefficients that the surrounding wavenumbers (Fig. \@ref(fig:ordinations)).
+The 1040 cm^-1^ peak also had high importance for the PLSR model differentiating acetolysed and non-acetolysed fossil pollen (Fig. \@ref(fig:ordinations) e and f).
 
-The presence of this new peak in the shoulder of the 1170 cm^-1^ wavenumbers in the acetolysised pollen grains can be indicative of sporopollenin and carbohydrates, and suggests an overall change in the pollen chemistry of the sample.
+The presence of this new peak in the 1170 cm^-1^ shoulder in the spectra from the acetolysised pollen grains suggests an overall change in the pollen chemistry of the sample.
 The presence of these two dominant peaks may be related to the removal and or alteration of grain-wall carbohydrates (cellulose etc), as well as changes to chemical composition of sporopollenin due to the acetolysis treatment.
-Since the 1190 cm^-1^ peak is not visible in any of the samples from the  non-acetolysed pollen, this likely indicates that the acetolysis treatment is creating this peak in the FTIR spectra.
+Since the 1190 cm^-1^ peak is not visible in any of the samples from the  non-acetolysed pollen, this likely indicates that it is processes related to the acetolysis treatment that are creating this new peaks in the FTIR spectra.
 <!-- Unfortunately, the BSi peak is covering the area of the 1040 cm^-1^ peak in our DAL and TSK samples, while it is visible in the MFM spectra.  -->
 
 Using the second PLSR model, the acetolysed pollen is clearly separated from the non-acetolysed pollen, with a much greater distance in the ordination space between samples for acetolysed pollen compared to non-acetolysed pollen (Fig. \@ref(fig:ordinations) d).
 In addition, there is some differentiation between the cores.
 Samples from Tiefer See are more distinct from samples of the other two cores, which show more similar scores in the ordination.
 One interpretation of this is that *Pinus* pollen from DAL and MFM are chemically quite similar, while TSK *Pinus* pollen is different in chemical structure.
-Since it is likely that the main contributions to the pollen some in the TSK core is *Pinus sylvestris*, it is likely that the same species is represented by all three cores, and the main difference between of the TSK pollen is age.
-The TSK samples are from the past 80 years, while MFM covers the YD/Holocene transition and DAL samples are from throughout the Holocene, with the youngest sample more than 100 years older than TSK pollen.
+Since it is likely that the main contributions to the pollen some in the TSK core is *Pinus sylvestris*, it is likely that the same species is represented by all three cores, and one of the main differences between the TSK pollen and the other two locations is sample age.
+Whilst the TSK samples are from the past 80 years, MFM covers the YD/Holocene transition and DAL samples are from throughout the Holocene, with the youngest sample likely more than 100 years older than TSK pollen.
 <!-- We cannot see any evidence that sediment type has an effect on the chemistry of the pollen, both TSK and MFM cores are varved cores, while DAL is not. -->
 <!-- This would suggest more difference between varved and non varved pollen if different types of diagenesis had an effect.  -->
 <!-- Any difference may be overshadowed by the large difference in age between the samples from these cores.  -->
 This finding could suggest a chemical difference in fossil-pollen grains that is persistent even after acetolysis, which may be explained by the age of the pollen.
-@jardineSporopolleninChemistryIts2021 have shown chemical differences between pollen on much larger timescales, where modern pollen had more in common with quarternary pollen than deep time samples.
-Our results also indicate chemical difference with age, but on a much shorter timescale.
+Interestingly, @jardineSporopolleninChemistryIts2021 also found differences in FTIR spectra with different sample ages, although they found that that modern-pollen spectra had more in common with spectra from Quaternary pollen, compared to pollen from deeper time samples.
 Further studies on pollen from different sediment types at fixed age/depths may provide a clearer answer on the effects of sediment type and age on pollen chemistry.
-
-If we compare our *Pinus* spectra to other acetolysised fossil *Pinus* pollen, we observed some differences.
-@jardineProxyReconstructionUltravioletB2020 extracted *Pinus* pollen from a varved sediment core using acetolysis and HF to study the UV-B response in *Pinus* pollen chemistry.
-Their spectra are similar to ours in the 1800 - 1500 cm^-1^ region, a prominent peak at 1515 cm^-1^ and peaks at 1700 and 1600 cm^-1^.
-The region between 1500 - 1300 cm^-1^ is fairly flat in our spectra, while a strong peak is visible at 1450 in @jardineProxyReconstructionUltravioletB2020 spectra.
-Lastly, the region between 1300 - 900 cm^-1^ in our spectra mainly consists of two large peaks at 1200 and 1040 cm^-1^, while the *Pinus* pollen from @jardineProxyReconstructionUltravioletB2020 shows large peaks at 1250, 1150, 1100 and 1010.
-Direct comparisons between spectra from different spectrometers are difficult, because peak heights are not always directly comparable.
-Nevertheless, we do see substantial differences in the 1500 - 1000 cm^-1^ region, while there are similarities in the 1800 - 1500 cm^-1^ region
-
-Additionally, there are similarities between the FTIR spectra from the acetolysed *Pinus* pollen from our study to the acetolysed pollen grains of other taxa.
-For example, the carbohydrate region at 1200 - 1000 cm^-1^ in our acetolysised *Pinus* pollen samples is most similar to the acetolysed extant Poaceae set of @jardineSporopolleninChemistryIts2021 and acetolyzed herbarium *Nitrariaceae* pollen [@woutersenNovelApproachStudy2018], where two peaks at 1040 and 1190/1170 are visible and similar to our samples.
-However, spectra from a modern Poaceae data set (sampled from the the Amazon Fan and Western Amazon) [@jardineSporopolleninChemistryIts2021] is quite different in composition to both our fossil pollen, and any extant acetolysed pollen  samples, in which the large peak at 1600 and 1190 peak are not clearly visible.
-These fossil Poaceae were treated differently than our pollen and the extant Poaceae set, a combination of density separation, Na~4~P~2~O~7~ and lignite as opposed to mainly acetolysis.
-
-Taken together, the simililarities of the acetolysed extant set to our acetolysed fossil set and dissimilarities to pollen treated with a different combination of extractions (Amazon Western and Fan), suggest that chemical extraction methods have a large effect on the chemistry of pollen, both modern and fossil origin.
-This is important to consider going forward for the application of IR methods in palaeoecology, where extraction methods are often dependent on sediment type.
-Further studies, in which the effects of these extraction methods need to be explored on modern and fossil material side by side to see if there are methods that can bridge the transition from modern to fossil pollen.
-It seems from the comparison of our spectra to other published fossil spectra, that chemical treatments have a large effect on pollen chemistry and may affect fossil and modern grains differently.
-Chemical treatments that can mimic diagenesis will be crucial to understanding the chemical changes of pollen under diagenesis and help to create species specific reference collections of artificial fossilized modern pollen grains.
-This would enable us to compare fossil pollen spectra with fossilized pollen spectra of known species for identification.
-
-<!-- @jardineImpactOxidationSpore2015 showed limited effects on pollen chemistry of cold acetolysis if it was shorter than 10 minutes. -->
-<!-- Hot acetolysis (90&deg;C), which is standard procedure in palynology [@erdtmanSixNotesPollen1959; @faegriTextbookPollenAnalysis1989], had an effect from the first minute.  -->
 
 ## Other effects observed in the fossil-pollen spectra
 
@@ -352,22 +327,45 @@ knitr::include_graphics(here("figures", "SM_BSI.png"))
 
 Spectra from the fossil-pollen samples showed differences between both sediment-core location and fossil-pollen treatment.
 These differences are likely due to a combination of sample processing, chemical variations, and also sediment-core processing effects.
-For example, we observed a broad peak at 1100 - 1090 cm^-1^ in the non acetolysed spectra of all three sediment cores (Fig. \@ref(fig:meanspectra)).
-In addition, samples from Tiefer See also shows a peak at 1630 cm^-1^, but these peaks are not present in either modern- or in the acetolysed-pollen samples.
-
-Comparisons of FTIR spectra from biogenic-silica spectra from diatoms [@alipourInfraredMicrospectroscopyBionanomaterials2016] and hydrated silica spectra [@SilicaATRIRSpectrum] reveal that the peak 1090 cm^-1^ in the non acetolysed samples is most likely biogenic silica, which may have precipitated onto the onto ZnSe slides as the sediment residues being prepared for analysis. 
+For example, we observed a broad peak at 1100 - 1090 cm^-1^ in the non-acetolysed spectra of all three sediment cores (Fig. \@ref(fig:meanspectra)).
+Comparisons of FTIR spectra from biogenic-silica spectra from diatoms [@alipourInfraredMicrospectroscopyBionanomaterials2016] and hydrated silica spectra [@SilicaATRIRSpectrum] reveal that the peak at 1090 cm^-1^ in the non acetolysed samples is most likely biogenic silica, which may have precipitated onto the onto ZnSe slides as the sediment residues being prepared for analysis. 
 During the measurements with the microscope, we applied our extracted pollen as droplets onto ZnSe slides and waited for the water to evaporate and we observed a crystalline layer over the same area that covered all particles and pollen (Fig. SM \@ref(fig:SM)).
 Interestingly, it appeared that the acetolysis treatment removed this peak, which may be because of the extended washing with several chemicals and water during standard acetolysis.
 For pollen-chemistry research this may present a challenge if we are aiming to directly compare spectra from unprocessed pollen samples since it may create differences in the spectra beween modern and fossil grains.
 Fortunately, the BSi peak does not cover any of the sporopollenin peaks, but obscures the region 1110 - 1070 cm^-1^.
-The quantity of biogenic silica may vary between different sediment cores from different lakes and regions, which may influence the severety of the interference caused by BSi.
-A solution would be to apply correction procedures during preprocessing, or explore extendend washing iterations after extraction of the pollen to dilute BSi.
+The quantity of biogenic silica may vary between different sediment cores from different lakes and regions, which may influence the severity of the interference caused by BSi.
+A solution would be to apply correction procedures during pre-processing, or explore extended-washing iterations after extraction of the pollen to dilute BSi.
 
-An additional contamination effect was observed in the Tiefer See samples (Fig. \@ref(fig:meanspectra)) with the peak at peak at 1630 cm^-1^. 
-This peak belongs very likely to SPT, when compared to this sodium metatungstate spectra [@SodiumMetatungstateHydrate].
-It is possible that the three washes with water after decanting of the pollen fraction were not enough in this case, but absence of this peak in the other spectra seem to suggest that further washes may remove successfully remove SPT fully.
+An additional contamination effect was observed in the Tiefer See samples (Fig. \@ref(fig:meanspectra)) with a broad peak at 1630 cm^-1^. 
+This peak belongs very likely to SPT  [see spectra from @SodiumMetatungstateHydrate].
 This 1630 cm^-1^ peak was responsible for part of the separation between Tiefer See non-acetolysised samples from the other cores, but does not change the larger differentiation of acetolysed Tiefer See samples (without the 1630 cm^-1^ peak) from the other cores.
+It is possible that the three washes with water after decanting of the pollen fraction were not enough in this case, but absence of this peak in the other spectra seem to suggest that further washes may remove successfully remove SPT fully.
 
+## Comparison of *Pinus* spectra with FTIR spectra from other studies
+
+The FTIR spectra obtained using the experimental set-up used in this study can be compared to FTIR spectra from *Pinus* pollen from other sources. 
+For example, the spectra obtained from our modern samples are very similar to *Pinus sylvestris* spectra measured using FTIR-bulk sample methodologies [@bagciogluMultiscaleVibrationalSpectroscopic2015; @zimmermannCharacterizationPollenVibrational2010] and FTIR microscopy using single-point measurements [@zimmermannChemicalCharacterizationIdentification2018].
+The same characteristic peaks described above are visible in all modern spectra captured with bulk and FTIR microscopy, e.g. 1745, 1515, 1170 and 1250 - 1000 cm^-1^, and these results build on previous studies which suggest that overall potential for the use of the FPA detector in pollen research **[add references]**.
+
+Interestingly, when comparing our acetolysed *Pinus* spectra to other acetolysised fossil *Pinus* pollen, we observed some differences.
+For example, @jardineProxyReconstructionUltravioletB2020 extracted *Pinus* pollen from a varved sediment core using acetolysis and HF to study the UV-B response in *Pinus* pollen chemistry.
+But while their spectra are similar to ours in the 1800 - 1500 cm^-1^ region, with similar prominent peaks at 1515 cm^-1^, 1700 and 1600 cm^-1^, there are major differences in the region between 1500 - 1300 cm^-1^.
+The latter region is fairly flat in our spectra, while a strong peak is visible at 1450 in @jardineProxyReconstructionUltravioletB2020 spectra.
+Lastly, the region between 1300 - 900 cm^-1^ in our spectra mainly consists of two large peaks at 1200 and 1040 cm^-1^, while the *Pinus* pollen from @jardineProxyReconstructionUltravioletB2020 shows large peaks at 1250, 1150, 1100 and 1010.
+Direct comparisons between spectra from different spectrometers are difficult, because peak heights are not always directly comparable, but further research is required to understand the reasons between these differences between the acetolysed *Pinus* pollen from across the sample sets.
+
+Indeed, we actually found greater similarities between the FTIR spectra from the acetolysed *Pinus* pollen from our study to  acetolysed pollen grains of other pollen types.
+For example, the carbohydrate region at 1200 - 1000 cm^-1^ in our acetolysised *Pinus* pollen samples is most similar to an acetolysed *extant* Poaceae set of @jardineSporopolleninChemistryIts2021, and in addition to acetolyzed herbarium *Nitrariaceae* pollen [@woutersenNovelApproachStudy2018], where two peaks at 1040 and 1190/1170 are visible and similar to our samples.
+However, spectra from a fossil Poaceae data set (sampled from the the Amazon Fan and Western Amazon; AF: Na~4~P~2~O~7~, density sep., lignite, WA: HCl, Na~4~P~2~O~7~, density sep., acetolysis) [@jardineSporopolleninChemistryIts2021] is quite different in composition to both our fossil pollen, and any extant acetolysed-pollen samples, since the large peak at 1600 and 1190 peak are not clearly visible.
+
+Taken together, these differences in the effects of acetolysis acorss taxa suggest that the chemical extraction methods have a large effect on the chemistry of pollen, both modern and fossil origin.
+This is important to consider going forward for the application of IR methods in palaeoecology, where extraction methods are often dependent on sediment type.
+It would be useful to explore the effects of these extraction methods on modern and fossil material side-by-side, to investigate if there are methods that can bridge the transition from modern to fossil pollen.
+Chemical treatments that can mimic diagenesis will be crucial to understanding the chemical changes of pollen under diagenesis and help to create species specific reference collections of artificial fossilized modern pollen grains.
+This would enable us to compare fossil pollen spectra with fossilized pollen spectra of known species for identification.
+
+<!-- @jardineImpactOxidationSpore2015 showed limited effects on pollen chemistry of cold acetolysis if it was shorter than 10 minutes. -->
+<!-- Hot acetolysis (90&deg;C), which is standard procedure in palynology [@erdtmanSixNotesPollen1959; @faegriTextbookPollenAnalysis1989], had an effect from the first minute.  -->
 
 ## Applications for palaeoecological research
 <!-- Our study is a demonstration of microscope FTIR for pollen chemical methods using fossil pollen. -->
@@ -376,7 +374,7 @@ This 1630 cm^-1^ peak was responsible for part of the separation between Tiefer 
 <!-- We used *Pinus sylvestris* to explore chemical differences between modern and fossil material, because this has not been fully explored yet. -->
 
 In this study we investigated the use of a detector in combination with a FTIR microscope that allows capture of several spectra in order to characterise the chemistry of pollen grains from a sediment sample.
-The approach has the potential to be an improvement on previous single-grain measurements using FTIR, where each grain is required to be targeted individually, or even manually extracted from the sediment matrix using a micro-pippette.
+The approach has the potential to be an improvement on previous single-grain measurements using FTIR, where each grain is required to be targeted individually, or even manually extracted from the sediment matrix using a micro-pipette.
 The FPA-MCT detector on our FTIR microscope allows simultaneous capture of a larger area of the sample (XXX x XXX µm ), compared to other detectors (e.g. 100 x 100 µm @jardineChemotaxonomyDomesticatedGrasses2019, 50 x 50 ?µm? @zimmermannChemicalCharacterizationIdentification2018).
 An image with a spectra for each pixel is created, from which spectra of single grains were extracted.
 In general the FTIR spectra obtained using this approach created similar spectra to spectra of *Pinus* pollen from bulk approaches, and the method was also sensitive to differences in chemical treatments on the fossil-pollen grains.
@@ -392,15 +390,14 @@ Nevertheless, we encountered a number of challenges that will need to be address
 First, we found that the concentration of pollen in our samples was very variable and posed a major bottleneck for our analysis with the FPA detector.
 Capturing spectra from a larger area is only advantageous over single-point measurements if several grains are located in the FTIR image.
 This was not always possible, we found, because the pollen was very scarce in some samples.
-
-Acetolysis is the conventional method to extract pollen in high concentration in Quarternary pollen samples, but the results presented here demonstrate the value in extracting non-acetolysised pollen from sediments, because of the substantial differences in pollen chemistry we found between acetolysised and non-acetolysised pollen.
-We believe that density separation is a viable alternative to acetolysis and other acid or oxidizing extractions [@caffreyUseLithiumHeteropolytungstate2013; @leipeTestingPerformanceSodium2019; @regnellPreparativeCentrifugationNew1996].
-The reported density of pollen is variable and may be dependent on age of the sample [@faegriTextbookPollenAnalysis1989; @flenley1971measurements; @regnellPreparativeCentrifugationNew1996; @nakagawaDensemediaSeparationMore1998; @juvigneDensiteExinesQuelques1973].
-After testing multiple densities, 1.44 g cm^-3^ yielded the most pollen from our samples.
-This density may be optimal for *Pinus* in our samples, but other pollen may have been discarded with the heavier fraction.
-Our results show that there is a need to refine extraction methods, which minimize chemical alteration to the pollen grain.
-A refinement of the right extraction medium density in combination with sieving of the samples to remove non pollen organic material may be one approach.
-@caffreyUseLithiumHeteropolytungstate2013 and @leipeTestingPerformanceSodium2019 have reported similar counts of pollen grains to conventional extraction methods using density separation, but also mention that ideal extraction density varies from core to core. 
+Acetolysis is the conventional method to extract pollen in high concentration in Quaternary pollen samples, but the results presented here demonstrate the value in extracting non-acetolysised pollen from sediments, because of the substantial differences in pollen chemistry we found between acetolysised and non-acetolysised pollen (see above).
+Given the limited chemical influence on the fossil pollen grains, we believe that density separation is a viable alternative to acetolysis and other acid or oxidizing extractions [@caffreyUseLithiumHeteropolytungstate2013; @leipeTestingPerformanceSodium2019; @regnellPreparativeCentrifugationNew1996], alhtough the results in this paper clearly demonstrate the need to identify efficient dilution processes.
+Similarly, since the reported density of pollen is variable and may be dependent on age of the sample [@faegriTextbookPollenAnalysis1989; @flenley1971measurements; @regnellPreparativeCentrifugationNew1996; @nakagawaDensemediaSeparationMore1998; @juvigneDensiteExinesQuelques1973], it is possible that specific extraction densities and procedures may be required from core to core.
+<!-- After testing multiple densities, 1.44 g cm^-3^ yielded the most pollen from our samples. -->
+<!-- This density may be optimal for *Pinus* in our samples, but other pollen may have been discarded with the heavier fraction. -->
+<!-- Our results show that there is a need to refine extraction methods, which minimize chemical alteration to the pollen grain. -->
+<!-- A refinement of the right extraction medium density in combination with sieving of the samples to remove non pollen organic material may be one approach. -->
+<!-- @caffreyUseLithiumHeteropolytungstate2013 and @leipeTestingPerformanceSodium2019 have reported similar counts of pollen grains to conventional extraction methods using density separation, but also mention that ideal extraction density varies from core to core.  -->
 
 Second, the quality of the optical images captured by our microscope was much worse than convential LM, which made it difficult to identify smaller pollen grains on the slide from other organic debris, e.g. *Betula*/*Corylus*, *Alnus* or *Quercus*.
 An objective with higher magnification (20x) may improve this aspect of using a FTIR microscope.
@@ -410,7 +407,9 @@ Third, as reported in other studies, FTIR measurements of small particles (5-25 
 A number of pollen species are affected by this scattering because of their size.
 While sample processing and computational methods exist to minimize or avoid scattering artifacts, there may be substantial species specific information stored in scattering artifacts that could be useful for identification and classification.
 
-In summary, fossil pollen from three sediment cores and modern material was analysed by FTIR microspectroscopy using a new detector that allows simultaneous capture of multiple single grain spectra.
+## Summary
+
+Fossil pollen from three sediment cores and modern material was analysed by FTIR microspectroscopy using a new detector that allows simultaneous capture of multiple single grain spectra.
 Our methods reproduces modern *Pinus* spectra well, compared to bulk analysis and other microspectroscopy approaches.
 Acetolysed fossil pollen was compared to non-acetolysed fossil pollen, which revealed differences in their chemical composition (e.g. changes in the 1200 - 1000 cm^-2^ region) that are most similar to reported acetolysed spectra from other taxa, suggesting that acetolysis alters fossil pollen chemistry.
 We also report contaminations observed in non-acetolysized samples and the applications of high density liquid extraction for FTIR microspectroscopy and palynology.
