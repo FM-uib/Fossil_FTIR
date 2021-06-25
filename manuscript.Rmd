@@ -2,6 +2,7 @@
 title: 'Assessing variations in the chemistry of fossil- and modern-*Pinus* pollen'
 date: '2020/02/04'
 output:
+  bookdown::word_document2:
   bookdown::pdf_document2:
     toc: false
     extra_dependencies: ["flafter"]
@@ -154,7 +155,8 @@ Some microscopes are equipped with automated stages, where multiple point locati
 However, recent developments in technologies related to FTIR may allow for easier and faster capture of spectra of pollen grains.
 A focal plane array detector (FPA) allows capture of an image and matrix of spectra over the same sample area instead of a single spectra at a specific point/area [@zimmermannAnalysisAllergenicPollen2016;@zimmermannChemicalCharacterizationIdentification2018; @zimmermannVibrationalMicrospectroscopyEnables2015].
 This enables the extraction of spectra from several single grains from the same area on the sample without the need to relocate the detector of the microscope or move the slide, and is therefore of potentially high relevance for palaeoecological research.
-When combined with imaging processing technology, it may allow for more rapid identification and generation of FTIR spectra of pollen grains from sediment samples, but whilst FTIR spectroscopy using FPA detectors have been widely applied with microplastics [@loderEnzymaticPurificationMicroplastics2017; @machadoMicroplasticsEmergingThreat2018; @primpkeAutomatedApproachMicroplastics2017] and some studies on pollen [@chiappePollenGrainsFunctionalized2017], there has been limited investigation into their application on fossil-pollen residues taken from sediment cores.
+When combined with imaging processing technology, it may allow for more rapid identification and extraction of FTIR spectra of pollen grains from sediment samples.
+Whilst FTIR spectroscopy using FPA detectors have been widely applied with microplastics [@loderEnzymaticPurificationMicroplastics2017; @machadoMicroplasticsEmergingThreat2018; @primpkeAutomatedApproachMicroplastics2017] and some studies on pollen [@chiappePollenGrainsFunctionalized2017], there has been no investigation into application of FPA detectors on fossil-pollen residues taken from sediment cores.
 
 Palaeoecologists may also use a variety of chemical-processing techniques in order to speed-up analyses through the isolation and concentration of pollen from the sediment matrix [@ridingGuidePreparationProtocols2021].
 One of the most common methods for sporopollenin extraction involves an acetolysis treatment, which, alongside a combination of HF and HCl treatments, enables removal of organic materials, calcium carbonates and silicates, while preserving the morphological integrity of pollen grains [@erdtmanSixNotesPollen1959; @faegriTextbookPollenAnalysis1989].

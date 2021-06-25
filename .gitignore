@@ -13,3 +13,4 @@ figures
 *.pdf
 renv/*
 !/renv/activate.R
+*.docx
