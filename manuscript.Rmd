@@ -322,8 +322,8 @@ Interestingly, it appeared that the acetolysis treatment removed this peak, whic
 
 # Discussion
 
-## Extraction of *Pinus* FTIR spectra using the FDA detector
-In this study we investigated the use of an FDA detector in combination with a FTIR microscope that allows capture of several spectra in order to characterise the chemistry of pollen grains from a sediment sample.
+## Extraction of *Pinus* FTIR spectra using the FPA detector
+In this study we investigated the use of an FPA detector in combination with a FTIR microscope that allows capture of several spectra in order to characterise the chemistry of pollen grains from a sediment sample.
 The approach has the potential to be an improvement on previous single-grain measurements using FTIR, where each grain is required to be targeted individually, or even manually extracted from the sediment matrix using a micro-pipette.
 The FPA-MCT detector on our FTIR microscope allows simultaneous capture of a larger area of the sample (XXX x XXX µm ), compared to other detectors (e.g. 100 x 100 µm @jardineChemotaxonomyDomesticatedGrasses2019, 50 x 50 ?µm? @zimmermannChemicalCharacterizationIdentification2018).
 An image with a spectra for each pixel is created, from which spectra of single grains were extracted.
@@ -331,7 +331,7 @@ An image with a spectra for each pixel is created, from which spectra of single 
 In general the FTIR spectra obtained using this approach created similar spectra to spectra of *Pinus* pollen from bulk approaches, and the method was also sensitive to differences in chemical treatments on the fossil-pollen grains.
 For example, the spectra obtained from our modern samples are very similar to *Pinus sylvestris* spectra measured using FTIR-bulk sample methodologies [@bagciogluMultiscaleVibrationalSpectroscopic2015; @zimmermannCharacterizationPollenVibrational2010] and FTIR microscopy using single-point measurements [@zimmermannChemicalCharacterizationIdentification2018].
 The same characteristic peaks described above are visible in all modern spectra captured with bulk and FTIR microscopy, e.g. 1745, 1515, 1170 and 1250 - 1000 cm^-1^, and these results build on previous studies which suggest that overall potential for the use of the FPA detector in pollen research **[add references]**.
-Thus, moving forward we see potential in the application of the FDA detector in chemical palaeoecology. 
+Thus, moving forward we see potential in the application of the FPA detector in chemical palaeoecology. 
 
 ## Variable effects of acetolysis
 Another important result in our study is the large differences in FTIR spectra between acetolysed and non-acetolysed grains.
