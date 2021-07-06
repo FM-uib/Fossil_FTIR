@@ -2,10 +2,10 @@
 title: 'Assessing variations in the chemistry of fossil- and modern-*Pinus* pollen'
 date: '2020/02/04'
 output:
-  bookdown::word_document2:
   bookdown::pdf_document2:
     toc: false
     extra_dependencies: ["flafter"]
+  bookdown::word_document2:
 bibliography: references.bib
 csl: biology-letters.csl
 ---
@@ -137,8 +137,8 @@ Several studies have shown links between solar and UV radiation and pollen chemi
 
 Successful application of pollen-chemistry techniques within palaeoecological research requires a thorough understanding of the factors influencing chemical variations in the modern environment and in the accurate estimation of the chemical spectra from pollen grains.
 Any insights gained from studies on modern grains must also be transferable under fossil settings [@jardineImpactOxidationSpore2015; @jardineSporopolleninChemistryIts2021].
-Fourier Transform Infrared (FTIR) spectroscopy has become one of the most popular methods for characterising the chemical variations present within pollen and spores in the modern environment.
-Bulk FTIR techniques, which involve the analysis of large quantities of modern-pollen samples (approximately 1-2 mg) (e.g. @zimmermannCharacterizationPollenVibrational2010, @lahlaliATRFTIRSpectroscopyReveals2014), have the advantage of reducing scattering effects from measurements due to contact measurement of large sample quantities, which improves the signal-to-noise ratio in terms of spectra acquisition.
+Fourier transform infrared (FTIR) spectroscopy has become one of the most popular methods for characterising the chemical variations present within pollen and spores in the modern environment.
+Bulk FTIR techniques, which involve the analysis of large quantities of modern-pollen samples (approximately 1-2 mg) (e.g. @zimmermannCharacterizationPollenVibrational2010, @lahlaliATRFTIRSpectroscopyReveals2014), predominantly result with high-quality spectra with detailed biochemical ‘fingerprint’ of pollen, comprising specific signals of sporopollenins, lipids, proteins, carbohydrates and other chemical constituents [@bagciogluMultiscaleVibrationalSpectroscopic2015].
 As a result, FTIR spectra obtained from bulk pollen samples have been used to identify chemical differences at the genus, and in some cases, species and population level [@muthreichChemicalVariationsQuercus2020; @zimmermannInfraredSpectroscopyPollen2014; @depciuchIdentificationBirchPollen2018; @diehnDiscriminationGrassPollen2020; @bagciogluMonitoringPlantEnvironment2017; @zimmermannHighthroughputFTIRSpectroscopy2017].
 However, these approaches may be less relevant for pollen samples extracted from fossil sequences since the number of pollen grains analysed vastly exceeds the quantity which is practically available from a sediment-core sample. 
 
@@ -146,30 +146,35 @@ An alternative approach involves the use of FTIR microscopes, where a FTIR spect
 This enables acquisition of infrared spectra from a small area, with aperture covering several pollen grains, a single pollen grain, or even pollen grain substructure [@zimmermannVibrationalMicrospectroscopyEnables2015].
 FTIR-microscopes are better suited to sediment samples as a result of the capacity to generate FTIR spectra from individual grains.
 However, FTIR microspectroscopy is hindered by strong Mie scattering of IR radiation on pollen grains, resulting with anomalous features in their FTIR spectra [@zimmermannVibrationalMicrospectroscopyEnables2015; @blumelObservationMieRipples2018a; @lukacsRecoveryAbsorbanceSpectra2015].
-This issues can be tackled by a number of analytical and numerical solutions [@diehnDiscriminationGrassPollen2020; @zimmermannChemicalCharacterizationIdentification2018; @lukacsRecoveryAbsorbanceSpectra2015; @zimmermannAnalysisAllergenicPollen2016], but nevertheless FTIR measurement of individual pollen grains remains challenging.
+Although the scattering issues can be tackled by a number of analytical and numerical solutions [@diehnDiscriminationGrassPollen2020; @zimmermannChemicalCharacterizationIdentification2018; @lukacsRecoveryAbsorbanceSpectra2015; @zimmermannAnalysisAllergenicPollen2016], FTIR measurement of individual pollen grains remains challenging.
 Nevertheless, microscopic FTIR techniques have now been applied to both modern- and fossil-pollen grains preserved in sediments.
-The approach has been successfully used to show that chemical differences are found between pollen at the genus and even species level [@julierChemotaxonomyToolInterpreting2016; @woutersenNovelApproachStudy2018;  @zimmermannChemicalCharacterizationIdentification2018; @jardineChemotaxonomyDomesticatedGrasses2019], and microscopic-FTIR techniques have also been used to observe chemical differences to reconstruct changes in UV-B absorbing compounds in different periods across Earth's history [@fraserUVBAbsorbingPigments2011; @jardinePollenSporesBiological2016; @jardineProxyReconstructionUltravioletB2019; @jardineSheddingLightSporopollenin2017].
+The approach has been successfully used to show that chemical differences are found between pollen at the genus and even species level [@julierChemotaxonomyToolInterpreting2016; @woutersenNovelApproachStudy2018;  @zimmermannChemicalCharacterizationIdentification2018; @jardineChemotaxonomyDomesticatedGrasses2019]. 
+Moreover, microscopic-FTIR techniques have been used to observe chemical differences in pollen samples to reconstruct changes in UV-B absorbing compounds in different periods across Earth's history [@fraserUVBAbsorbingPigments2011; @jardinePollenSporesBiological2016; @jardineProxyReconstructionUltravioletB2019; @jardineSheddingLightSporopollenin2017].
 
 One of key challenges faced by chemical palynologists using micro-FTIR and other approaches is the time taken to extract and analyse fossil-pollen samples.
-Some microscopes are equipped with automated stages, where multiple point locations on the slide can be targeted manually to record spectra automatically.
-However, recent developments in technologies related to FTIR may allow for easier and faster capture of spectra of pollen grains.
-A focal plane array detector (FPA) allows capture of an image and matrix of spectra over the same sample area instead of a single spectra at a specific point/area [@zimmermannAnalysisAllergenicPollen2016;@zimmermannChemicalCharacterizationIdentification2018; @zimmermannVibrationalMicrospectroscopyEnables2015].
-This enables the extraction of spectra from several single grains from the same area on the sample without the need to relocate the detector of the microscope or move the slide, and is therefore of potentially high relevance for palaeoecological research.
+Some FTIR microscopes are equipped with automated sample stages, enabling automated measurement of predetermined measurement positions.
+Measurements are usually acquired by consecutive recording of spectra by a single element detector [@zimmermannAnalysisAllergenicPollen2016;@zimmermannChemicalCharacterizationIdentification2018; @zimmermannVibrationalMicrospectroscopyEnables2015].
+When spectra are recorded with equidistant spatial steps (i.e. scanning measurement), the individual spectra can be assembled after the recording to obtain a chemical image [@jardineSporopolleninChemistryIts2021; @zimmermannVibrationalMicrospectroscopyEnables2015; @julierChemotaxonomyToolInterpreting2016].
+However, recent developments in technologies related to FTIR allow for easier and faster capture of spectra of pollen grains. 
+A focal plane array detector (FPA) is made of a 2D array of IR detectors, and allows true chemical imaging.
+This enables simultaneous measurement of several single pollen grains from a relatively large surface area without the need to move the sample stage.
+Therefore, it is of potentially high relevance for palaeoecological research. 
+
 When combined with imaging processing technology, it may allow for more rapid identification and extraction of FTIR spectra of pollen grains from sediment samples.
-Whilst FTIR spectroscopy using FPA detectors have been widely applied with microplastics [@loderEnzymaticPurificationMicroplastics2017; @machadoMicroplasticsEmergingThreat2018; @primpkeAutomatedApproachMicroplastics2017] and some studies on pollen [@chiappePollenGrainsFunctionalized2017], there has been no investigation into application of FPA detectors on fossil-pollen residues taken from sediment cores.
+Whilst FTIR microspectroscopy with FPA detectors has been widely applied with microplastics [@primpkeAutomatedApproachMicroplastics2017] application on pollen samples was limited just to chemical characterization of isolated sporopollenin capsules  [@chiappePollenGrainsFunctionalized2017].
+In particular, there has been no investigation into application of FPA detectors on measurement of fossil-pollen residues taken from sediment cores.
 
 Palaeoecologists may also use a variety of chemical-processing techniques in order to speed-up analyses through the isolation and concentration of pollen from the sediment matrix [@ridingGuidePreparationProtocols2021].
-One of the most common methods for sporopollenin extraction involves an acetolysis treatment, which, alongside a combination of HF and HCl treatments, enables removal of organic materials, calcium carbonates and silicates, while preserving the morphological integrity of pollen grains [@erdtmanSixNotesPollen1959; @faegriTextbookPollenAnalysis1989].
+One of the most common methods for sporopollenin extraction involves an acetolysis treatment, which, alongside a combination of treatments with hydrofluoric acid (HF) and hydrochloric acid (HCl), enables removal of organic materials, calcium carbonates and silicates, while preserving the morphological integrity of pollen grains [@erdtmanSixNotesPollen1959; @faegriTextbookPollenAnalysis1989].
 Acetolysis has also often been used in combination with FTIR on pollen as a way to standardise between modern and fossil samples, [@jardinePollenSporesBiological2016; @woutersenNovelApproachStudy2018] or to study the effects of acid extractions [@dominguezIsolationIntactPollen1998; @dominguezPollenSporopolleninDegradation1999; @loaderPreparationPollenStable2000; @schulzeosthoffPhenolsIntegratedCompounds1987; @jardineImpactOxidationSpore2015; @jardineSporopolleninChemistryIts2021].
 Indeed, although acetolysis treatments at low temperatures did not create major chemical differences in *Lycopodium* spores [@jardineImpactOxidationSpore2015], it is uncommon for low-temperature treatments to be applied to fossil-sediment samples since the higher temperatures are required for oxidation of the non-pollen organic material.
 Such treatments may then result in chemically altering effects on fossil-pollen composition [@jardineSporopolleninChemistryIts2021], whilst variations in sediment types mean that different combinations of sample-preparation techniques may be required for different sediment types [@ridingGuidePreparationProtocols2021].
-Given the large variations in FTIR spectra observed across taxa [@diehnCombiningChemicalInformation2020; @muthreichChemicalVariationsQuercus2020], and the variety of sediment types even from Holocene sequences in Europe, more studies are needed investigate the potential effects of the chemical preparation procedures used to isolate pollen grains from different pollen types.
+Given the large variations in FTIR spectra observed across taxa [@diehnCombiningChemicalInformation2020; @muthreichChemicalVariationsQuercus2020], and the variety of sediment types even from Holocene sequences in Europe, more studies are needed to investigate the potential effects of the chemical preparation procedures used to isolate pollen grains from different pollen types.
 
-In this study we aimed to explore the use of an FPA detector to extract FTIR spectra from fossil-pollen *Pinus* grains.
-We develop a workflow which enables comparison of fossil-pollen grains taken from three sediment-core locations (Table \@ref(tab:sites)), and compare the FTIR spectra generated using the FPA detector from both modern- and fossil-pollen samples. 
-Pollen was extracted from the sediment cores using two different approaches (density separation using sodium polytungstate and acetolysis) and the fossil-pollen samples were measured using a combined FTIR microscope with FPA detector.
-We also compared the FTIR spectra obtained from fossil-pollen grains with modern *Pinus* pollen samples.
-Thus, in addition to testing the feasibility of the FPA detector on different sediment types, we were were also able to investigate how the inferred FTIR spectra in *Pinus* pollen can vary as a result of two different extraction procedures.
+In this study we aimed to explore the use of a FTIR imaging to obtain IR spectra from fossil-pollen *Pinus* grains.
+We develop a workflow which enables comparison of fossil-pollen grains taken from three sediment-core locations (Table \@ref(tab:sites)), and compare the IR spectra from both modern- and fossil-pollen samples.
+Pollen was extracted from the sediment cores using two different approaches, namely density separation using sodium polytungstate and acetolysis, followed by FTIR microscopy imaging.
+Thus, in addition to testing the feasibility of the FTIR imaging approach on different sediment types, we were were also able to investigate how the IR spectra of the *Pinus* pollen vary as a result of two different extraction procedures.
 
 <!-- Chemical treatment... -->
 <!-- SPT density separation as an alternative to acetolysis by investigating the chemical alteration of both extraction methods to three fossil cores. -->
